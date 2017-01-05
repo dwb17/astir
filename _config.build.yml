@@ -2,7 +2,7 @@
 # Overrides these options in _config.yml
 
 # Write your domain.
-url: https://dwb17.github.io/astir
+url: https://dwb17.github.io/astir-beta
 
 # Hides your drafts and future posts
 future: false
