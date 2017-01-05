@@ -3,7 +3,7 @@
 title: Jekyll-base
 description:
 tagline:
-url: localhost:4000
+url: http://astir.ninja
 
 source: src
 destination: serve

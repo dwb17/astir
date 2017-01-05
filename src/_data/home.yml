@@ -3,7 +3,7 @@ en:
   video:
     title: "TOP QUALITY CROWN CORKS"
     subtitle: "Manufacturing bespoke excellence"
-    videoLocation: "assets/video/home/home"
+    videoLocation: "/assets/video/home/home"
     WatchFullVideo: true
     FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
   company:
@@ -31,7 +31,7 @@ el:
   video:
     title: "TOP QUALITY CROWN CORKS"
     subtitle: "Manufacturing bespoke excellence"
-    videoLocation: "assets/video/home/home"
+    videoLocation: "/assets/video/home/home"
     hasWatchVideo: false
   company:
     title: "State of the art plant"
