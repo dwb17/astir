@@ -1,0 +1,20 @@
+en:
+  home:
+    menuTitle: "Home"
+    url: "/"
+  facilities:
+    menuTitle: "Facilites"
+    url: "/facilities/"
+  company:
+    menuTitle: "Company"
+    url: "/company/"
+el:
+  home:
+    menuTitle: "Αρχική"
+    url: "/el/"
+  facilities:
+    menuTitle: "Εγκαταστάσεις"
+    url: "/el/εγκαταστασεις/"
+  company:
+    menuTitle: "Εταιρία"
+    url: "/el/εταιρια/"

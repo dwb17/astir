@@ -1,0 +1,13 @@
+<div id="navigation" class="overlay">
+  <ul class="nav navbar-nav overlay-content">
+    {% assign langcode = page.lang %}
+    {% for menuTree in site.data.menu[langcode] %}
+      {% assign menuItem = menuTree[1] %}
+      <li>
+        {% comment %} escape URL so as to match in Greek {% endcomment %}
+        {% assign escapedURL = menuItem.url | uri_escape %}
+        <a {% if escapedURL  == page.url %}class="active"{% endif %} href="{{ menuItem.url }}">{{ menuItem.menuTitle }}</a>
+      </li>
+    {% endfor %}
+ </ul>
+</div>

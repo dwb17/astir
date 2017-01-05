@@ -1,0 +1,28 @@
+---
+en:
+  production:
+    title: "State of the art plant"
+    title_variantClasses: "inverse"
+    subtitle: "PRODUCTION SITE"
+    body: "bla **bla**"
+    image: http://lorempixel.com/400/200/sports/1
+    variantClasses: "below inverse"
+
+  facilites:
+    title: "Production Process"
+    subtitle: "FACILITIES"
+    body: "bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...
