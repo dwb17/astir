@@ -6,7 +6,7 @@
       <li>
         {% comment %} escape URL so as to match in Greek {% endcomment %}
         {% assign escapedURL = menuItem.url | uri_escape %}
-        <a {% if escapedURL  == page.url %}class="active"{% endif %} href="{{ menuItem.url }}">{{ menuItem.menuTitle }}</a>
+        <a {% if escapedURL  == page.url %}class="active"{% endif %} href="{{ site.url }}{{ menuItem.url }}">{{ menuItem.menuTitle }}</a>
       </li>
     {% endfor %}
  </ul>
