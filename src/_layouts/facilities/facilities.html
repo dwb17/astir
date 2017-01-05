@@ -1,8 +1,0 @@
----
-layout: default
----
-{% assign langcode = page.lang %}
-{% for facilityItems in site.data.facilities[langcode] %}
-  {% assign facilityItem = facilityItems[1] %}
-  {% include slice.html param=facilityItem %}
-{% endfor %}
