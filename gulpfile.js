@@ -62,6 +62,11 @@ gulp.task("js", function() {
     .pipe(gulp.dest("site/assets/javascript/"));
 });
 
+gulp.task("video", function() {
+  gulp.src('./src/assets/video/**')
+    .pipe(gulp.dest("site/assets/video/"));
+});
+
 // Optimizes the images that exists
 gulp.task("images", function () {
   return gulp.src("src/images/**")
@@ -214,7 +219,7 @@ gulp.task("copy-favicon", function() {
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "video", "copy-favicon");
 });
 
 
