@@ -2,6 +2,28 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 
-// Main menu
-@import "menu";
+// Hide myFonts temp.
+#mfPreviewBar {
+  display: none !important;
+}
 
+// Layouts
+@import "layout/layout-two-thirds/layout-two-thirds";
+@import "layout/layout-two-column/layout-two-column";
+@import "layout/layout-stacked/layout-stacked";
+
+// Misc
+@import "base/misc";
+
+
+@import "components/carousel/carousel";
+
+@import "components/header/header";
+@import "components/menu/menu";
+@import "components/titles/titles";
+@import "components/typography/typography";
+@import "components/video/video";
+@import "components/section/section";
+@import "components/slice/slice";
+
+@import "components/footer/footer";

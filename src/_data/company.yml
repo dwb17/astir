@@ -1,18 +1,57 @@
 ---
 en:
-  production:
-    title: "State of the art plant"
-    title_variantClasses: "inverse"
-    subtitle: "PRODUCTION SITE"
-    body: "bla **bla**"
-    image: http://lorempixel.com/400/200/sports/1
-    variantClasses: "below inverse"
-
-  facilites:
-    title: "Production Process"
-    subtitle: "FACILITIES"
-    body: "bla bla BLLMA"
+  video:
+    title: "60 YEARS OLD BUT FRESH "
+    subtitle: "Combining the taste of tradition with our passion for innovation, we craft high-quality crown corks that help brands enhance the value of their products and build strong customer relationships."
+    videoLocation: "/assets/video/company/company"
+    WatchFullVideo: false
+  about:
+    title: "Crowning An art of its own"
+    title_variantClasses: "title--large"
+    subtitle: "ABOUT ASTIR"
+    body: "Astir Vitogiannis Bros S.A. is a leading crown corks manufacturer with over 60 years of experience. Operating in the crowns business for 3 generations, we combine traditional values for excellent service and strong customer relationships with in-depth knowledge of the product. We produce in our state of the art facilities, utilising innovative technology and know-how and we proudly serve the needs of the world’s favorite and largest beer and beverage brands."
+    variantClasses: ""
+    layout: "layout-two-column"
+    id: "about"
+  history:
+    title: "Traditionally Innovative Since 1953"
+    title_variantClasses: "title--large"
+    subtitle: "OUR HISTORY"
+    body: "Founded by George Vitogiannis in 1953, initially as a small soft drinks bottler for the local market, Astir blossomed to a world renowned crown corks manufacturer.
+In 1983, the company relocated close to the center of Athens, became a societe anonyme and entered a new growth chapter in its development.
+The turning point in the company’s recent history was in 2004 with its strategic investment in a new plant in the industrial park of Avlona near Athens.
+Since then, having invested in excess of €20m, our internationally accredited and compliant infrastructure and our fully automated production processes, contributed to elevating Astir to one of the best manufacturing facilities in Europe, and among the most sophisticated in the world.
+In 2014, the group launched another manufacturing plant in Canada, boosting production capacity and improving its access to North America
+Today, Astir sells its products to more than 45 countries across 5 continents serving more than 400 different clients, including the largest bottlers in the world."
     image: http://lorempixel.com/400/200/sports/2
+    variantClasses: "text--centered on-brand-color"
+    layout: "layout-stacked"
+    id: "history"
+  facts:
+    title: "Growing bigger Getting better"
+    title_variantClasses: "title--large"
+    subtitle: "FACTS"
+    body: "Astir has diligently invested for decades, experiencing significant organic growth, while it has doubled in size during the last decade under its existing management, following the relocation to our modern production facility in Avlona. We currently enjoy a capacity exceeding 12 billion crowns, 87% of which is exported to more than 45 countries worldwide."
+    variantClasses: ""
+    layout: "layout-two-column"
+  team:
+    title: "Our people our strength"
+    title_variantClasses: ""
+    subtitle: "OUR TEAM"
+    body: "Astir’s most savored stakeholder is its human capital. Our team of highly qualified individuals is focused to target achievement, with fresh ideas, teamwork spirit, and uncompromised quality. Our people, are Astir’s most valuable asset."
+    variantClasses: ""
+  team:
+    title: "A truly global game play"
+    title_variantClasses: ""
+    subtitle: "GLOBAL REACH"
+    body: "Astir crown corks are manufactured in our strategically located plants in Greece, and Canada. Our efficient and fast growing distribution network distributes our crowns to more than 700 destinations globally, in more than 45 counties across 5 continents from New Zealand to California and South Africa to Ireland. We proudly serve more than 400 different clients globally across developed, developing and emerging markets."
+    variantClasses: "on-dark-color"
+  clients:
+    title: "Crowning the world's favourite brands"
+    title_variantClasses: ""
+    subtitle: "CLIENTS"
+    body: "Astir’s flexibility, consistency and technical expertise has gained our company the reputation of a trusted and reliable partner, offering high-standard products with the industry’s best price-quality ratio and shortest lead times. No bureaucracy, no surprises, no limits. Just zero-fault crown corks, always there, always on time. That’s why famous beer and soft drinks companies as well as exquisite, innovative and fast growing craft breweries choose to print their logo on Astir crown corks."
+    variantClasses: ""
 el:
   production:
     title: "Ελληνικα State of the art plant"

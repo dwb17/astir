@@ -5,34 +5,80 @@ en:
     subtitle: "Manufacturing bespoke excellence"
     videoLocation: "/assets/video/home/home"
     WatchFullVideo: true
+    WatchVideoLinkText: "WATCH VIDEO"
     FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
-  company:
-    title: "State of the art plant"
-    title_variantClasses: "inverse"
+  leader:
+    title: "A global leader in crown corks"
+    variantClasses: "text--centered "
+    layout: "layout-stacked"
     buttonText: "THE COMPANY"
     buttonLink: "/company/"
-    body: "bla **bla**"
-    image: http://lorempixel.com/400/200/sports/1
-    bgImage: http://lorempixel.com/1200/500/sports/10
-    variantClasses: "below inverse"
-    id: company
-  facilites:
+    buttonClasses: "btn-primary"
+    body: "Crowning the world’s favourite beer and beverage brands."
+    image: "/images/bootle-caps.jpg"
+    bgImage: "/images/the-company.jpg"
+    bgImagePosition: "center center"
+    bgImageSize: "auto"
+    id: leader
+  facilities:
     title: "State of the art plant"
-    title_variantClasses: "inverse"
-    buttonText: "THE COMPANY"
+    variantClasses: ""
+    layout: "layout-two-thirds"
+    buttonText: "FACILITIES"
     buttonLink: "/facilities/"
-    buttonVariantClasses: "btn-dark"
-    body: "bla **bla**"
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: http://lorempixel.com/1200/500/sports/6
-    variantClasses: "below inverse"
+    buttonClasses: "btn-primary"
+    body: "One of the most advanced, vertically integrated production sites in the global metal packaging sector."
+    image: "/images/facilities.png"
+    bgImage: ""
+    bgImagePosition: "right top"
+    bgImageSize: "auto"
     id: facilities
+  crown-corks:
+    title: "Elegantly crafted"
+    variantClasses: "on-brand-color odd"
+    layout: "layout-two-thirds"
+    buttonText: "CROWN CORKS"
+    buttonLink: "/crown-corks/"
+    buttonClasses: "btn-secondary"
+    body: "Astir’s crowns stand out for their supreme quality and excellent performance across all available specifications."
+    image: "/images/crown-corks.png"
+    bgImage: ""
+    bgImagePosition: "left top"
+    bgImageSize: "cover"
+    id: crown-corks
+  logistics:
+    title: "Quality and reliability"
+    variantClasses: ""
+    layout: "layout-two-thirds"
+    buttonText: "LOGISTICS"
+    buttonLink: "/logistics/"
+    buttonClasses: "btn-primary"
+    body: "Efficiently produced and delivered in compliance with all international standards at record lead times."
+    image: "/images/logistics.png"
+    bgImage: ""
+    bgImagePosition: "left center"
+    bgImageSize: "auto"
+    id: logistics
+  why-crown-corks:
+    title: "The perfect closure"
+    variantClasses: "on-dark-color odd"
+    layout: "layout-two-thirds"
+    buttonText: "CROWN CORKS"
+    buttonLink: "/crown-corks/"
+    buttonClasses: "btn-secondary"
+    body: "Iconic design, functional simplicity and consistent reliability."
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "left top"
+    bgImageSize: "cover"
+    id: why-crown-corks
 el:
   video:
     title: "TOP QUALITY CROWN CORKS"
     subtitle: "Manufacturing bespoke excellence"
     videoLocation: "/assets/video/home/home"
-    hasWatchVideo: false
+    WatchFullVideo: true
+    WatchVideoLinkText: "WATCH VIDEO"
+    FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
   company:
     title: "State of the art plant"
     title_variantClasses: "inverse"
@@ -41,7 +87,7 @@ el:
     buttonVariantClasses: "inverse"
     body: "bla **bla**"
     image: http://lorempixel.com/400/200/sports/1
-    bgImage: http://lorempixel.com/1200/500/sports/6
+    bgImage: http://lorempixel.com/1200/500/sports/
     variantClasses: "below inverse"
     id: company
 
@@ -53,7 +99,7 @@ el:
     buttonVariantClasses: "inverse"
     body: "bla **bla**"
     image: http://lorempixel.com/400/200/sports/2
-    bgImage: http://lorempixel.com/1200/500/sports/4
+    bgImage: http://lorempixel.com/1200/500/sports/
     variantClasses: "below inverse"
     id: facilities
 ...

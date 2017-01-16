@@ -3,6 +3,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+  <script type="text/javascript">
+      (function() {
+          var path = '//easy.myfonts.net/v2/js?sid=173679(font-family=PF+DIN+Text+Pro+Thin)&sid=173743(font-family=PF+DIN+Text+Pro+Regular)&sid=173780(font-family=PF+DIN+Text+Pro+Light)&key=55L9f9LFVV',
+              protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+              trial = document.createElement('script');
+          trial.type = 'text/javascript';
+          trial.async = true;
+          trial.src = protocol + path;
+          var head = document.getElementsByTagName("head")[0];
+          head.appendChild(trial);
+      })();
+  </script>
+
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title[page.lang] | escape }}{% endif %}</title>
   {% if page.title %}
       <meta property="og:title" content="{{ page.title }}">
@@ -24,7 +37,9 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.url }}/assets/stylesheets/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- JS -->
+  <script src="//use.fontawesome.com/eb7ab6760b.js"></script>
 
   <!-- SEO -->
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}{% for translationSets in pages %}{% if translationSets.lang == page.lang %}{% else %}

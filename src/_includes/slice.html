@@ -1,13 +1,10 @@
 {% assign node = include.param %}
-<div class="slice container {{ node.variantClasses }}">
-  <div class="row">
-    <div class="slice__text col-md-6">
+<div class="slice {{ node.variantClasses }} {{ node.layout }}" id="{{node.id}}" >
+    <div class="column">
       <h2 class="subtitle">{{ node.subtitle }}</h2>
       <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
-      <div class="text">{{ node.body | markdownify }}</div>
     </div>
-    <div class="slice__image col-md-6">
-      <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+    <div class="column">
+      <div class="text">{{ node.body }}</div>
     </div>
-  </div>
 </div>

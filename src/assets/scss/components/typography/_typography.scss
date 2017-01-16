@@ -1,0 +1,27 @@
+.text {
+  color: $body-color;
+
+  p:last-child,
+  p:last-child:first-child {
+    margin-bottom: 0;
+  }
+
+  &--large {
+    font-size: 1.45rem;
+  }
+
+  // Light colored text
+  &--light-colored {
+    color: $inverse-color;
+  }
+
+  // Brand colored text
+  &--brand-colored {
+    color: $brand-primary;
+  }
+
+  // Centered text
+  &--centered {
+    text-align: center;
+  }
+}

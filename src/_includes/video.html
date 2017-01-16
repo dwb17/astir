@@ -1,12 +1,13 @@
 {% assign video = include.param %}
-<div id="video" style="width: 100%; height: 90vh;"
+<div class="video text--centered {{include.variantClass}}"
   data-vide-bg="m4v: {{site.url}}{{ video.videoLocation }}, webm: {{site.url}}{{ video.videoLocation }}, ogv: {{site.url}}{{ video.videoLocation }}, poster: {{site.url}}{{ video.videoLocation }}"
   data-vide-options="posterType: jpg, autoplay: true, loop: true, muted: true, position: 50% 50%, resizing: true, bgColor: transparent">
   <div class="video__content">
     <h1 class="title">{{ video.title }}</h1>
-    <h2 class="subtitle">{{ video.subtitle }}</h2>
+    <h2 class="text">{{ video.subtitle }}</h2>
     {% if video.WatchFullVideo == true %}
-      <a href="{{video.FullVideoURL}}">Watch more</a>
+      <a class="video__watch-full-video" href="{{video.FullVideoURL}}"><i class="fa fa-play-circle" aria-hidden="true"></i>
+{{video.WatchVideoLinkText}}</a>
     {% endif %}
   </div>
 </div>

@@ -1,0 +1,62 @@
+// Override btn, chnage font-size and paddings
+// due to capitlization on them.
+.btn {
+  font-size: $font-size-xs;
+  padding-bottom: 0.6rem;
+}
+
+@mixin vertically-centered() {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertically-centered {
+  @include vertically-centered();
+}
+
+// Max width on content wrapper
+.content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  //max-width: $content-wrapper-max-width;
+}
+
+.on-brand-color {
+  // title white color
+  // text white colored
+  background-color: $brand-primary;
+
+  .title {
+    @extend .text--light-colored;
+  }
+
+  .text {
+    @extend .text--light-colored;
+  }
+
+  .subtitle {
+    @extend .text--light-colored;
+  }
+}
+
+.on-dark-color {
+  // title brand color
+  // text white colored
+  background-color: $black;
+  .title {
+      @extend .text--brand-colored;
+  }
+
+  .text {
+    @extend .text--light-colored;
+  }
+
+  .subtitle {
+    @extend .text--light-colored;
+  }
+}

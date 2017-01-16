@@ -1,0 +1,30 @@
+.layout-two-thirds {
+  .column:nth-child(2n+1) {
+    width: 55%;
+    float: left;
+    position: relative;
+  }
+
+  .column:nth-child(2n) {
+    width: 45%;
+    float: left;
+    position: relative;
+  }
+
+  // Inverse layout
+  &.odd {
+    .content-wrapper {
+    }
+    .column:nth-child(2n+1) {
+      width: 45%;
+      float: right;
+      position: relative;
+    }
+
+    .column:nth-child(2n) {
+      width: 55%;
+      float: right;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.carousel {
+  // setting min-height for background container
+  min-height: 200px;
+  background-repeat: no-repeat;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  0%{
+    background-position: 0 center;
+  }
+  100%{
+    background-position: -776px center;
+  }
+}

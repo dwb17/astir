@@ -5,8 +5,12 @@ layout: default
 {% for homeItems in site.data.home[langcode] %}
   {% assign homeItem = homeItems[1] %}
   {% if homeItems[0] == "video" %}
-    {% include video.html param=homeItem %}
+      {% include video.html param=homeItem variantClass="video--homepage" %}
   {% else %}
-    {% include section-teaser.html param=homeItem %}
+    {% if homeItem.layout == "layout-stacked" %}
+      {% include section-with-carousel.html param=homeItem %}
+    {% else %}
+      {% include section.html param=homeItem %}
+    {% endif %}
   {% endif %}
 {% endfor %}

@@ -1,0 +1,22 @@
+.title {
+  font-size: $font-size-huge;
+  font-family: $pf-thin;
+  color: $brand-primary;
+
+  &--large {
+    font-size: $font-size-lg;
+  }
+
+  &--small {
+    font-size: $font-size-sm;
+    font-family: $pf-light;
+    color: $gray-lighter;
+  }
+
+  &--block {
+    font-size: $text-large;
+    font-family: $pf-light;
+  }
+
+
+}
