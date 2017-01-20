@@ -13,6 +13,7 @@ en:
     variantClasses: ""
     layout: "layout-two-column"
     id: "about"
+    includeArea: "company/production-capacity-evolution.html"
   history:
     title: "Traditionally Innovative Since 1953"
     title_variantClasses: "title--large"
@@ -24,9 +25,13 @@ Since then, having invested in excess of €20m, our internationally accredited 
 In 2014, the group launched another manufacturing plant in Canada, boosting production capacity and improving its access to North America
 Today, Astir sells its products to more than 45 countries across 5 continents serving more than 400 different clients, including the largest bottlers in the world."
     image: http://lorempixel.com/400/200/sports/2
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "right top"
+    bgImageSize: "auto"
     variantClasses: "text--centered on-brand-color"
     layout: "layout-stacked"
     id: "history"
+    includeArea: "company/our-history-image-slice.html"
   facts:
     title: "Growing bigger Getting better"
     title_variantClasses: "title--large"
@@ -34,24 +39,33 @@ Today, Astir sells its products to more than 45 countries across 5 continents se
     body: "Astir has diligently invested for decades, experiencing significant organic growth, while it has doubled in size during the last decade under its existing management, following the relocation to our modern production facility in Avlona. We currently enjoy a capacity exceeding 12 billion crowns, 87% of which is exported to more than 45 countries worldwide."
     variantClasses: ""
     layout: "layout-two-column"
+    id: "facts"
+    includeArea: "company/revenues-evoution.html"
   team:
     title: "Our people our strength"
-    title_variantClasses: ""
+    title_variantClasses: "title--large"
     subtitle: "OUR TEAM"
     body: "Astir’s most savored stakeholder is its human capital. Our team of highly qualified individuals is focused to target achievement, with fresh ideas, teamwork spirit, and uncompromised quality. Our people, are Astir’s most valuable asset."
-    variantClasses: ""
-  team:
+    variantClasses: "on-dark-color"
+    layout: "layout-two-column"
+    id: "team"
+    includeArea: "company/our-team-image-slice.html"
+  global-reach:
     title: "A truly global game play"
-    title_variantClasses: ""
+    title_variantClasses: "title--large"
     subtitle: "GLOBAL REACH"
     body: "Astir crown corks are manufactured in our strategically located plants in Greece, and Canada. Our efficient and fast growing distribution network distributes our crowns to more than 700 destinations globally, in more than 45 counties across 5 continents from New Zealand to California and South Africa to Ireland. We proudly serve more than 400 different clients globally across developed, developing and emerging markets."
-    variantClasses: "on-dark-color"
+    variantClasses: ""
+    id: "global-reach"
+    includeArea: "company/global-reach-map.html"
   clients:
     title: "Crowning the world's favourite brands"
-    title_variantClasses: ""
+    title_variantClasses: "title--large"
     subtitle: "CLIENTS"
     body: "Astir’s flexibility, consistency and technical expertise has gained our company the reputation of a trusted and reliable partner, offering high-standard products with the industry’s best price-quality ratio and shortest lead times. No bureaucracy, no surprises, no limits. Just zero-fault crown corks, always there, always on time. That’s why famous beer and soft drinks companies as well as exquisite, innovative and fast growing craft breweries choose to print their logo on Astir crown corks."
     variantClasses: ""
+    id: "clients"
+    includeArea: "company/clients.html"
 el:
   production:
     title: "Ελληνικα State of the art plant"

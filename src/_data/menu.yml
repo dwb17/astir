@@ -1,13 +1,26 @@
 en:
   home:
-    menuTitle: "Home"
+    menuTitle: "HOME"
     url: "/"
-  facilities:
-    menuTitle: "Facilites"
-    url: "/facilities/"
   company:
-    menuTitle: "Company"
+    menuTitle: "COMPANY"
     url: "/company/"
+  crown-corks:
+    menuTitle: "CROWN CORKS"
+    url: "/crown-corks/"
+  facilities:
+    menuTitle: "FACILITES"
+    url: "/facilities/"
+  logistics:
+    menuTitle: "SPECIFICATIONS"
+    url: "/logistics/"  
+  why-crown-corks:
+    menuTitle: "WHY CROWN CORKS"
+    url: "/why-crown-corks/"
+  contact:
+    menuTitle: "CONTACT"
+    url: "/contact/"
+
 el:
   home:
     menuTitle: "Αρχική"

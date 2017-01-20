@@ -2,5 +2,21 @@
   .column {
     width: 50%;
     float: left;
+
+    &--full-width {
+      width: 100%;
+      clear: both
+    }
+  }
+  &.odd {
+    .column:nth-child(2n+1) {
+      width: 50%;
+      float: right;
+    }
+
+    .column:nth-child(2n) {
+      width: 50%;
+      float: left;
+    }
   }
 }

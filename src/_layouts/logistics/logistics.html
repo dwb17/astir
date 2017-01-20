@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% assign langcode = page.lang %}
+{% for logisticsItems in site.data.logistics[langcode] %}
+  {% assign logisticsItem = logisticsItems[1] %}
+  {% if logisticsItems[0] == "video" %}
+      {% include video.html param=logisticsItem %}
+  {% else %}
+
+    {% if logisticsItem.id == "supply-chain" %}
+      {% include slice.html param=logisticsItem imageBelowSection="true" %}
+
+    {% elsif logisticsItem.id == "packaging" %}
+      {% include slice.html param=logisticsItem %}
+      <div class="container">
+        <div class="row layout-two-column">
+        {% for packagingItems in site.data.packaging[langcode] %}
+          {% assign packagingItem = packagingItems[1] %}
+            {% include item.html param=packagingItem %}
+        {% endfor %}
+        </div>
+      </div>
+
+    {% elsif logisticsItem.id == "quality-standards" %}
+      {% include slice.html param=logisticsItem %}
+      <div class="container">
+        <div class="row layout-two-column">
+        {% for certificatesItems in site.data.certificates[langcode] %}
+          {% assign certificatesItem = certificatesItems[1] %}
+            <div class="col-4">
+              <h3 class="title title--small text--centered">{{ certificatesItem.title }}</h3>
+              <div class="image"><img alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
+            </div>
+        {% endfor %}
+        </div>
+      </div>
+
+    {% else %}
+
+    {% endif %}
+  {% endif %}
+{% endfor %}

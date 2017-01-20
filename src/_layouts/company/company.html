@@ -8,5 +8,8 @@ layout: default
     {% include video.html param=companyItem variantClass="video--homepage" %}
   {% else %}
     {% include slice.html param=companyItem %}
+    {% if companyItem.includeArea %}
+      {% include {{companyItem.includeArea}} %}
+    {% endif %}
   {% endif %}
 {% endfor %}

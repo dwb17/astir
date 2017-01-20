@@ -1,0 +1,62 @@
+---
+en:
+  0:
+    variantClasses: "text--centered"
+    title: "10,000 pieces Carton boxes"
+    title_variantClasses: "title--medium"
+    body: "Stacked in palettes of 400,000 or 500,000 pieces"
+    text_variantClasses: "text--small"
+    image: http://lorempixel.com/400/200/sports/2
+    layout: "layout-stacked"
+  1:
+    variantClasses: "text--centered"
+    title: "Pallet Rows"
+    title_variantClasses: "title--medium"
+    body: "Each row contains: 10 cartons / 100,000 pcs"
+    text_variantClasses: "text--small"
+    image: http://lorempixel.com/400/200/sports/2
+    layout: "layout-stacked"
+  2:
+    variantClasses: "text--centered"
+    title: "400.000 pcs Pallet Pattern"
+    title_variantClasses: "title--medium"
+    body: "Net weight pallet: 840 kgs"
+    text_variantClasses: "text--small"
+    image: http://lorempixel.com/400/200/sports/2
+    layout: "layout-stacked"
+  3:
+    variantClasses: "text--centered"
+    title: "500.000 pcs Pallet Pattern"
+    title_variantClasses: "title--medium"
+    body: "Net weight pallet: 1,050 kgs"
+    text_variantClasses: "text--small"
+    image: http://lorempixel.com/400/200/sports/2
+    layout: "layout-stacked"
+  4:
+    variantClasses: "text--centered"
+    title: "400,000 pieces Octabins"
+    title_variantClasses: "title--medium"
+    body: "Mainly used in large scale orders"
+    text_variantClasses: "text--small"
+    image: http://lorempixel.com/400/200/sports/2
+    layout: "layout-stacked"
+  5:
+    variantClasses: "text--centered"
+    title: ""
+    title_variantClasses: "title--medium"
+    body: ""
+    image: http://lorempixel.com/400/200/sports/2
+    layout: "layout-stacked"
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...

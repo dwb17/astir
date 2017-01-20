@@ -8,6 +8,7 @@ $gray-lighter:              #666666 !default;
 $gray-lightest:             #999999 !default;
 $white:                     #ffffff !default;
 $black:                     #000000 !default;
+$input-line:                #f4aaad;
 
 $brand-primary:             #e11b22 !default;
 $brand-success:             #5cb85c !default;
@@ -174,3 +175,6 @@ $container-small: 500px;
 
 $section-text-max-width: 420px;
 $content-wrapper-max-width: 1240px;
+
+// Gutter
+$gutter: 30px;

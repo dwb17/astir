@@ -172,7 +172,8 @@ gulp.task("doctor", $.shell.task("bundle exec jekyll doctor"));
 gulp.task("serve:dev", ["styles", "jekyll:dev", "js"], function () {
   bs = browserSync({
     notify: true,
-    open: true,
+    //proxy: 'http://astir.ninja',
+    open: false,
     // tunnel: "",
     server: {
       baseDir: "serve"

@@ -1,0 +1,64 @@
+// Not a coponent per se, but used to style all forms in one file.
+textarea,
+input,
+button {
+  outline: none;
+}
+
+form {
+  //@extend %layout-center;
+  @include clearfix();
+}
+
+.form-item {
+  margin: 2rem 0;
+  padding: 0 $gutter/2;
+  width: 50%;
+  float: left;
+
+  // Collapse in one column.
+  /*
+  @include breakpoint(0 ($tablet - 1)) {
+    width: 100%;
+    float: none;
+  }
+  */
+
+  &.webform-component-textarea {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    resize: none;
+    border: 0;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    background: transparent;
+  }
+}
+
+
+
+label {
+  padding-bottom: .5rem;
+}
+
+.form-text {
+  padding-bottom: .75rem;
+  color: $black;
+  border: 0;
+}
+
+.form-actions {
+  @include clearfix();
+  text-align: right;
+}
+
+.form-submit {}

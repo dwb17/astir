@@ -7,7 +7,20 @@
   }
 
   &--large {
-    font-size: 1.45rem;
+    font-size: $text-large;
+  }
+
+
+  &--small {
+    font-size: $font-size-sm;
+  }
+
+  &--extra-small {
+    font-size: $font-size-xs;
+  }
+
+  &--label {
+    font-size: $contact-title;
   }
 
   // Light colored text

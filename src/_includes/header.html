@@ -1,5 +1,5 @@
 <div class="header">
-
+  {% comment %}
   <ul class="language-selector">
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
   {% for page in pages %}
@@ -8,6 +8,7 @@
     </li>
   {% endfor %}
   </ul>
+  {% endcomment %}
   <nav id="nav" role="navigation" class="navbar navbar-default">
     <div class="hamburger-wrap">
       <button type="button" class="hamburger hamburger--collapse hamburger--accessible js-hamburger">

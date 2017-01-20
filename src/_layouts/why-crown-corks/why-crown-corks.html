@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% assign langcode = page.lang %}
+{% for crownCorks in site.data.why-crown-corks[langcode]  %}
+  {% assign crownCork = crownCorks[1] %}
+  {% if crownCorks[0] == "video" %}
+      {% include video.html param=crownCork %}
+  {% else %}
+      {% include section.html param=crownCork %}
+  {% endif %}
+{% endfor %}

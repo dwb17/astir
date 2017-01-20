@@ -4,5 +4,13 @@ layout: default
 {% assign langcode = page.lang %}
 {% for facilityItems in site.data.facilities[langcode] %}
   {% assign facilityItem = facilityItems[1] %}
-  {% include slice.html param=facilityItem %}
+  {% if facilityItems[0] == "video" %}
+      {% include video.html param=facilityItem %}
+  {% else %}
+    {% if facilityItem.id == "sustainable" %}
+      {% include slice-with-image-on-right.html param=facilityItem %}
+    {% else %}
+      {% include slice.html param=facilityItem imageBelowSection="true" %}
+    {% endif %}
+  {% endif %}
 {% endfor %}

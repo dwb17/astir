@@ -1,0 +1,51 @@
+---
+en:
+  video:
+    title: "LOGISTICS"
+    subtitle: "Above the picture: Astir strives in removing uncertainties from any client’s supply chain. From order to delivery we exceed our clients expectations and provide a fully flexible unparalleled offering."
+    videoLocation: "/assets/video/logistics/logistics"
+    WatchFullVideo: false
+  supply-chain:
+    title: "Supply Chain optimisation"
+    title_variantClasses: "title--large"
+    subtitle: "SHORT LEAD TIMES"
+    body: "Maximize efficiency, eliminate distance, time and cost. Astir’s manufacturing expertise, flexibility and direct customer approach sets new standards for business credibility, product quality, lead time and after sales service.
+
+    Vertical integration from in-house prepress to all stages of the manufacturing process guarantees your order will be delivered on time.
+
+Send us your specific requirements and once the order is placed, our creative team develops your artwork and your file is approved in as little as 24 hours. Manufacturing process starts and, in record lead times, outstanding fault free crown caps arrive to your doorstep.
+
+Delivery transit time may vary depending on destination, yet our global reach handled by our experienced export department, ensure that Astir crown corks reach any destination by sea, truck, rail or even by air."
+    image: http://lorempixel.com/400/200/sports/2
+    variantClasses: "slice--with-centered-image"
+    layout: "layout-two-column"
+    id: "supply-chain"
+  packaging:
+    title: "Packaging Alternatives"
+    title_variantClasses: "title--large"
+    subtitle: "PACKAGING"
+    body: "Crowns are shipped in large quantities and to many international destinations. As a result, rigid packaging is deployed. There are two main alternatives:"
+    variantClasses: "text--centered"
+    layout: "layout-stacked"
+    id: "packaging"
+  quality-standards:
+    title: "Certifications"
+    title_variantClasses: "title--large"
+    subtitle: "QUALITY STANDARDS"
+    body: "Astir’s operations and our crown corks meet the strictest and most demanding production and qualitative criteria. We are certified by international organisations for all relevant aspects of the production process and are proud to be trusted by corporate leaders that reach the majority of households globally"
+    variantClasses: "text--centered"
+    layout: "layout-stacked"
+    id: "quality-standards"
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...

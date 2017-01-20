@@ -1,10 +1,17 @@
 {% assign node = include.param %}
-<div class="slice {{ node.variantClasses }} {{ node.layout }}" id="{{node.id}}" >
-    <div class="column">
-      <h2 class="subtitle">{{ node.subtitle }}</h2>
-      <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
-    </div>
-    <div class="column">
-      <div class="text">{{ node.body }}</div>
-    </div>
+<div class="slice {{ node.variantClasses }} {{ node.layout }} clearfix" id="{{node.id}}"{% if node.id == 'history' %} style="background-image:url({{ node.bgImage }}); background-position: {{ node.bgImagePosition }}; background-size: {{ node.bgImageSize }};"{% endif %}>
+  <div class="column">
+    <h2 class="subtitle">{{ node.subtitle }}</h2>
+    <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
+    {% if node.id == 'history' %}
+      <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+    {% endif %}
+  </div>
+
+  <div class="column">
+    <div class="text">{{ node.body | markdownify }}</div>
+  </div>
+  {% if include.imageBelowSection== 'true' %}
+    <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+  {% endif %}
 </div>

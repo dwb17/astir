@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{% assign langcode = page.lang %}
+{% for contactItems in site.data.contact[langcode] %}
+  {% assign contactItem = contactItems[1] %}
+  {% if contactItems[0] == "video" %}
+      {% include video.html param=contactItem %}
+  {% elsif contactItems[0] == "contact" %}
+    <div class="text--centered">
+      <h1 class="title title--large">{{ contactItem.title }}</h1>
+
+      <h3 class="title--small">{{ contactItem.callusLabel }}</h3>
+      <div class="text--label">{{ contactItem.callusNumber }}</div>
+
+      <h3 class="title--small">{{ contactItem.skypeLabel }}</h3>
+      <a class="contact__skype-number" href="skype:{{ site.data.contact[langcode].contact.skypeUsername }}?call"><i class="fa fa-skype" aria-hidden="true"></i>{{ site.data.contact[langcode].contact.skypetext }}</a>
+
+      <h3 class="title--small">{{ contactItem.enquiries }}</h3>
+      <div class="text text--medium"><a href="mailto:{{ contactItem.email }}">{{ contactItem.email }}</a></div>
+
+      <h3 class="title--small">{{ contactItem.headquartersLabel }}</h3>
+      <div class="text">{{ contactItem.headquartersAddress }}</div>
+    </div>
+    {% assign gmapInfoWindow = contactItem.popupContent %}
+  {% else %}
+
+  {% endif %}
+{% endfor %}
+
+<div id="gmap"></div>
+
+<!-- Include google map -->
+<script>
+  var map,
+      marker;
+
+  function initMap() {
+    var astir = {lat: -25.363, lng: 131.044};
+    var popupContent = "{{ gmapInfoWindow }}";
+    map = new google.maps.Map(document.getElementById('gmap'), {
+      zoom: 4,
+      scrollwheel: false,
+      center: astir
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: popupContent
+    });
+
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    var icon = iconBase + 'parking_lot_maps.png';
+
+    marker = new google.maps.Marker({
+      position: astir,
+      icon: icon,
+      map: map
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+
+  }
+  window.addEventListener('resize', function () {
+    map.panTo(marker.getPosition());
+  });
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ page.googleAPIkey }}&callback=initMap" type="text/javascript"></script>

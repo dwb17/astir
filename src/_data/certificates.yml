@@ -1,0 +1,27 @@
+---
+en:
+  0:
+    title: "FOOD SAFETY"
+    title_variantClasses: "title--small"
+    image: http://lorempixel.com/400/200/sports/2
+  1:
+    title: "ENVIRONMENTAL"
+    title_variantClasses: "title--small"
+    image: http://lorempixel.com/400/200/sports/2
+  2:
+    title: "HIGH HYGIENE"
+    title_variantClasses: "title--small"
+    image: http://lorempixel.com/400/200/sports/2  
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...

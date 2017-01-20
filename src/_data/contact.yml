@@ -1,0 +1,42 @@
+---
+en:
+  video:
+    title: "CONTACT"
+    subtitle: "As one of the most advanced production sites in the global metal packaging sector , Astir’s central manufacturing plant is devoted to the efficient production of high quality bottle caps with the lowest environmental impact."
+    videoLocation: "/assets/video/contact/contact"
+    WatchFullVideo: false
+  contact:
+    title: "Contact us 24/7"
+    callusLabel: "CALL US"
+    callusNumber: "+30 22950 29371"
+    skypeLabel: "SKYPE"
+    skypetext: "Call us on Skype"
+    skypeUsername: "dawiba-7"
+    enquiries: "GENREAL ENQUIRIES"
+    email: "&#105;&#110;&#102;&#111;&#064;&#118;&#105;&#116;&#111;&#103;&#105;&#097;&#110;&#110;&#105;&#115;&#046;&#103;&#114;"
+    headquartersLabel: "ATHENS HEADQUARTERS"
+    headquartersAddress: "Position Draseza, Ind. Park of Avlona,<br/>P.C. 19011, P.O. Box 16<br/>Attiki, Greece"
+    footerAddress: "Position Draseza, Ind. Park of Avlona,P.C. 19011, P.O. Box 16 Attiki, Greece"
+    googleMapLink: "https://goo.gl/maps/u3RoLYafemT2"
+    popupContent: "bla bla"
+    linkInLink: "https://www.linkedin.com/"
+  request:
+    title: "Raise a Request"
+    variantClasses: "on-brand-color"
+    title_variantClasses: 'title--large'
+    body: "A dedicated member of our team stands ready to assist you."
+    layout: "layout-stacked"
+    id: "request-form"
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...

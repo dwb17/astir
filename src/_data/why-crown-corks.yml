@@ -1,0 +1,65 @@
+---
+en:
+  video:
+    title: "WHY CROWN CORKS"
+    subtitle: "For more than 100 years, the crown cork safely seals and preserves the freshness of beers and beverages as no other alternative."
+    videoLocation: "/assets/video/corks/corks"
+    WatchFullVideo: false
+  why:
+    title: "The perfect closure"
+    title_variantClasses: "title--large"
+    subtitle: "WHY CROWN CORKS"
+    body: "The crown cork - also known as a crown seal, a crown cap or just a cap - was invented by William Painter in 1892 and is the first form of bottle cap that revolutionized the bottling industry. Since then this small metal closure marked a significant technological development, yet its essential design remains unaltered until this day. Because it’s perfect."
+    variantClasses: "viewport-height odd"
+    layout: "layout-two-column"
+    id: "why-crown-works"
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "right top"
+    bgImageSize: "auto"
+  performance:
+    title: "Performance"
+    title_variantClasses: "title--large"
+    subtitle: "WHY CROWN CORKS"
+    body: "Iconic design, functional simplicity and consistent reliability are the key elements that make crown caps the proven choice for the bottling industry. They seal glass bottles extremely efficiently and offer longer expiration time against other packaging materials; and they are cheap. Thanks to its simple and streamlined shape, the crown cork is fully compatible with any production method, providing high speed continuous bottling. That’s why bottle makers and beverage manufactures trust crown corks."
+    variantClasses: "on-brand-color viewport-height"
+    layout: "layout-two-column"
+    id: "performance"
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "left top"
+    bgImageSize: "auto"
+  taste:
+    title: "Taste"
+    title_variantClasses: "title--large"
+    subtitle: "WHY CROWN CORKS"
+    body: "The crown cork combined with glass bottling bring the best of your product’s original flavor and taste. Beers and soft drinks sealed with crown corks are chilled faster in the fridge, avoiding taste alteration caused by ice. Enjoy freshness!"
+    variantClasses: "on-dark-color viewport-height odd"
+    layout: "layout-two-column"
+    id: "taste"
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "right top"
+    bgImageSize: "cover"
+  safety:
+    title: "Safety"
+    title_variantClasses: "title--large"
+    subtitle: "WHY CROWN CORKS"
+    body: "The crown cork is the safest of all closures. Complementing rigid glass bottles, it offers superior barrier protection from oxygen, bacteria or environmental changes. A crown cork sealed bottle offers tamper evidence, minimises contamination risk, safely securing your brand and content."
+    variantClasses: "on-dark-color viewport-height"
+    layout: "layout-two-column"
+    id: "safety"
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "right top"
+    bgImageSize: "cover"
+
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...

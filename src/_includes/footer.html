@@ -1,3 +1,4 @@
+{% assign langcode = page.lang %}
 <footer class="footer clearfix">
   <div class="container-fluid">
     <div class="row">
@@ -7,62 +8,50 @@
             <h2 class="title--block text--light-colored">
               Insights
             </h2>
-            <ul>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li></ul>
+            <ul class="list">
+              {% for menuTree in site.data.menu[langcode] %}
+                {% assign menuItem = menuTree[1] %}
+                <li class="list__item">
+                  {% comment %} escape URL so as to match in Greek {% endcomment %}
+                  {% assign escapedURL = menuItem.url | uri_escape %}
+                  <a class="list__item__link {% if escapedURL  == page.url %}active{% endif %}" href="{{ site.url }}{{ menuItem.url }}">{{ menuItem.menuTitle }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
           <div class="footer__item col-sm-6 col-lg-3">
-            <h2 class="title--block">
-              Insights
+            <h2 class="title--block text--light-colored">
+              Location
             </h2>
-            <ul>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li></ul>
+            {% assign footerAddress = site.data.contact[langcode].contact.footerAddress %}
+            <div class="text">{{ footerAddress }}</div>
+            {% assign googleMapLink = site.data.contact[langcode].contact.googleMapLink %}
+            <a class="footer__link footer__link--map" href="{{ googleMapLink }}"><i class="fa fa-map-marker" aria-hidden="true"></i>View Map</a>
           </div>
           <div class="footer__item col-sm-6 col-lg-3">
-            <h2 class="title--block">
-              Insights
+            <h2 class="title--block text--light-colored">
+              Contact
             </h2>
-            <ul>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li></ul>
+            <div class="text">{{ site.data.contact[langcode].contact.callusNumber }}</div>
+            <div class="text"><a href="mailto:{{ site.data.contact[langcode].contact.email }}">{{ site.data.contact[langcode].contact.email }}</a></div>
+            <a class="footer__link footer__link--skype" href="skype:{{ site.data.contact[langcode].contact.skypeUsername }}?call"><i class="fa fa-skype" aria-hidden="true"></i>{{ site.data.contact[langcode].contact.skypetext }}</a>
           </div>
           <div class="footer__item col-sm-6 col-lg-3">
-            <h2 class="title--block">
-              Insights
+            <h2 class="title--block text--light-colored">
+              Follow Us
             </h2>
-            <ul>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li>
-            <li>
-              <a href=#>Company</a>
-            </li></ul>
+            <ul class="list">
+              <li class="list__item">
+                <a class="list__item__link" href="{{ site.data.contact[langcode].contact.linkInLink }}">Linked In</a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+      <div class="container footer__attribution">
+        <div class="row">
+          <div class="footer__item col-sm-6"><div class="text text--small">Copyright Astir Vitogiannis {{ site.time | date: '%Y' }}<br/>All Rights Reserved</div></div>
+          <div class="footer__item col-sm-6"><div class="text text--small"><a class="footer__link footer__link--credits" href="http://www.pointblank.gr" target="_blank"><span>Website created by</span< Point Blank</a><br/><a class="footer__link" href="http://www.pointblank.gr" target="_blank">More Credits</a></div>
         </div>
       </div>
     </div>

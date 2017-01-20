@@ -1,0 +1,49 @@
+// A form label that on focus moves to reveal input plus a line fx.
+// Relies on js.
+.is-floating-label {
+  position: relative;
+
+  label {
+    position: relative;
+    top: 40px;
+    transition: .75s;
+    pointer-events: none;
+  }
+
+  // Textarea: Add some padding for the placeholder text.
+  textarea {
+    padding-top: 1rem;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+
+  // Used for the line fx.
+  &:after {
+    content: '';
+    left: 10px;
+    right: 10px;
+    position: absolute;
+    bottom: 1px;
+    height: 1px;
+    background: $input-line;
+    transition: .2s;
+  }
+
+  &.is-floated {
+    label {
+      top: 0;
+    }
+
+    &:after {
+      height: 3px;
+    }
+
+    // Textarea: Move not all the way up but at line height pixels.
+    &.webform-component-textarea {
+      label {
+        top: $line-height-base;
+      }
+    }
+  }
+}

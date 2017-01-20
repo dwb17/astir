@@ -1,0 +1,45 @@
+---
+en:
+  video:
+    title: "CROWN CORKS"
+    subtitle: "Safe, efficient and established. Astir crown corks stand out for their excellent quality and zero fault tolerance. We use high-standard raw materials and advanced technologies to create brand-building metal packaging solutions with the lowest ecological foot print."
+    videoLocation: "/assets/video/corks/corks"
+    WatchFullVideo: false
+  crown-corks:
+    title: "The anatomy of a crown cork"
+    subtitle: "CROWN CORKS"
+    variantClasses: "odd"
+    title_variantClasses: 'title--large'
+    body: "Whether Pry Off or Twist Off, crown corks are the best choice for bottling in the brewing and beverage industry. Serving the whole spectrum from special craft beers to popular soft drinks and mainstream beers, Astir offers all possible combinations of materials and options. We produce eye-catching, functional, certified crown corks that perfectly match with all bottle types and offer a new experience of taste and freshness using advanced materials with scavenging properties."
+    layout: "layout-two-thirds"
+    buttonText: "DOWNLOAD CROWN'S SPECS"
+    buttonLink: "/crown-corks/"
+    buttonClasses: "btn-primary"
+    image: "/images/bootle-caps.jpg"
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "left top"
+    bgImageSize: "auto"
+    id: "crown-corks"
+  exterior-side:
+    title: "Steel"
+    subtitle: "EXTERIOR SIDE"
+    variantClasses: "text--centered viewport-height-disabled"
+    body: "Both materials offer excellent corrosion resistance, formability, printability, strength in sealing and high performance during bottling. Different thickness and hardness may apply according to the application and glass finish."
+    layout: "layout-stacked"
+    bgImage: "/images/why-crown-corks.jpg"
+    bgImagePosition: "left top"
+    bgImageSize: "auto"
+    id: "exterior-side"
+el:
+  production:
+    title: "Ελληνικα State of the art plant"
+    subtitle: "ΕλληνικαPRODUCTION SITE"
+    body: "Ελληνικαbla bla"
+    image: http://lorempixel.com/400/200/sports/1
+
+  facilites:
+    title: "ΕλληνικαProduction Process"
+    subtitle: "Ελληνικα FACILITIES"
+    body: "Ελληνικα bla bla BLLMA"
+    image: http://lorempixel.com/400/200/sports/2
+...

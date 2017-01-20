@@ -1,8 +1,50 @@
 .footer {
-  background-color: $white;
-  
+  background-color: $black;
 
   &__item {
 
+    .text {
+      color: $gray-light;
+    }
+  }
+
+  &__attribution {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  &__link {
+    color: $gray-light;
+
+    &--map {
+      padding-top: 1rem;
+      display: block;
+    }
+
+    &--skype {
+      padding-top: 1rem;
+      display: block;
+    }
+
+    &--credits {
+
+    }
+    // font-icon
+    i {
+      color: $white;
+      padding-right: 15px;
+    }
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &__item {
+      list-style: none;
+      &__link{
+        color: $gray-light;
+      }
+    }
   }
 }

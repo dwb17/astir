@@ -1,14 +1,21 @@
 .section {
-  height: 100vh;
+  //
   background-repeat: no-repeat;
   position: relative;
 
+  &.viewport-height {
+    height: 100vh;
+  }
+
   .content-wrapper {
+    /*
+      Might want to add class for this
     @include vertically-centered();
+    */
     height: inherit;
   }
 
   .column {
     height: inherit;
-  }  
+  }
 }
