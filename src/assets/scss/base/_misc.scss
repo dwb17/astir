@@ -1,3 +1,10 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.is-loading {
+    opacity: 0;
+  }
+}
 // Override btn, chnage font-size and paddings
 // due to capitlization on them.
 .btn {

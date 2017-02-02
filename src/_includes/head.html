@@ -27,7 +27,7 @@
     <meta name="description" content="{{ page.excerpt }}">
     <meta property="og:description" content="{{ page.excerpt }}">
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@gizra_drupal" />
+    <meta name="twitter:site" content="" />
     {% endif %}
 
     {% if page.image %}
@@ -37,9 +37,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.url }}/assets/stylesheets/style.css">
-
-  <!-- JS -->
-  <script src="//use.fontawesome.com/eb7ab6760b.js"></script>
 
   <!-- SEO -->
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}{% for translationSets in pages %}{% if translationSets.lang == page.lang %}{% else %}

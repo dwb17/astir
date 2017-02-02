@@ -3,8 +3,52 @@
   width: 100%;
   height: 90vh;
   position: relative;
+  overflow: hidden;
+
   &__content {
     @include vertically-centered();
+    top: 32%;
+    opacity: 0;
+    transition: top .9s, opacity .4s;
+    &.is-loaded {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+
+  &__tag {
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  &__cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 1;
+      transition: opacity .5s;
+      &.is-loaded {
+        opacity: 0;
+      }
+    }
+
+  video {
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
   }
 
   .title {

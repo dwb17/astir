@@ -1,7 +1,10 @@
 {% assign video = include.param %}
-<div class="video text--centered {{include.variantClass}}"
-  data-vide-bg="m4v: {{site.url}}{{ video.videoLocation }}, webm: {{site.url}}{{ video.videoLocation }}, ogv: {{site.url}}{{ video.videoLocation }}, poster: {{site.url}}{{ video.videoLocation }}"
-  data-vide-options="posterType: jpg, autoplay: true, loop: true, muted: true, position: 50% 50%, resizing: true, bgColor: transparent">
+<div class="video text--centered {{include.variantClass}}">
+  <video loop autoplay muted class="video__tag">
+  </video>
+  <div style="display:none" class=""><img src="{{site.url}}{{ video.videoPoster }}" /></div>
+  <div class="video__cover" style="background-image:url({{site.url}}{{ video.videoPoster }});"></div>
+
   <div class="video__content">
     <h1 class="title">{{ video.title }}</h1>
     <h2 class="text">{{ video.subtitle }}</h2>
@@ -11,3 +14,90 @@
     {% endif %}
   </div>
 </div>
+
+<script src="{{site.url}}/assets/javascript/bideo.js"></script>
+<script type="text/javascript">
+(function () {
+
+  var bv = new Bideo();
+  bv.init({
+    // Video element
+    videoEl: document.querySelector('.video__tag'),
+
+    // Container element
+    container: document.querySelector('.video'),
+
+    // Resize
+    resize: true,
+
+    // autoplay: false,
+
+    isMobile: window.matchMedia('(max-width: 768px)').matches,
+
+    // Array of objects containing the src and type
+    // of different video formats to add
+    src: [
+      {
+        src: '{{site.url}}{{ video.videowebm }}',
+        type: 'video/webm'
+      },
+    ],
+
+    // What to do once video loads (initial frame)
+    onLoad: function () {
+      // Check that the class exist first.
+      var el = document.querySelector('.video__cover');
+      if (el.classList.contains("is-loaded")){
+         return true;
+      } else {
+        document.querySelector('.video__cover').className += " is-loaded";
+        document.querySelector('.video__content').className += " is-loaded";
+      }
+    }
+  });
+}());
+</script>
+
+<!--
+<script type="text/javascript">
+  var req = new XMLHttpRequest();
+  var videoElement = document.getElementById("video");
+  var imageFallback = '{{site.url}}{{ video.videoPoster }}';
+  req.open('GET', '{{site.url}}{{ video.videomp4 }}', true);
+
+  req.timeout="500";
+  req.ontimeout=function(){
+    req.abort();
+    var img = document.createElement("img");
+    img.src = imageFallback;
+    var videoPlaceholder = document.getElementById("video-placeholder");
+    videoPlaceholder.appendChild(img);
+    document.getElementById("body").classList.remove("is-loading");
+  };
+  req.responseType = 'blob';
+
+  req.onload = function() {
+    // Onload is triggered even on 404
+    // so we need to check the status code
+    if (this.status === 200) {
+      var videoBlob = this.response;
+      var vid = URL.createObjectURL(videoBlob); // IE10+
+      // Video is now downloaded
+      // and we can set it as source on the video element
+      videoElement.src = vid;
+      videoElement.play();
+      document.getElementById("body").classList.add('is-loaded');
+      document.getElementById("body").classList.remove("is-loading");
+      URL.revokeObjectURL(videoBlob);
+    }
+  }
+
+  req.onerror = function() {
+   // Error
+  }
+
+  req.send();
+
+
+</script>
+JS -->

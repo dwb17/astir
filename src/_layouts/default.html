@@ -12,7 +12,7 @@
     <!-- When on contact page the Request form is open -->
     {% if page.ref == 'contact' %}
       {% assign formClass = "" %}
-      {% assign buttonClass = "js-hidden" %}      
+      {% assign buttonClass = "js-hidden" %}
     {% else %}
       {% assign formClass = "js-hidden" %}
       {% assign buttonClass = "" %}
@@ -27,13 +27,12 @@
     <!-- JavaScript External -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
-
+    <script src="//use.fontawesome.com/eb7ab6760b.js"></script>
     <!-- JavaScript Internal NEW-->
-    <script src="{{site.url}}/assets/javascript/jquery.form.min.js"></script>
-    <script src="{{site.url}}/assets/javascript/contact-validation.js"></script>
-    <script src="{{site.url}}/assets/javascript/menu.js"></script>
-    <script src="{{site.url}}/assets/javascript/floating-label.js"></script>
-    <script src="{{site.url}}/assets/javascript/jquery.vide.min.js"></script>
+    <script async defer src="{{site.url}}/assets/javascript/jquery.form.min.js"></script>
+    <script async defer src="{{site.url}}/assets/javascript/contact-validation.js"></script>
+    <script async defer src="{{site.url}}/assets/javascript/menu.js"></script>
+    <script async defer src="{{site.url}}/assets/javascript/floating-label.js"></script>
 
   </body>
 </html>
