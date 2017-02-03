@@ -1,7 +1,43 @@
 .layout-two-column {
+  // Fallback.
+  text-align: center;
+
+  // Flexbox.
+  display: flex;
+
   .column {
     width: 50%;
-    float: left;
+    max-width: $content-wrapper-max-width/2;
+    padding-right: 5%;
+
+    // Fallback.
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+
+    // Flexbox;
+    display: flex;
+    flex-direction: column;
+
+
+    + .column {
+      padding-left: 5%;
+      padding-right: 0;
+    }
+
+    // When image is after column it should take up the whole width.
+    + .image {
+      width: 100%;
+    }
+
+    // When image is in the column it should center.
+    .image {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+
 
     &--full-width {
       width: 100%;
@@ -11,12 +47,12 @@
   &.odd {
     .column:nth-child(2n+1) {
       width: 50%;
-      float: right;
+     // float: right;
     }
 
     .column:nth-child(2n) {
       width: 50%;
-      float: left;
+//float: left;
     }
   }
 }

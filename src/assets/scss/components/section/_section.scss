@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   position: relative;
 
+  // Minimum distances.
+  padding-top: 95px;
+  padding-bottom: 95px;
+
   &.viewport-height {
     height: 100vh;
   }
@@ -17,5 +21,9 @@
 
   .column {
     height: inherit;
+  }
+
+  .image {
+    text-align: center;
   }
 }
