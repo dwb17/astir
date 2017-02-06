@@ -1,30 +1,55 @@
 .layout-two-thirds {
+  // Flexbox.
+  display: flex;
+
+  .column {
+    position: relative;
+
+    // Fallback.
+    float: left ;
+    min-height: 20px;
+
+    // Flexbox.
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
   .column:nth-child(2n+1) {
     width: 55%;
-    float: left;
-    position: relative;
+
   }
 
   .column:nth-child(2n) {
     width: 45%;
-    float: left;
-    position: relative;
+    max-width: $content-wrapper-max-width*45/100;
+  }
+
+  .content-wrapper {
+    max-width: $section-text-max-width;
+    box-sizing: content-box;
+    margin-left: 0;
+    margin-right: 0;
+
+    // We might want to change this class in order to avoid overwriting css.
+    padding-right: 0;
+    padding-left: 5%;
+
   }
 
   // Inverse layout
   &.odd {
+    // Fallback.
+    .column {
+      float: right;
+    }
+    // Flexbox.
+    justify-content: flex-end;
     .content-wrapper {
+      padding-left: 0;
+      padding-right: 5%;
     }
-    .column:nth-child(2n+1) {
-      width: 45%;
-      float: right;
-      position: relative;
-    }
-
     .column:nth-child(2n) {
-      width: 55%;
-      float: right;
-      position: relative;
+      order: -1;
     }
   }
 }
