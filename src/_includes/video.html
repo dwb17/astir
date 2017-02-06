@@ -1,10 +1,9 @@
 {% assign video = include.param %}
 <div class="video text--centered {{include.variantClass}}">
-  <video loop autoplay muted class="video__tag">
+  <video loop muted class="video__tag">
   </video>
   <div style="display:none" class=""><img src="{{site.url}}{{ video.videoPoster }}" /></div>
   <div class="video__cover" style="background-image:url({{site.url}}{{ video.videoPoster }});"></div>
-
   <div class="video__content">
     <h1 class="title">{{ video.title }}</h1>
     <h2 class="text">{{ video.subtitle }}</h2>
@@ -27,12 +26,15 @@
     // Container element
     container: document.querySelector('.video'),
 
+    // Pay button for mobile
+    //playButton: document.querySelector('#mobile-play-button'),
+
     // Resize
     resize: true,
 
-    // autoplay: false,
+    autoplay: true,
 
-    isMobile: window.matchMedia('(max-width: 768px)').matches,
+    //isMobile: window.matchMedia('(max-width: 768px)').matches,
 
     // Array of objects containing the src and type
     // of different video formats to add
