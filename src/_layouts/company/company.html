@@ -1,6 +1,83 @@
 ---
 layout: default
 ---
+<script src="{{site.url}}/assets/javascript/noframework.waypoints.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    // Line chart.
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2013',  1000,      400],
+      ['2014',  1170,      460],
+      ['2015',  660,       1120],
+      ['2016',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Company Performance',
+      hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0},
+      animation: {
+        duration: 1000,
+        easing: 'in'
+      }
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+    // Waypoint, start
+    var waypoint = new Waypoint({
+      element: document.getElementById('chart_div'),
+      handler: function(direction) {
+        chart.draw(data, options);
+      }
+    })
+
+
+    // Donut chart
+    var donutData = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+
+      var donutOptions = {
+        title: 'My Daily Activities',
+        pieHole: 0.7,
+        legend: 'none',
+        animation: {
+          duration: 1000,
+          easing: 'in'
+        },
+      };
+
+      var donutChart1 = new google.visualization.PieChart(document.getElementById('donutchart_1'));
+
+      // Waypoint, start
+      var waypoint = new Waypoint({
+        element: document.getElementById('donutchart_1'),
+        handler: function(direction) {
+          donutChart1.draw(donutData, donutOptions);
+        }
+      })
+
+      var donutChart2 = new google.visualization.PieChart(document.getElementById('donutchart_2'));
+      donutChart2.draw(donutData, donutOptions);
+
+      var donutChart3 = new google.visualization.PieChart(document.getElementById('donutchart_3'));
+      donutChart3.draw(donutData, donutOptions);
+
+  }
+
+</script>
+
 {% assign langcode = page.lang %}
 {% for companyItems in site.data.company[langcode] %}
   {% assign companyItem = companyItems[1] %}
