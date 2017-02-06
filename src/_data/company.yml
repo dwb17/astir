@@ -56,6 +56,7 @@ Today, Astir sells its products to more than 45 countries across 5 continents se
     subtitle: "GLOBAL REACH"
     body: "Astir crown corks are manufactured in our strategically located plants in Greece, and Canada. Our efficient and fast growing distribution network distributes our crowns to more than 700 destinations globally, in more than 45 counties across 5 continents from New Zealand to California and South Africa to Ireland. We proudly serve more than 400 different clients globally across developed, developing and emerging markets."
     variantClasses: ""
+    layout: "layout-two-column"
     id: "global-reach"
     includeArea: "company/global-reach-map.html"
   clients:
@@ -64,6 +65,7 @@ Today, Astir sells its products to more than 45 countries across 5 continents se
     subtitle: "CLIENTS"
     body: "Astir’s flexibility, consistency and technical expertise has gained our company the reputation of a trusted and reliable partner, offering high-standard products with the industry’s best price-quality ratio and shortest lead times. No bureaucracy, no surprises, no limits. Just zero-fault crown corks, always there, always on time. That’s why famous beer and soft drinks companies as well as exquisite, innovative and fast growing craft breweries choose to print their logo on Astir crown corks."
     variantClasses: ""
+    layout: "layout-two-column"
     id: "clients"
     includeArea: "company/clients.html"
 el:
