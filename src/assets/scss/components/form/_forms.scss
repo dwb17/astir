@@ -57,7 +57,7 @@ label {
 }
 
 .form-actions {
-  @include clearfix();
+  clear: both;
   text-align: right;
 }
 

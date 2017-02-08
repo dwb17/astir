@@ -1,20 +1,24 @@
 {% assign node = include.param %}
-<div class="section {{ node.variantClasses }} {{ node.layout }} clearfix" id="{{node.id}}" style="background-image:url({{ node.bgImage }}); background-position: {{ node.bgImagePosition }}; background-size: {{ node.bgImageSize }};">
+<div class="section {{ node.variantClasses }} {{ node.layout }} clearfix" id="{{node.id}}" {% if(node.bgImage) %}style="background-image:url({{ node.bgImage }}); background-position: {{ node.bgImagePosition }}; background-size: {{ node.bgImageSize }};"{% endif %}>
   <div class="column">
     {% if node.image %}
-      <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+      <div class="js-waypoint-image">
+        <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+      </div>
     {% endif %}
   </div>
-  <div class="column">
+  <div class="column ">
     <div class="content-wrapper">
-      {% if node.subtitle %}
-      <h2 class="subtitle">{{ node.subtitle }}</h2>
-      {% endif %}
-      <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
-      <div class="text">{{ node.body | markdownify }}</div>
-      {% if node.buttonLink %}
-      <a href="{{ site.url }}{{ node.buttonLink }}" class="btn {{ node.buttonClasses }}">{{ node.buttonText }}</a>
-      {% endif %}
+      <div class="js-waypoint-text">
+        {% if node.subtitle %}
+        <h2 class="subtitle">{{ node.subtitle }}</h2>
+        {% endif %}
+        <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
+        <div class="text">{{ node.body | markdownify }}</div>
+        {% if node.buttonLink %}
+        <a href="{{ site.url }}{{ node.buttonLink }}" class="btn {{ node.buttonClasses }}">{{ node.buttonText }}</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

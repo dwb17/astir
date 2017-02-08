@@ -10,8 +10,10 @@
     min-height: 20px;
 
     // Flexbox.
+    justify-content: center;
     margin-top: auto;
     margin-bottom: auto;
+
   }
 
   .column:nth-child(2n+1) {

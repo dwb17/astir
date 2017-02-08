@@ -2,6 +2,7 @@
   font-size: $font-size-huge;
   font-family: $pf-thin;
   color: $brand-primary;
+  margin-bottom: 1rem;
 
   &--large {
     font-size: $font-size-lg;
@@ -21,6 +22,8 @@
     font-size: $text-large;
     font-family: $pf-light;
   }
+}
 
-
+.subtitle {
+  margin-bottom: 1rem;
 }

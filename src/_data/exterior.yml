@@ -20,7 +20,6 @@ en:
     title_variantClasses: "title--medium"
     body: "Choose Silver or Gold steel from the tabs below. Drag left/right the red line to see the difference"
     text_variantClasses: "text--small"
-    image: http://lorempixel.com/400/200/sports/2
     layout: "column--full-width"
     id: "exterior-diferrence"
     includeArea: "crown/silver-gold.html"

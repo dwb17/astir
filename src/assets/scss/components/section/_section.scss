@@ -2,25 +2,26 @@
   //
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden;
 
   // Minimum distances.
   padding-top: 95px;
   padding-bottom: 95px;
 
-  &.viewport-height {
-    height: 100vh;
-  }
 
-  .content-wrapper {
-    /*
-      Might want to add class for this
-    @include vertically-centered();
-    */
-    height: inherit;
+  &.viewport-height {
+    height: 100%;
+    //min-height: 576px;
+    //center only within a viewport-height element
+    .content-wrapper,
+    .image {
+      //  Might want to add class for this
+      //@include vertically-centered();
+    }
   }
 
   .column {
-    height: inherit;
+    //height: inherit;
   }
 
   .image {

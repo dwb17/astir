@@ -6,6 +6,7 @@ $gray-dark:                 #333333 !default;
 $gray-light:                #808080 !default;
 $gray-lighter:              #666666 !default;
 $gray-lightest:             #999999 !default;
+$pastel:                    #eee2cc !default;
 $white:                     #ffffff !default;
 $black:                     #000000 !default;
 $input-line:                #f4aaad;
@@ -174,7 +175,9 @@ $container-medium: 560px;
 $container-small: 500px;
 
 $section-text-max-width: 420px;
-$content-wrapper-max-width: 1240px;
+
+// Sync with bootstrap
+$content-wrapper-max-width: map-get($container-max-widths, xl);
 
 // Gutter
 $gutter: 30px;

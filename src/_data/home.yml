@@ -12,7 +12,7 @@ en:
     FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
   leader:
     title: "A global leader in crown corks"
-    variantClasses: "text--centered "
+    variantClasses: "text--centered viewport-height"
     layout: "layout-stacked"
     buttonText: "THE COMPANY"
     buttonLink: "/company/"
@@ -21,37 +21,37 @@ en:
     image: "/images/bootle-caps.jpg"
     bgImage: "/images/the-company.jpg"
     bgImagePosition: "center center"
-    bgImageSize: "auto"
+    bgImageSize: "cover"
     id: leader
   facilities:
     title: "State of the art plant"
-    variantClasses: ""
+    variantClasses: "viewport-height"
     layout: "layout-two-thirds"
     buttonText: "FACILITIES"
     buttonLink: "/facilities/"
     buttonClasses: "btn-primary"
     body: "One of the most advanced, vertically integrated production sites in the global metal packaging sector."
     image: "/images/facilities.png"
-    bgImage: ""
+    bgImage: "/images/home-fork-lift.jpg"
     bgImagePosition: "right top"
-    bgImageSize: "auto"
+    bgImageSize: "auto 70%"
     id: facilities
   crown-corks:
     title: "Elegantly crafted"
-    variantClasses: "on-brand-color odd"
+    variantClasses: "on-brand-color odd viewport-height"
     layout: "layout-two-thirds"
     buttonText: "CROWN CORKS"
     buttonLink: "/crown-corks/"
     buttonClasses: "btn-secondary"
     body: "Astir’s crowns stand out for their supreme quality and excellent performance across all available specifications."
     image: "/images/crown-corks.png"
-    bgImage: ""
+    bgImage: "/images/home-inspection.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "cover"
+    bgImageSize: "auto 85%"
     id: crown-corks
   logistics:
     title: "Quality and reliability"
-    variantClasses: ""
+    variantClasses: "viewport-height"
     layout: "layout-two-thirds"
     buttonText: "LOGISTICS"
     buttonLink: "/logistics/"
@@ -64,7 +64,7 @@ en:
     id: logistics
   why-crown-corks:
     title: "The perfect closure"
-    variantClasses: "on-dark-color odd"
+    variantClasses: "on-dark-color odd viewport-height"
     layout: "layout-two-thirds"
     buttonText: "CROWN CORKS"
     buttonLink: "/crown-corks/"

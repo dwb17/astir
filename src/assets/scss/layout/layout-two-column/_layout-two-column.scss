@@ -1,6 +1,4 @@
 .layout-two-column {
-  // Fallback.
-  text-align: center;
 
   // Flexbox.
   display: flex;
@@ -15,7 +13,7 @@
     // Fallback.
     display: inline-block;
     vertical-align: middle;
-    text-align: left;
+    //text-align: left;
 
     // Flexbox;
     display: flex;
@@ -41,7 +39,13 @@
 
     &--full-width {
       width: 100%;
-      clear: both
+      clear: both;
+      float: none;
+      display: block;
+      + .column {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 

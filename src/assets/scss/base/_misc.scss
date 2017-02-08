@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5,11 +8,13 @@ body {
     opacity: 0;
   }
 }
+
 // Override btn, chnage font-size and paddings
 // due to capitlization on them.
 .btn {
   font-size: $font-size-xs;
   padding-bottom: 0.6rem;
+  margin-top: 1rem;
 }
 
 @mixin vertically-centered() {
@@ -66,4 +71,28 @@ body {
   .subtitle {
     @extend .text--light-colored;
   }
+}
+
+// History two column
+#history {
+  .text {
+    column-count: 2;
+    column-gap: 1rem;
+    max-width: $content-wrapper-max-width;
+    text-align: left;
+  }
+  // Adding extra spacing to image
+  .image {
+    margin-bottom: 3rem;
+  }
+}
+
+// Why crwon corks
+#why-crown-works {
+  background-color: $pastel;
+}
+
+// Animate
+.is-going-to-be-animated {
+  visibility: hidden;
 }
