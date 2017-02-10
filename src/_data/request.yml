@@ -2,7 +2,7 @@
 en:
   request:
     title: "Raise a Request"
-    variantClasses: "on-brand-color"
+    variantClasses: ""
     title_variantClasses: 'title--large'
     body: "A dedicated member of our team stands ready to assist you."
     buttonText: "CONTACT US"

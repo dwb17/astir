@@ -7,17 +7,17 @@ layout: default
   {% if contactItems[0] == "video" %}
       {% include video.html param=contactItem %}
   {% elsif contactItems[0] == "contact" %}
-    <div class="text--centered">
+    <div class="text--centered contact">
       <h1 class="title title--large">{{ contactItem.title }}</h1>
 
       <h3 class="title--small">{{ contactItem.callusLabel }}</h3>
-      <div class="text--label">{{ contactItem.callusNumber }}</div>
+      <div class="text--label contact__telephone"><a href="tel:{{ contactItem.callusNumber }}">{{ contactItem.callusNumber }}</a></div>
 
       <h3 class="title--small">{{ contactItem.skypeLabel }}</h3>
       <a class="contact__skype-number" href="skype:{{ site.data.contact[langcode].contact.skypeUsername }}?call"><i class="fa fa-skype" aria-hidden="true"></i>{{ site.data.contact[langcode].contact.skypetext }}</a>
 
       <h3 class="title--small">{{ contactItem.enquiries }}</h3>
-      <div class="text text--medium"><a href="mailto:{{ contactItem.email }}">{{ contactItem.email }}</a></div>
+      <div class="text text--medium contact__email"><a href="mailto:{{ contactItem.email }}">{{ contactItem.email }}</a></div>
 
       <h3 class="title--small">{{ contactItem.headquartersLabel }}</h3>
       <div class="text">{{ contactItem.headquartersAddress }}</div>

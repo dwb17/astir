@@ -4,34 +4,37 @@ layout: default
 {% assign langcode = page.lang %}
 {% for crownItems in site.data.crown[langcode] %}
   {% assign crownItem = crownItems[1] %}
-  <!-- video -->
   {% if crownItems[0] == "video" %}
       {% include video.html param=crownItem %}
   {% else %}
-    <!-- Exterior side template -->
     {% if crownItem.id == "exterior-side" %}
-    <!-- render the Section into -->
       {% include section.html param=crownItem %}
-      <!-- Get exterior-side data and render -->
       <div class="container">
         <div class="row layout-two-column">
         {% for exteriorItems in site.data.exterior[langcode] %}
           {% assign exteriorItem = exteriorItems[1] %}
-            {% include item.html param=exteriorItem %}
-            <!-- Add the extra include Markup -->
-            {% if exteriorItem.includeArea %}
-              {% include {{ exteriorItem.includeArea }} %}
+            {% if exteriorItem.id == 'exterior-diferrence' %}
+              </div>
+            </div>
+            <div class="container">
+              <div class="row layout-stacked">
+                {% include item.html param=exteriorItem %}
+                {% if exteriorItem.includeArea %}
+                  {% include {{ exteriorItem.includeArea }} %}
+                {% endif %}
+              </div>
+            </div>
+            {% else %}
+                {% include item.html param=exteriorItem %}
             {% endif %}
         {% endfor %}
         </div>
       </div>
     {% else %}
-      <!-- Default template -->
       {% include section.html param=crownItem %}
     {% endif %}
   {% endif %}
 {% endfor %}
-<!-- Products template -->
 {% for productItems in site.data.products[langcode] %}
   {% assign productItem = productItems[1] %}
     {% include section.html param=productItem %}

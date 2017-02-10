@@ -1,11 +1,13 @@
 {% assign node = include.param %}
 <div class="slice {{ node.variantClasses }} {{ node.layout }} clearfix" id="{{node.id}}">
-  <div class="column">
-    <h2 class="subtitle">{{ node.subtitle }}</h2>
-    <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
-    <div class="text">{{ node.body }}</div>
-  </div>
-  <div class="column">
-    <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>    
+  <div class="content-container">
+    <div class="column">
+      <h2 class="subtitle">{{ node.subtitle }}</h2>
+      <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
+      <div class="text">{{ node.body }}</div>
+    </div>
+    <div class="column">
+      <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+    </div>
   </div>
 </div>

@@ -3,7 +3,21 @@
   // Flexbox.
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  // contain content
+  .content-container {
+    max-width: $content-wrapper-max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.vertically-centered {
+
+    justify-content: center;
+    .column {
+      justify-content: center;
+    }
+  }
 
   .column {
     width: 50%;

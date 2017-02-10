@@ -87,6 +87,11 @@ body {
   }
 }
 
+// Home page logistics
+#logistics {
+  background-color: #f2f2f2;
+}
+
 // Why crwon corks
 #why-crown-works {
   background-color: $pastel;
@@ -95,4 +100,12 @@ body {
 // Animate
 .is-going-to-be-animated {
   visibility: hidden;
+}
+
+
+// Content widths
+.content-narrow {
+  max-width: $section-text-max-width;
+  margin-left: auto;
+  margin-right: auto;
 }

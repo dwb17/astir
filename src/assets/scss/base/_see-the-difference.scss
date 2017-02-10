@@ -41,13 +41,15 @@ ul.tabs li.current{
 
 .cd-image-label {
   position: absolute;
-  bottom: 0;
+  top: 80%;
   right: 0;
-  color: #ffffff;
-  padding: 1em;
   opacity: 0;
   transform: translateY(20px);
   transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
+}
+
+.cd-image-label div {
+	margin: 0;
 }
 .cd-image-label.is-hidden {
   visibility: hidden;
@@ -130,7 +132,7 @@ ul.tabs li.current{
   margin-left: -22px;
   margin-top: -22px;
   border-radius: 50%;
-  background: #dc717d url("/images/cd-arrows.png") no-repeat center center;
+  background: $brand-primary url("/images/cd-arrows.png") no-repeat center center;
   cursor: move;
   box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
   opacity: 0;

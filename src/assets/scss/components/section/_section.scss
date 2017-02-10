@@ -5,13 +5,14 @@
   overflow: hidden;
 
   // Minimum distances.
-  padding-top: 95px;
-  padding-bottom: 95px;
+  //centering within viewport height
+  //padding-top: 95px;
+  //padding-bottom: 95px;
 
 
   &.viewport-height {
     height: 100%;
-    //min-height: 576px;
+    min-height: 476px;
     //center only within a viewport-height element
     .content-wrapper,
     .image {

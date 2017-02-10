@@ -1,43 +1,45 @@
 {% assign formClass = include.formVisibily %}
 {% assign buttonFormClass = include.buttonVisibily %}
 {% assign langcode = page.lang %}
-{% for requestItems in site.data.request[langcode] %}
-  {% assign requestItem = requestItems[1] %}
-    <div class="text--centered {{ requestItem.variantClasses }} {{ requestItem.layout }}"  id="{{ requestItem.id }}">
-      <h3 class="title {{ requestItem.title_variantClasses }}">{{ requestItem.title }}</h3>
-      <div class="text">{{ requestItem.body }}</div>
-      <a href="{{ requestItem.buttonLink }}" class="btn {{ requestItem.buttonClasses }} {{ buttonFormClass }}">{{ requestItem.buttonText }}</a>
-    </div>
-{% endfor %}
-<div id="form-response" class="js-hidden text"></div>
-<form accept-charset="UTF-8" id="request-form" action="{{ site.url }}/request.php" method="POST" class="on-brand-color request-form {{ formClass }}">
-  <div class="container">
-    <div id="webform-component-name" class="js-floating-label form-item is-floating-label">
-      <label for="edit-submitted-name">NAME </label>
-      <input type="text" class="form-text" maxlength="128" size="60" value="" name="name" id="edit-submitted-name">
+<div class="contact-form on-brand-color">
+  {% for requestItems in site.data.request[langcode] %}
+    {% assign requestItem = requestItems[1] %}
+      <div class="text--centered {{ requestItem.variantClasses }} {{ requestItem.layout }}"  id="{{ requestItem.id }}">
+        <h3 class="title {{ requestItem.title_variantClasses }}">{{ requestItem.title }}</h3>
+        <div class="text">{{ requestItem.body }}</div>
+        <a href="{{ requestItem.buttonLink }}" class="btn {{ requestItem.buttonClasses }} {{ buttonFormClass }}">{{ requestItem.buttonText }}</a>
       </div>
-    <div id="webform-component-surname" class="js-floating-label form-item is-floating-label">
-      <label for="edit-submitted-surname">SURNAME </label>
-      <input type="text" class="form-text" maxlength="128" size="60" value="" name="surname" id="edit-submitted-surname">
+  {% endfor %}
+  <div id="form-response" class="js-hidden text"></div>
+  <form accept-charset="UTF-8" id="request-form" action="{{ site.url }}/request.php" method="POST" class="on-brand-color request-form {{ formClass }}">
+    <div class="container">
+      <div id="webform-component-name" class="js-floating-label form-item is-floating-label">
+        <label for="edit-submitted-name">NAME </label>
+        <input type="text" class="form-text" maxlength="128" size="60" value="" name="name" id="edit-submitted-name">
+        </div>
+      <div id="webform-component-surname" class="js-floating-label form-item is-floating-label">
+        <label for="edit-submitted-surname">SURNAME </label>
+        <input type="text" class="form-text" maxlength="128" size="60" value="" name="surname" id="edit-submitted-surname">
+      </div>
+      <div id="webform-component-e-mail" class="js-floating-label form-item is-floating-label">
+        <label for="edit-submitted-e-mail">E-MAIL <span title="This field is required." class="form-required">*</span></label>
+        <input type="email" size="60" name="e_mail" id="edit-submitted-e-mail" class="email form-text form-email required" required="required">
+      </div>
+      <div id="webform-component-telephone" class="js-floating-label form-item is-floating-label">
+        <label for="edit-submitted-telephone">TELEPHONE </label>
+       <input type="text" class="form-text" maxlength="128" size="60" value="" name="telephone" id="edit-submitted-telephone">
+      </div>
+      <div id="webform-component-message" class="js-floating-label form-item is-floating-label">
+        <label for="edit-submitted-message">MESSAGE <span title="This field is required." class="form-required">*</span></label>
+        <div class="form-textarea-wrapper"><textarea class="form-textarea required" rows="5" cols="60" name="message" id="edit-submitted-message" placeholder="Type your message" required="required"></textarea></div>
+      </div>
+      <div id="webform-component-url" class="js-floating-label form-item is-floating-label">
+        <label for="edit-submitted-url">URL </label>
+        <input type="url" class="form-text ignore" maxlength="128" size="60" value="" name="url" id="edit-submitted-url" required>
+      </div>
+      <div class="form-actions clearfix">
+        <input type="submit" value="SEND" name="op" class="webform-submit btn btn-secondary form-submit">
+      </div>
     </div>
-    <div id="webform-component-e-mail" class="js-floating-label form-item is-floating-label">
-      <label for="edit-submitted-e-mail">E-MAIL <span title="This field is required." class="form-required">*</span></label>
-      <input type="email" size="60" name="e_mail" id="edit-submitted-e-mail" class="email form-text form-email required" required="required">
-    </div>
-    <div id="webform-component-telephone" class="js-floating-label form-item is-floating-label">
-      <label for="edit-submitted-telephone">TELEPHONE </label>
-     <input type="text" class="form-text" maxlength="128" size="60" value="" name="telephone" id="edit-submitted-telephone">
-    </div>
-    <div id="webform-component-message" class="js-floating-label form-item is-floating-label">
-      <label for="edit-submitted-message">MESSAGE <span title="This field is required." class="form-required">*</span></label>
-      <div class="form-textarea-wrapper"><textarea class="form-textarea required" rows="5" cols="60" name="message" id="edit-submitted-message" placeholder="Type your message" required="required"></textarea></div>
-    </div>
-    <div id="webform-component-url" class="js-floating-label form-item is-floating-label">
-      <label for="edit-submitted-url">URL </label>
-      <input type="url" class="form-text ignore" maxlength="128" size="60" value="" name="url" id="edit-submitted-url" required>
-    </div>
-    <div class="form-actions clearfix">
-      <input type="submit" value="SEND" name="op" class="webform-submit btn btn-secondary form-submit">
-    </div>
-  </div>
-</form>
+  </form>
+</div>

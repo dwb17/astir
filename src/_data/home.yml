@@ -18,8 +18,8 @@ en:
     buttonLink: "/company/"
     buttonClasses: "btn-primary"
     body: "Crowning the world’s favourite beer and beverage brands."
-    image: "/images/bootle-caps.jpg"
-    bgImage: "/images/the-company.jpg"
+    image: "/images/homepage/Global-leader-Crown-Corks.png"
+    bgImage: "/images/homepage/Global-map.jpg"
     bgImagePosition: "center center"
     bgImageSize: "cover"
     id: leader
@@ -31,8 +31,8 @@ en:
     buttonLink: "/facilities/"
     buttonClasses: "btn-primary"
     body: "One of the most advanced, vertically integrated production sites in the global metal packaging sector."
-    image: "/images/facilities.png"
-    bgImage: "/images/home-fork-lift.jpg"
+    image: "/images/homepage/State-of-the-art-plant.png"
+    bgImage: "/images/homepage/State-of-the-art-plant-back.jpg"
     bgImagePosition: "right top"
     bgImageSize: "auto 70%"
     id: facilities
@@ -44,8 +44,8 @@ en:
     buttonLink: "/crown-corks/"
     buttonClasses: "btn-secondary"
     body: "Astir’s crowns stand out for their supreme quality and excellent performance across all available specifications."
-    image: "/images/crown-corks.png"
-    bgImage: "/images/home-inspection.jpg"
+    image: "/images/homepage/Elegantly-Crafted---Kapaki.png"
+    bgImage: "/images/homepage/Elegantly-Crafted-Back.jpg"
     bgImagePosition: "left top"
     bgImageSize: "auto 85%"
     id: crown-corks
@@ -57,10 +57,10 @@ en:
     buttonLink: "/logistics/"
     buttonClasses: "btn-primary"
     body: "Efficiently produced and delivered in compliance with all international standards at record lead times."
-    image: "/images/logistics.png"
-    bgImage: ""
+    image: "/images/homepage/Quality.png"
+    bgImage: "/images/homepage/Quality-back.jpg"
     bgImagePosition: "left center"
-    bgImageSize: "auto"
+    bgImageSize: "auto 80%"
     id: logistics
   why-crown-corks:
     title: "The perfect closure"
@@ -70,7 +70,7 @@ en:
     buttonLink: "/crown-corks/"
     buttonClasses: "btn-secondary"
     body: "Iconic design, functional simplicity and consistent reliability."
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/homepage/Perfect-Closure-Back.jpg"
     bgImagePosition: "left top"
     bgImageSize: "cover"
     id: why-crown-corks

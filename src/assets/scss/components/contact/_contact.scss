@@ -1,14 +1,30 @@
 // request form
-#request-form-content {
+.contact-form {
   padding-top: 6rem;
   padding-bottom: 6rem;
+
 }
 
 .contact {
+  padding-bottom: 6rem;
+
+  .title--small {
+    padding-bottom: .3rem;
+    padding-top: 1.8rem;
+  }
+  
+  &__telephone,
+  &__email {
+    font-size: $contact-title;
+    a {
+      color: $gray-dark;
+    }
+  }
   &__skype-number {
     font-size: 1.25rem;
     i {
       color: #12A5F4;
+      padding-right: 10px;
     }
   }
 }

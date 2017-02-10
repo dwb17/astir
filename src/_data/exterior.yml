@@ -15,7 +15,7 @@ en:
     image: http://lorempixel.com/400/200/sports/2
     layout: ""
   2:
-    variantClasses: "text--centered"
+    variantClasses: "text--centered content-narrow"
     title: "SEE THE DIFFERENCE"
     title_variantClasses: "title--medium"
     body: "Choose Silver or Gold steel from the tabs below. Drag left/right the red line to see the difference"
