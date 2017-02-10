@@ -77,7 +77,7 @@ body {
 #history {
   .text {
     column-count: 2;
-    column-gap: 1rem;
+    column-gap: 2rem;
     max-width: $content-wrapper-max-width;
     text-align: left;
   }
@@ -102,6 +102,11 @@ body {
   visibility: hidden;
 }
 
+// COmpany
+#company-team {
+  background-color: $black;
+  padding-bottom: 150px;
+}
 
 // Content widths
 .content-narrow {

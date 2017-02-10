@@ -1,0 +1,7 @@
+.image-slice {
+
+  &--contained {
+    max-width: $content-wrapper-max-width;
+    margin: 0 auto;
+  }
+}
