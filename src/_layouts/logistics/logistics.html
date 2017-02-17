@@ -13,12 +13,14 @@ layout: default
 
     {% elsif logisticsItem.id == "packaging" %}
       {% include slice.html param=logisticsItem %}
-      <div class="container">
-        <div class="row layout-two-column">
-        {% for packagingItems in site.data.packaging[langcode] %}
-          {% assign packagingItem = packagingItems[1] %}
-            {% include item.html param=packagingItem %}
-        {% endfor %}
+      <div class="grey-background">
+        <div class="container">
+          <div class="row layout-two-column">
+          {% for packagingItems in site.data.packaging[langcode] %}
+            {% assign packagingItem = packagingItems[1] %}
+              {% include item.html param=packagingItem %}
+          {% endfor %}
+          </div>
         </div>
       </div>
 
@@ -30,7 +32,7 @@ layout: default
           {% assign certificatesItem = certificatesItems[1] %}
             <div class="col-4">
               <h3 class="title title--small text--centered">{{ certificatesItem.title }}</h3>
-              <div class="image"><img alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
+              <div class="image text--centered"><img alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
             </div>
         {% endfor %}
         </div>

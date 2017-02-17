@@ -4,8 +4,6 @@ en:
     title: "TOP QUALITY CROWN CORKS"
     subtitle: "Manufacturing bespoke excellence"
     videomp4: "/assets/video/home/home.mp4"
-    videowebm: "/assets/video/home/home.webm"
-    videoogv: "/assets/video/home/home.ogv"
     videoPoster: "/assets/video/home/home.jpg"
     WatchFullVideo: true
     WatchVideoLinkText: "WATCH VIDEO"
@@ -48,7 +46,7 @@ en:
     bgImage: "/images/homepage/Elegantly-Crafted-Back.jpg"
     bgImagePosition: "left top"
     bgImageSize: "auto 85%"
-    id: crown-corks
+    id: home-crown-corks
   logistics:
     title: "Quality and reliability"
     variantClasses: "viewport-height"

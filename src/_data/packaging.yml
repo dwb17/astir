@@ -6,7 +6,7 @@ en:
     title_variantClasses: "title--medium"
     body: "Stacked in palettes of 400,000 or 500,000 pieces"
     text_variantClasses: "text--small"
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/logistics/1.jpg"
     layout: "layout-stacked"
   1:
     variantClasses: "text--centered"
@@ -14,7 +14,7 @@ en:
     title_variantClasses: "title--medium"
     body: "Each row contains: 10 cartons / 100,000 pcs"
     text_variantClasses: "text--small"
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/logistics/2.png"
     layout: "layout-stacked"
   2:
     variantClasses: "text--centered"
@@ -22,7 +22,7 @@ en:
     title_variantClasses: "title--medium"
     body: "Net weight pallet: 840 kgs"
     text_variantClasses: "text--small"
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/logistics/3.jpg"
     layout: "layout-stacked"
   3:
     variantClasses: "text--centered"
@@ -30,7 +30,7 @@ en:
     title_variantClasses: "title--medium"
     body: "Net weight pallet: 1,050 kgs"
     text_variantClasses: "text--small"
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/logistics/4.jpg"
     layout: "layout-stacked"
   4:
     variantClasses: "text--centered"
@@ -38,14 +38,14 @@ en:
     title_variantClasses: "title--medium"
     body: "Mainly used in large scale orders"
     text_variantClasses: "text--small"
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/logistics/5.jpg"
     layout: "layout-stacked"
   5:
     variantClasses: "text--centered"
     title: ""
     title_variantClasses: "title--medium"
     body: ""
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/logistics/6.jpg"
     layout: "layout-stacked"
 el:
   production:

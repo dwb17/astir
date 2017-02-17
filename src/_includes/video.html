@@ -1,4 +1,5 @@
 {% assign video = include.param %}
+
 <!-- Should replicate https://atomicobject.com/-->
 <div class="video text--centered {{include.variantClass}}">
   <video loop muted class="video__tag">
@@ -21,6 +22,7 @@
 
 <script src="{{site.url}}/assets/javascript/bideo.js"></script>
 <script type="text/javascript">
+
 (function () {
 
   var bv = new Bideo();
@@ -39,14 +41,14 @@
 
     autoplay: true,
 
-    //isMobile: window.matchMedia('(max-width: 768px)').matches,
+    isMobile: window.matchMedia('(max-width: 768px)').matches,
 
     // Array of objects containing the src and type
     // of different video formats to add
     src: [
       {
-        src: '{{site.url}}{{ video.videowebm }}',
-        type: 'video/webm'
+        src: '{{site.url}}{{ video.videomp4 }}',
+        type: 'video/mp4'
       },
     ],
 

@@ -8,6 +8,7 @@ layout: default
       {% include video.html param=crownItem %}
   {% else %}
     {% if crownItem.id == "exterior-side" %}
+      <div id="exterior-side-wrapper" style="background-image:url({{ crownItem.bgImage }}); background-position: {{ crownItem.bgImagePosition }}; background-size: {{ crownItem.bgImageSize }};">
       {% include section.html param=crownItem %}
       <div class="container">
         <div class="row layout-two-column">
@@ -30,6 +31,7 @@ layout: default
         {% endfor %}
         </div>
       </div>
+    </div>
     {% else %}
       {% include section.html param=crownItem %}
     {% endif %}

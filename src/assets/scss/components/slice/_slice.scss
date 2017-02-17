@@ -3,6 +3,12 @@
   padding-bottom: 150px;
   background-repeat: no-repeat;
 
+  &--with-centered-image {
+    .image {
+      text-align: center;
+    }
+  }
+
   h2 {
     @extend .title--small;
   }

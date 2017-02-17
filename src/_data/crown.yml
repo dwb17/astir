@@ -3,7 +3,8 @@ en:
   video:
     title: "CROWN CORKS"
     subtitle: "Safe, efficient and established. Astir crown corks stand out for their excellent quality and zero fault tolerance. We use high-standard raw materials and advanced technologies to create brand-building metal packaging solutions with the lowest ecological foot print."
-    videoLocation: "/assets/video/corks/corks"
+    videomp4: "/assets/video/corks/corks.mp4"
+    videoPoster: "/assets/video/home/home.jpg"
     WatchFullVideo: false
   crown-corks:
     title: "The anatomy of a crown cork"
@@ -15,10 +16,9 @@ en:
     buttonText: "DOWNLOAD CROWN'S SPECS"
     buttonLink: "/crown-corks/"
     buttonClasses: "btn-primary"
-    image: "/images/bootle-caps.jpg"
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Anatomy-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "60% auto"
     id: "crown-corks"
   exterior-side:
     title: "Steel"
@@ -26,9 +26,9 @@ en:
     variantClasses: "text--centered viewport-height-disabled"
     body: "Both materials offer excellent corrosion resistance, formability, printability, strength in sealing and high performance during bottling. Different thickness and hardness may apply according to the application and glass finish."
     layout: "layout-stacked"
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Steel-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "60% auto"
     id: "exterior-side"
 el:
   production:

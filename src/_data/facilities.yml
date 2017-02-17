@@ -3,14 +3,15 @@ en:
   video:
     title: "FACILITIES"
     subtitle: "As one of the most advanced production sites in the global metal packaging sector , Astir’s central manufacturing plant is devoted to the efficient production of high quality crown corks with the lowest environmental impact."
-    videoLocation: "/assets/video/facilities/facilities"
+    videomp4: "/assets/video/facilities/facilities.mp4"
+    videoPoster: "/assets/video/home/home.jpg"
     WatchFullVideo: false
   production:
     title: "State of the art plant"
     title_variantClasses: "title--large"
     subtitle: "PRODUCTION SITE"
-    body: "Astir ‘s headquarters and main manufacturing facility are strategically located in Athens’ Industrial Park, only 40 kilometers away from Piraeus port and 45 minutes from Athens International Airport with excellent access across the supply chain. With state of the art production equipment and ergonomic design, our premises comply with the strictest quality standards. With an installed capacity in excess of 10 billion crowns annually and a fully automated production process we operate one of the largest crown cork facilities in the world with minimal human intervention and practically zero fault rates."
-    image: http://lorempixel.com/400/200/sports/2
+    body: "Astir's headquarters and main manufacturing facility are strategically located in Athens’ Industrial Park, only 40 kilometers away from Piraeus port and 45 minutes from Athens International Airport with excellent access across the supply chain. With state of the art production equipment and ergonomic design, our premises comply with the strictest quality standards. With an installed capacity in excess of 10 billion crowns annually and a fully automated production process we operate one of the largest crown cork facilities in the world with minimal human intervention and practically zero fault rates."
+    image: "/images/facilities/1.jpg"
     variantClasses: "image-pulled-up slice--with-centered-image"
     layout: "layout-two-column"
     id: "production"
@@ -19,8 +20,8 @@ en:
     title_variantClasses: "title--large"
     subtitle: "FACILITIES"
     body: "In a market where competitive edges are really marginal, we simply make the difference. Our direct customer approach philosophy, the unique flexibility and adaptability of the manufacturing process enables us to address extraordinary requests, optimise distance and time factors and maximize customer satisfaction. All phases of the manufacturing process are vertically integrated. Our in-house prepress department, printing, quality control, packaging and shipping are fine-tuned to guarantee on time delivery at the shortest lead times. Once we receive the artwork and order, everything mobilizes. A creative team develops your artwork and the PDF file is approved in as little as 24 hours. Your batch is scheduled and produced to perfection and be it ground, sea or air transportation, outstanding fault free crown caps arrive to your production line ready to use, in a best value for money and time ratio."
-    image: http://lorempixel.com/400/200/sports/2
-    variantClasses: ""
+    image: "/images/facilities/2.jpg"
+    variantClasses: "grey-background"
     layout: "layout-two-column slice--with-centered-image"
     id: "facilities"
   sustainable:
@@ -28,7 +29,7 @@ en:
     title_variantClasses: "title--large"
     subtitle: "SUSTAINABLE DEVELOPMENT"
     body: "In a market where competitive edges are really marginal, we simply make the difference. Our direct customer approach philosophy, the unique flexibility and adaptability of the manufacturing process enables us to address extraordinary requests, optimise distance and time factors and maximize customer satisfaction. All phases of the manufacturing process are vertically integrated. Our in-house prepress department, printing, quality control, packaging and shipping are fine-tuned to guarantee on time delivery at the shortest lead times. Once we receive the artwork and order, everything mobilizes. A creative team develops your artwork and the PDF file is approved in as little as 24 hours. Your batch is scheduled and produced to perfection and be it ground, sea or air transportation, outstanding fault free crown caps arrive to your production line ready to use, in a best value for money and time ratio."
-    image: http://lorempixel.com/400/200/sports/2
+    image: "/images/facilities/3.jpg"
     variantClasses: "slice-with-image-on-right"
     layout: "layout-two-column"
     id: "sustainable"

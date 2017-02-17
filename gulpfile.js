@@ -133,10 +133,13 @@ gulp.task("html", ["styles"], function () {
       removeCDATASectionsFromCDATA: true,
       collapseWhitespace: true,
       collapseBooleanAttributes: true,
+      collapseInlineTagWhitespace: true,
       removeAttributeQuotes: true,
       removeRedundantAttributes: true,
       keepClosingSlash: true
     })))
+    // Minify inline JS and CSS
+    .pipe($.if("*.html", $.minifyInline()))
     // Send the output to the correct folder
     .pipe(gulp.dest("site"))
     .pipe($.size({title: "optimizations"}));

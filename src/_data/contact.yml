@@ -3,7 +3,8 @@ en:
   video:
     title: "CONTACT"
     subtitle: "As one of the most advanced production sites in the global metal packaging sector , Astir’s central manufacturing plant is devoted to the efficient production of high quality bottle caps with the lowest environmental impact."
-    videoLocation: "/assets/video/contact/contact"
+    videomp4: "/assets/video/contact/contact.mp4"
+    videoPoster: "/assets/video/home/home.jpg"
     WatchFullVideo: false
   contact:
     title: "Contact us 24/7"

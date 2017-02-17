@@ -56,8 +56,11 @@
   }
 
   .text {
+    line-height: $line-height-base;
     @extend .text--light-colored;
-    padding-bottom: .5rem;
+    max-width: $container-medium;
+    margin: 0 auto;
+    padding-top: .5rem;
     padding-bottom: 1rem;
   }
 

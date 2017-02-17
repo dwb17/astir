@@ -88,6 +88,7 @@
       });
 
       if (self.opt.isMobile) {
+        /*
         if (self.opt.playButton) {
           self.opt.videoEl.addEventListener('timeupdate', function () {
             if (!self.onLoadCalled) {
@@ -96,7 +97,7 @@
             }
           });
 
-
+          /*
           self.opt.playButton.addEventListener('click', function () {
             self.opt.pauseButton.style.display = 'inline-block';
             this.style.display = 'none';
@@ -110,7 +111,9 @@
 
             self.videoEl.pause();
           }, false);
+
         }
+          */
       }
 
       return;

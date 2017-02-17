@@ -7,10 +7,9 @@ en:
     subtitle: "PRIMER"
     counter:  "01"
     body: "White enamel lacquer is mainly used on top of TFS steel. It allows colours to reach a bright and glossy look and gives a pure white appearance. Most Pantone references can be achieved using White enamel."
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Primer-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "60% auto"
     id: "white-primer"
     group: "primer"
     layout: "layout-two-column"
@@ -21,7 +20,6 @@ en:
     subtitle: "PRIMER"
     counter: "02"
     body: "Clear size substrate. It improves colour adhesion to the steel plates, hence always applied to TFS and ETP steel, when metallic appearance is requested."
-    image: http://lorempixel.com/400/200/sports/2
     id: "transparent-primer"
     group: "primer"
     layout: "layout-two-column"
@@ -32,7 +30,6 @@ en:
     subtitle: "PRIMER"
     counter: "03"
     body: "Aluminum size primer unifies the surface finish with a constant aluminum shade look. It is used instead of white lacquer or clear size and also provides excellent adhesion to the applied colours."
-    image: http://lorempixel.com/400/200/sports/2
     id: "aluminum-primer"
     group: "primer"
     layout: "layout-two-column"
@@ -43,10 +40,9 @@ en:
     subtitle: "PRINT"
     counter: "01"
     body: "We can meet most of pantone references on crowns, especially if white base is applied and use Solid Coated as a reference guide. We can even meet your colour target tonality by sending us a sample or a label. We use sophisticated devices and software to allow us to mix internally and create thousands of different colour references."
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Print-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "60% auto"
     buttonText: "DOWNLOAD PRINT SPEC"
     buttonLink: "/pdfs/"
     buttonClasses: "btn-primary"
@@ -60,7 +56,6 @@ en:
     subtitle: "PRINT"
     counter: "02"
     body: "Anything you imagine can be printed in the small crown surface area, using CMYK process printing. We generate fully customized designs including images, photos, faces and any type of fancy prints."
-    image: http://lorempixel.com/400/200/sports/2
     id: "cmyk-print"
     group: "print"
     layout: "layout-two-column"
@@ -71,7 +66,6 @@ en:
     subtitle: "PRINT"
     counter: "03"
     body: "Thermocromic ink changes colours when your beer or beverage is cold enough and ready to drink. This interactive special effect clearly indicates that the product has reached the right temperature, improving the overall drinking experience."
-    image: http://lorempixel.com/400/200/sports/2
     id: "cold-activated-print"
     group: "print"
     layout: "layout-two-column"
@@ -81,10 +75,9 @@ en:
     title_variantClasses: "title--large"
     subtitle: "INTERNAL PRINT"
     body: "Printed crowns help build a strong marketing strategy and customer engagement. We use litho printing to create promotional crown corks with prints under the steel sheet. A number of promo options are available: specific messages, gifts or quotes etc."
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Unique-codes-back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "70 auto"
     id: "internal-print"
     group: "internal-print"
     layout: "layout-two-column"
@@ -94,10 +87,9 @@ en:
     title_variantClasses: "title--large"
     subtitle: "INTERIOR SIDE"
     body: "Internal varnish is applied to all printed sheets in order to allow liner adhesion to the crown shell. It also protects the internal side of the crown cap from corrosion and scratching during the bottling process. There are different types of internal varnish depending on the application."
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Interior-Side-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "75% auto"
     id: "interior-side"
     group: "interior-side"
     layout: "layout-two-column"
@@ -107,10 +99,9 @@ en:
     title_variantClasses: "title--large"
     subtitle: "INJECT COATING"
     body: "Enhance consumer interaction with lottery promotions by printing unique alphanumeric codes under the liner. Our in-house developed software algorithm generates unique codes that are applied with an inkjet head on each crown cork. FDA compliant ink is used in every application."
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Anatomy-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "60% auto"
     id: "inject-coating"
     group: "inject-coating"
     layout: "layout-two-column"
@@ -121,10 +112,9 @@ en:
     subtitle: "INTERIOR PLASTIC LINER"
     counter: "01"
     body: "Enhance consumer interaction with lottery promotions by printing unique alphanumeric codes under the liner. Our in-house developed software algorithm generates unique codes that are applied with an inkjet head on each crown cork. FDA compliant ink is used in every application."
-    image: http://lorempixel.com/400/200/sports/2
-    bgImage: "/images/why-crown-corks.jpg"
+    bgImage: "/images/corks/Interior-Plastic-Liner-Back.jpg"
     bgImagePosition: "left top"
-    bgImageSize: "auto"
+    bgImageSize: "70% auto"
     id: "pry-off-interior"
     group: "interior-liner"
     layout: "layout-two-column"
@@ -135,7 +125,6 @@ en:
     subtitle: "INTERIOR PLASTIC LINER"
     counter: "02"
     body: "A single lip liner profile, mainly used in USA and Canada. Doesn’t need bottle opener but requires extra lubricated and softer type of liner to meet the opening torque specs. Most common profiles are 917 and 912."
-    image: http://lorempixel.com/400/200/sports/2
     id: "twist-off-interior"
     group: "interior-liner"
     layout: "layout-two-column"
@@ -146,7 +135,6 @@ en:
     subtitle: "INTERIOR PLASTIC LINER"
     counter: "03"
     body: "A special liner that absorbs the oxygen remaining in the bottle neck finish, decreasing the beer or beverage oxidation. Oxygen scavenger liners provide extra freshness, better taste and extended shelf life. That’s why they are strongly preferred by premium beer brands and craft breweries"
-    image: http://lorempixel.com/400/200/sports/2
     id: "oxygen-interior"
     group: "interior-liner"
     layout: "layout-two-column"
@@ -157,7 +145,6 @@ en:
     subtitle: "INTERIOR PLASTIC LINER"
     counter: "04"
     body: "A liner profile that actually acts as a barrier to any external contamination such as odor and oxygen ingress into the glass bottle."
-    image: http://lorempixel.com/400/200/sports/2
     id: "oxygen-barrier-interior"
     group: "interior-liner"
     layout: "layout-two-column"
