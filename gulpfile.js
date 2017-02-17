@@ -67,6 +67,11 @@ gulp.task("video", function() {
     .pipe(gulp.dest("site/assets/video/"));
 });
 
+gulp.task("phpmailer", function() {
+  gulp.src('./src/PHPMailer/**')
+    .pipe(gulp.dest("site/PHPMailer/"));
+});
+
 // Optimizes the images that exists
 gulp.task("images", function () {
   return gulp.src("src/images/**")
