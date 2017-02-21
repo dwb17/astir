@@ -238,7 +238,7 @@ gulp.task("publish", ["build"], function () {
 //    .pipe(gulp.dest('./src/assets/javascript'))
 //    .pipe(gulp.dest("site/assets/javascript/"));
 
-gulp.task('scripts-opt', function() {
+gulp.task('scripts-opt', ["scripts-opt-bideo"] function() {
   return gulp.src('./src/assets/javascript/*.js')
     .pipe($.concat('main-scripts.js'))
     .pipe(gulp.dest("site/assets/javascript/"))
@@ -246,6 +246,15 @@ gulp.task('scripts-opt', function() {
     .pipe($.uglify())
     .pipe(gulp.dest("site/assets/javascript/"))
     .pipe(gulp.dest("serve/assets/javascript/"));
+
+});
+
+gulp.task('scripts-opt-bideo', function() {
+  return gulp.src('./src/assets/javascript/vendors/bideo.js')
+    .pipe($.rename('bideo.min.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest("site/assets/javascript/vendors/"))
+    .pipe(gulp.dest("serve/assets/javascript/vendors/"));
 
 });
 
