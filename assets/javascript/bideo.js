@@ -69,51 +69,29 @@
       // Start time of video initialization
       this.startTime = (new Date()).getTime();
 
-      // Create `source` for video
-      this.opt.src.forEach(function (srcOb, i, arr) {
-        var key
-          , val
-          , source = document.createElement('source');
+      // Create `source` for video, Only on desktop.
+      if (!self.opt.isMobile) {
+        this.opt.src.forEach(function (srcOb, i, arr) {
+          var key
+            , val
+            , source = document.createElement('source');
 
-        // Set all the attribute key=val supplied in `src` option
-        for (key in srcOb) {
-          if (srcOb.hasOwnProperty(key)) {
-            val = srcOb[key];
+          // Set all the attribute key=val supplied in `src` option
+          for (key in srcOb) {
+            if (srcOb.hasOwnProperty(key)) {
+              val = srcOb[key];
 
-            source.setAttribute(key, val);
+              source.setAttribute(key, val);
+            }
           }
-        }
 
-        self.videoEl.appendChild(source);
-      });
+          self.videoEl.appendChild(source);
+        });
+      };
 
       if (self.opt.isMobile) {
-        /*
-        if (self.opt.playButton) {
-          self.opt.videoEl.addEventListener('timeupdate', function () {
-            if (!self.onLoadCalled) {
-              self.opt.onLoad && self.opt.onLoad();
-              self.onLoadCalled = true;
-            }
-          });
-
-          /*
-          self.opt.playButton.addEventListener('click', function () {
-            self.opt.pauseButton.style.display = 'inline-block';
-            this.style.display = 'none';
-
-            self.videoEl.play();
-          }, false);
-
-          self.opt.pauseButton.addEventListener('click', function () {
-            this.style.display = 'none';
-            self.opt.playButton.style.display = 'inline-block';
-
-            self.videoEl.pause();
-          }, false);
-
-        }
-          */
+        // No video, show text.
+        document.querySelector('.video__content').className += " is-loaded";
       }
 
       return;
