@@ -20,7 +20,7 @@
   </svg>
 </div>
 
-<script src="{{site.url}}/assets/javascript/bideo.js"></script>
+<script src="{{site.url}}/assets/javascript/vendor/bideo.js"></script>
 <script type="text/javascript">
 
 (function () {
@@ -66,47 +66,3 @@
   });
 }());
 </script>
-
-<!--
-<script type="text/javascript">
-  var req = new XMLHttpRequest();
-  var videoElement = document.getElementById("video");
-  var imageFallback = '{{site.url}}{{ video.videoPoster }}';
-  req.open('GET', '{{site.url}}{{ video.videomp4 }}', true);
-
-  req.timeout="500";
-  req.ontimeout=function(){
-    req.abort();
-    var img = document.createElement("img");
-    img.src = imageFallback;
-    var videoPlaceholder = document.getElementById("video-placeholder");
-    videoPlaceholder.appendChild(img);
-    document.getElementById("body").classList.remove("is-loading");
-  };
-  req.responseType = 'blob';
-
-  req.onload = function() {
-    // Onload is triggered even on 404
-    // so we need to check the status code
-    if (this.status === 200) {
-      var videoBlob = this.response;
-      var vid = URL.createObjectURL(videoBlob); // IE10+
-      // Video is now downloaded
-      // and we can set it as source on the video element
-      videoElement.src = vid;
-      videoElement.play();
-      document.getElementById("body").classList.add('is-loaded');
-      document.getElementById("body").classList.remove("is-loading");
-      URL.revokeObjectURL(videoBlob);
-    }
-  }
-
-  req.onerror = function() {
-   // Error
-  }
-
-  req.send();
-
-
-</script>
-JS -->

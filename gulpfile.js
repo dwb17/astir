@@ -58,7 +58,6 @@ gulp.task("styles", function () {
 
 gulp.task("js", function() {
   gulp.src('./src/assets/javascript/*.js')
-    .pipe(gulp.dest('./src/assets/javascript'))
     .pipe(gulp.dest("site/assets/javascript/"));
 });
 
@@ -121,7 +120,7 @@ gulp.task("html", ["styles"], function () {
   return gulp.src("serve/**/*.html")
     .pipe(assets)
     // Concatenate JavaScript files and preserve important comments
-    .pipe($.if("*.js", $.uglify({preserveComments: "some"})))
+    //.pipe($.if("*.js", $.uglify({preserveComments: "some"})))
     // Minify CSS
     .pipe($.if("*.css", $.minifyCss()))
     // Start cache busting the files
@@ -177,7 +176,7 @@ gulp.task("doctor", $.shell.task("bundle exec jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "jekyll:dev", "js"], function () {
+gulp.task("serve:dev", ["styles", "jekyll:dev", "scripts-opt"], function () {
   bs = browserSync({
     notify: true,
     //proxy: 'http://astir.ninja',
@@ -228,7 +227,26 @@ gulp.task("copy-favicon", function() {
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "video", "copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "video", "phpmailer","copy-favicon");
+});
+
+// concat
+
+//var jsFiles = 'assets/scripts/**/*.js',
+//    jsDest = 's/scripts';
+//gulp.src('./src/assets/javascript/*.js')
+//    .pipe(gulp.dest('./src/assets/javascript'))
+//    .pipe(gulp.dest("site/assets/javascript/"));
+
+gulp.task('scripts-opt', function() {
+  return gulp.src('./src/assets/javascript/*.js')
+    .pipe($.concat('main-scripts.js'))
+    .pipe(gulp.dest("site/assets/javascript/"))
+    .pipe($.rename('scripts.min.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest("site/assets/javascript/"))
+    .pipe(gulp.dest("serve/assets/javascript/"));
+
 });
 
 
