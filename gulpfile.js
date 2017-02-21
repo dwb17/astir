@@ -227,7 +227,7 @@ gulp.task("copy-favicon", function() {
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "video", "phpmailer","copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "video", "phpmailer","copy-favicon");
 });
 
 // concat
