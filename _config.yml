@@ -4,6 +4,7 @@ title: Jekyll-base
 description:
 tagline:
 url: http://localhost:3000
+canvasLocation: /assets/canvas
 
 source: src
 destination: serve

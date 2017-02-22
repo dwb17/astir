@@ -66,6 +66,11 @@ gulp.task("video", function() {
     .pipe(gulp.dest("site/assets/video/"));
 });
 
+gulp.task("canvas", function() {
+  gulp.src('./src/assets/canvas/**')
+    .pipe(gulp.dest("site/assets/canvas/"));
+});
+
 gulp.task("phpmailer", function() {
   gulp.src('./src/PHPMailer/**')
     .pipe(gulp.dest("site/PHPMailer/"));
@@ -173,10 +178,12 @@ gulp.task("jslint", function () {
 // and will check for URL errors a well
 gulp.task("doctor", $.shell.task("bundle exec jekyll doctor"));
 
+
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "jekyll:dev", "scripts-opt"], function () {
+gulp.task("serve:dev", ["styles", "jekyll:dev", "scripts-opt", "scripts-opt-bideo"], function () {
+
   bs = browserSync({
     notify: true,
     //proxy: 'http://astir.ninja',
@@ -227,7 +234,7 @@ gulp.task("copy-favicon", function() {
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "video", "phpmailer","copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "scripts-opt-bideo", "video", "canvas", "phpmailer","copy-favicon");
 });
 
 // concat
@@ -238,7 +245,7 @@ gulp.task("publish", ["build"], function () {
 //    .pipe(gulp.dest('./src/assets/javascript'))
 //    .pipe(gulp.dest("site/assets/javascript/"));
 
-gulp.task('scripts-opt', ["scripts-opt-bideo"] function() {
+gulp.task('scripts-opt', ["scripts-opt-bideo"], function() {
   return gulp.src('./src/assets/javascript/*.js')
     .pipe($.concat('main-scripts.js'))
     .pipe(gulp.dest("site/assets/javascript/"))
@@ -255,7 +262,6 @@ gulp.task('scripts-opt-bideo', function() {
     .pipe($.uglify())
     .pipe(gulp.dest("site/assets/javascript/vendors/"))
     .pipe(gulp.dest("serve/assets/javascript/vendors/"));
-
 });
 
 
