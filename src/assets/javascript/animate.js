@@ -27,7 +27,7 @@
         }
         this.destroy();
       }, {
-        offset: '70%',
+        offset: '40%',
         triggerOnce: true,
       });
 

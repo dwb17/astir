@@ -1,0 +1,44 @@
+<script id="primertransparent" src="{{site.url}}{{site.canvasLocation}}/products/primertransparent/primertransparent.js"></script>
+<script type="text/javascript">
+(function() {
+	var canvas, stage, exportRoot;
+
+	// Get location of current script,
+	// Used to provide absolute position for resources.
+	var scriptPath = function () {
+	    var scripts = document.getElementById('primertransparent');
+	    var path = '';
+	    if(scripts.src && scripts.src.match(/\/primertransparent\.js$/)) {
+	    	path = scripts.src.replace(/(.*)\/primertransparent\.js$/, '$1');
+	  	}
+	    return path;
+	};
+
+	window.transparentPrimerinit = function() {
+		canvas = document.getElementById("transparent-primer-canvas");
+		images = images||{};
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+
+		loader.loadManifest(lib.properties.manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.primertransparent();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+})();
+</script>
+<canvas id="transparent-primer-canvas" class="canvas-animation" width="540" height="520" style=""></canvas>

@@ -13,6 +13,8 @@ en:
     id: "white-primer"
     group: "primer"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/white-primer.html"
   1:
     variantClasses: "grey-background"
     title: "Transparent Primer"
@@ -23,6 +25,8 @@ en:
     id: "transparent-primer"
     group: "primer"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/primertransparent.html"
   2:
     variantClasses: "odd grey-background"
     title: "Aluminum"
@@ -33,6 +37,8 @@ en:
     id: "aluminum-primer"
     group: "primer"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/primeraluminium.html"
   3:
     variantClasses: "odd"
     title: "Offset Print"

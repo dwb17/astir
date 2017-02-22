@@ -1,0 +1,43 @@
+<script id="primeraluminium" src="{{site.url}}{{site.canvasLocation}}/products/primeraluminium/primeraluminium.js"></script>
+<script type="text/javascript">
+(function() {
+  var canvas, stage, exportRoot;
+
+  // Get location of current script,
+  // Used to provide absolute position for resources.
+  var scriptPath = function () {
+      var scripts = document.getElementById('primeraluminium');
+      var path = '';
+      if(scripts.src && scripts.src.match(/\/primeraluminium\.js$/)) {
+      	path = scripts.src.replace(/(.*)\/primeraluminium\.js$/, '$1');
+    	}
+      return path;
+  };
+
+  window.primeraluminiumPrimerinit = function() {
+  	canvas = document.getElementById("primeraluminium-canvas");
+  	images = images||{};
+
+  	var loader = new createjs.LoadQueue(false);
+  	loader.addEventListener("fileload", handleFileLoad);
+  	loader.addEventListener("complete", handleComplete);
+  	loader.loadManifest(lib.properties.manifest);
+  }
+
+  function handleFileLoad(evt) {
+  	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+  }
+
+  function handleComplete() {
+  	exportRoot = new lib.primeraluminium();
+
+  	stage = new createjs.Stage(canvas);
+  	stage.addChild(exportRoot);
+  	stage.update();
+
+  	createjs.Ticker.setFPS(lib.properties.fps);
+  	createjs.Ticker.addEventListener("tick", stage);
+  }
+})();
+</script>
+<canvas id="primeraluminium-canvas" class="canvas-animation" width="540" height="520" style=""></canvas>
