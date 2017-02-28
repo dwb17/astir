@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      "hamburgers",
+      "/Applications/MAMP/htdocs/astir/website"
+    ]
+  ],
+  "_from": "hamburgers@latest",
+  "_id": "hamburgers@0.7.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/hamburgers",
+  "_nodeVersion": "6.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/hamburgers-0.7.0.tgz_1480468778403_0.2982609202153981"
+  },
+  "_npmUser": {
+    "email": "hello@jonsuh.com",
+    "name": "jonsuh"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "hamburgers",
+    "raw": "hamburgers",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/hamburgers/-/hamburgers-0.7.0.tgz",
+  "_shasum": "f86ac41eae9e5de4b2f956496dd98884f7c48cf9",
+  "_shrinkwrap": null,
+  "_spec": "hamburgers",
+  "_where": "/Applications/MAMP/htdocs/astir/website",
+  "author": {
+    "email": "hello@jonsuh.com",
+    "name": "Jonathan Suh",
+    "url": "https://jonsuh.com/hamburgers"
+  },
+  "bugs": {
+    "url": "https://github.com/jonsuh/hamburgers/issues"
+  },
+  "dependencies": {},
+  "description": "Collection of tasty CSS-animated hamburger icons. Includes Sass files (modular and customizable), so cook up your own hamburger.",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "f86ac41eae9e5de4b2f956496dd98884f7c48cf9",
+    "tarball": "https://registry.npmjs.org/hamburgers/-/hamburgers-0.7.0.tgz"
+  },
+  "eyeglass": {
+    "exports": "eyeglass-exports.js",
+    "needs": "*"
+  },
+  "gitHead": "2cf6e08f417db33fb53b900172bd4135f366b5e6",
+  "homepage": "https://jonsuh.com/hamburgers",
+  "keywords": [
+    "css",
+    "hamburger",
+    "hamburgers",
+    "menu",
+    "sass",
+    "scss"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "jonsuh",
+      "email": "hello@jonsuh.com"
+    }
+  ],
+  "name": "hamburgers",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonsuh/hamburgers.git"
+  },
+  "scripts": {},
+  "version": "0.7.0"
+}

@@ -5959,6 +5959,11 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+.canvas-animation {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
 ul.tabs {
   margin: 0px;
   padding: 0px;
