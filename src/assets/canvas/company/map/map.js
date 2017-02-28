@@ -13,7 +13,7 @@ lib.properties = {
 
 // stage content:
 (lib.map = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// legend
 	this.shape = new cjs.Shape();
@@ -1618,5 +1618,5 @@ p.nominalBounds = new cjs.Rectangle(-35.5,-48.5,71.2,97);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-70.5,-31.7,141,63.5);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libMap = libMap||{}, images = images||{}, createjs = createjs||{});
+var libMap, images, createjs;

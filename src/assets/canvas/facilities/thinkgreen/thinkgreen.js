@@ -16,7 +16,7 @@ lib.properties = {
 
 // stage content:
 (lib.thinkgreen = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
 	this.instance = new lib.Symbol1();
@@ -59,5 +59,5 @@ p.nominalBounds = new cjs.Rectangle(0,0,430,407);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-215,-203.5,430,407);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libThinkGreen = libThinkGreen||{}, images = images||{}, createjs = createjs||{});
+var libThinkGreen, images, createjs;

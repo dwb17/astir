@@ -6,22 +6,32 @@
   // Get location of current script,
   // Used to provide absolute position for resources.
   var scriptPath = function () {
-      var scripts = document.getElementById('primeraluminium');
-      var path = '';
-      if(scripts.src && scripts.src.match(/\/primeraluminium\.js$/)) {
-      	path = scripts.src.replace(/(.*)\/primeraluminium\.js$/, '$1');
-    	}
-      return path;
+    var scripts = document.getElementById('primeraluminium');
+    var path = '';
+    if(scripts.src && scripts.src.match(/\/primeraluminium\.js$/)) {
+      path = scripts.src.replace(/(.*)\/primeraluminium\.js$/, '$1');
+    }
+    return path;
   };
 
   window.primeraluminiumPrimerinit = function() {
   	canvas = document.getElementById("primeraluminium-canvas");
   	images = images||{};
 
+    // Change the source of the assets, so as to point to the
+		// location of the js file.
+		libPrimerAluminium.properties.manifest.forEach(function(currentValue){
+			// Only process if the scriptPath is not already set.
+			if(currentValue.src.indexOf('http') != 0){
+				currentValue.src = scriptPath() + '/' + currentValue.src;
+			}
+		});
+
+
   	var loader = new createjs.LoadQueue(false);
   	loader.addEventListener("fileload", handleFileLoad);
   	loader.addEventListener("complete", handleComplete);
-  	loader.loadManifest(lib.properties.manifest);
+  	loader.loadManifest(libPrimerAluminium.properties.manifest);
   }
 
   function handleFileLoad(evt) {
@@ -29,13 +39,13 @@
   }
 
   function handleComplete() {
-  	exportRoot = new lib.primeraluminium();
+  	exportRoot = new libPrimerAluminium.primeraluminium();
 
   	stage = new createjs.Stage(canvas);
   	stage.addChild(exportRoot);
   	stage.update();
 
-  	createjs.Ticker.setFPS(lib.properties.fps);
+  	createjs.Ticker.setFPS(libPrimerAluminium.properties.fps);
   	createjs.Ticker.addEventListener("tick", stage);
   }
 })();

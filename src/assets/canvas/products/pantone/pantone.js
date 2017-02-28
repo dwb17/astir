@@ -17,7 +17,7 @@ lib.properties = {
 
 // stage content:
 (lib.pantone = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
 	this.instance = new lib.guide();
@@ -129,5 +129,5 @@ p.nominalBounds = new cjs.Rectangle(0,0,540,564);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-246,-37.6,492,76.2);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libPantone = libPantone||{}, images = images||{}, createjs = createjs||{});
+var libPantone, images, createjs;

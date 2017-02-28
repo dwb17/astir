@@ -17,7 +17,7 @@ lib.properties = {
 
 // stage content:
 (lib.primerwhite = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
 	this.frame_69 = function() {
@@ -105,5 +105,5 @@ p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libPrimerWhite = libPrimerWhite||{}, images = images||{}, createjs = createjs||{});
+var libPrimerWhite, images, createjs;

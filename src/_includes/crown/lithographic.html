@@ -1,4 +1,4 @@
-<script id="primertransparent" src="{{site.url}}{{site.canvasLocation}}/products/primertransparent/primertransparent.js"></script>
+<script id="lithographic" src="{{site.url}}{{site.canvasLocation}}/products/lithographic/lithographic.js"></script>
 <script type="text/javascript">
 (function() {
 	var canvas, stage, exportRoot;
@@ -6,21 +6,21 @@
 	// Get location of current script,
   // Used to provide absolute position for resources.
   var scriptPath = function () {
-    var scripts = document.getElementById('primertransparent');
-    var path = '';
-    if(scripts.src && scripts.src.match(/\/primertransparent\.js$/)) {
-      path = scripts.src.replace(/(.*)\/primertransparent\.js$/, '$1');
-    }
-    return path;
+	  var scripts = document.getElementById('lithographic');
+	  var path = '';
+	  if(scripts.src && scripts.src.match(/\/lithographic\.js$/)) {
+	    path = scripts.src.replace(/(.*)\/lithographic\.js$/, '$1');
+	  }
+	  return path;
   };
 
-	window.transparentPrimerinit = function() {
-		canvas = document.getElementById("transparent-primer-canvas");
+	window.lithographicinit = function() {
+		canvas = document.getElementById("lithographic-canvas");
 		images = images||{};
 
 		// Change the source of the assets, so as to point to the
 		// location of the js file.
-		libPrimerTransparent.properties.manifest.forEach(function(currentValue){
+		libLithographic.properties.manifest.forEach(function(currentValue){
 			// Only process if the scriptPath is not already set.
 			if(currentValue.src.indexOf('http') != 0){
 				currentValue.src = scriptPath() + '/' + currentValue.src;
@@ -30,8 +30,8 @@
 		var loader = new createjs.LoadQueue(false);
 		loader.addEventListener("fileload", handleFileLoad);
 		loader.addEventListener("complete", handleComplete);
-		loader.loadManifest(libPrimerTransparent.properties.manifest);
 
+		loader.loadManifest(libColdActivated.properties.manifest);
 	}
 
 	function handleFileLoad(evt) {
@@ -39,15 +39,15 @@
 	}
 
 	function handleComplete() {
-		exportRoot = new libPrimerTransparent.primertransparent();
+		exportRoot = new libLithographic.lithographic();
 
 		stage = new createjs.Stage(canvas);
 		stage.addChild(exportRoot);
 		stage.update();
 
-		createjs.Ticker.setFPS(libPrimerTransparent.properties.fps);
+		createjs.Ticker.setFPS(libLithographic.properties.fps);
 		createjs.Ticker.addEventListener("tick", stage);
 	}
 })();
 </script>
-<canvas id="transparent-primer-canvas" class="canvas-animation" width="540" height="520" style=""></canvas>
+<canvas id="lithographic-canvas" class="canvas-animation" width="607" height="582" style=""></canvas>

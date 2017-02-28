@@ -5,9 +5,6 @@
 <title>o2scavenger</title>
 
 <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
-<script src="http://code.createjs.com/tweenjs-0.5.0.min.js"></script>
-<script src="http://code.createjs.com/movieclip-0.7.0.min.js"></script>
-<script src="http://code.createjs.com/preloadjs-0.4.0.min.js"></script>
 <script src="o2scavenger.js"></script>
 
 <script>
@@ -15,27 +12,14 @@ var canvas, stage, exportRoot;
 
 function init() {
 	canvas = document.getElementById("canvas");
-	images = images||{};
-
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(lib.properties.manifest);
-}
-
-function handleFileLoad(evt) {
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
-
-function handleComplete() {
-	exportRoot = new lib.o2scavenger();
+	exportRoot = new libO2Scavenger.o2scavenger();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 
-	createjs.Ticker.setFPS(lib.properties.fps);
-	createjs.Ticker.addEventListener("tick", stage);
+	createjs.Ticker.setFPS(libO2Scavenger.properties.fps);
+	//createjs.Ticker.addEventListener("tick", stage);
 }
 </script>
 </head>

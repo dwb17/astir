@@ -72,5 +72,5 @@ p.nominalBounds = new cjs.Rectangle(0,0,540,520);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libPrimerTransparent = libPrimerTransparent||{}, images = images||{}, createjs = createjs||{});
+var libPrimerTransparent, images, createjs;

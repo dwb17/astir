@@ -61,14 +61,16 @@ gulp.task("js", function() {
     .pipe(gulp.dest("site/assets/javascript/"));
 });
 
+
+
 gulp.task("video", function() {
   gulp.src('./src/assets/video/**')
     .pipe(gulp.dest("site/assets/video/"));
 });
 
 gulp.task("canvas", function() {
-  gulp.src('./src/assets/canvas/**')
-    .pipe(gulp.dest("site/assets/canvas/"));
+  $.shell.task('cp -af ./src/assets/canvas/ ./site/assets/canvas/');
+  $.shell.task('cp -af ./src/assets/canvas/ ./serve/assets/canvas/');
 });
 
 gulp.task("phpmailer", function() {
@@ -236,14 +238,6 @@ gulp.task("copy-favicon", function() {
 gulp.task("publish", ["build"], function () {
   gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "scripts-opt-bideo", "video", "canvas", "phpmailer","copy-favicon");
 });
-
-// concat
-
-//var jsFiles = 'assets/scripts/**/*.js',
-//    jsDest = 's/scripts';
-//gulp.src('./src/assets/javascript/*.js')
-//    .pipe(gulp.dest('./src/assets/javascript'))
-//    .pipe(gulp.dest("site/assets/javascript/"));
 
 gulp.task('scripts-opt', ["scripts-opt-bideo"], function() {
   return gulp.src('./src/assets/javascript/*.js')

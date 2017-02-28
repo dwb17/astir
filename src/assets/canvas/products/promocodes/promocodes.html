@@ -20,7 +20,7 @@ function init() {
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", handleFileLoad);
 	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(lib.properties.manifest);
+	loader.loadManifest(libPromoCode.properties.manifest);
 }
 
 function handleFileLoad(evt) {
@@ -28,13 +28,13 @@ function handleFileLoad(evt) {
 }
 
 function handleComplete() {
-	exportRoot = new lib.promocodes();
+	exportRoot = new libPromoCode.promocodes();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 
-	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.setFPS(libPromoCode.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
 }
 </script>

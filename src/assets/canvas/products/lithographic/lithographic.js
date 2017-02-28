@@ -18,7 +18,7 @@ lib.properties = {
 
 // stage content:
 (lib.lithographic = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
 	this.instance = new lib.Symbol1();
@@ -143,5 +143,5 @@ p.nominalBounds = new cjs.Rectangle(-303.5,-291,607,582);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-303.5,-291,607,582);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libLithographic = libLithographic||{}, images = images||{}, createjs = createjs||{});
+var libLithographic, images, createjs;

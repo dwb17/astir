@@ -20,7 +20,7 @@ lib.properties = {
 
 // stage content:
 (lib.cmyk = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// guide
 	this.shape = new cjs.Shape();
@@ -414,5 +414,5 @@ p.nominalBounds = new cjs.Rectangle(-246,-37.6,492,76.2);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-246,-37.6,492,76.2);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libCMYK = libCMYK||{}, images = images||{}, createjs = createjs||{});
+var libCMYK, images, createjs;

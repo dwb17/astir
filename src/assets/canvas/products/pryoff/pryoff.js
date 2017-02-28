@@ -17,7 +17,7 @@ lib.properties = {
 
 // stage content:
 (lib.pryoff = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 4 (mask)
 	var mask = new cjs.Shape();
@@ -90,5 +90,5 @@ p.nominalBounds = new cjs.Rectangle(-137.5,-120,275,240);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-46.5,-24.5,93,49);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libPryoff = libPryoff||{}, images = images||{}, createjs = createjs||{});
+var libPryoff, images, createjs;

@@ -55,6 +55,8 @@ en:
     id: "offset-print"
     group: "print"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/pantone.html"
   4:
     variantClasses: ""
     title: "CMYK"
@@ -65,6 +67,8 @@ en:
     id: "cmyk-print"
     group: "print"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/cmyk.html"
   5:
     variantClasses: "odd"
     title: "Cold activated ink"
@@ -75,6 +79,8 @@ en:
     id: "cold-activated-print"
     group: "print"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/coldactivated.html"
   6:
     variantClasses: "viewport-height grey-background"
     title: "Lithographic Print"
@@ -87,6 +93,8 @@ en:
     id: "internal-print"
     group: "internal-print"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/lithographic.html"
   7:
     variantClasses: "odd viewport-height"
     title: "Internal Varnish"
@@ -99,6 +107,8 @@ en:
     id: "interior-side"
     group: "interior-side"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/internalvarnish.html"
   8:
     variantClasses: "viewport-height grey-background"
     title: "Unique Promotional Codes"
@@ -111,6 +121,8 @@ en:
     id: "inject-coating"
     group: "inject-coating"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/promocodes.html"
   9:
     variantClasses: "odd"
     title: "Pry Off"
@@ -124,6 +136,8 @@ en:
     id: "pry-off-interior"
     group: "interior-liner"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/pryoff.html"
   10:
     variantClasses: ""
     title: "Twist Off"
@@ -134,6 +148,8 @@ en:
     id: "twist-off-interior"
     group: "interior-liner"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/twistoff.html"
   11:
     variantClasses: "odd"
     title: "Oxygen scavenger"
@@ -144,6 +160,8 @@ en:
     id: "oxygen-interior"
     group: "interior-liner"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/o2scavenger.html"
   12:
     variantClasses: ""
     title: "Oxygen barrier"
@@ -154,6 +172,8 @@ en:
     id: "oxygen-barrier-interior"
     group: "interior-liner"
     layout: "layout-two-column"
+    mobileImage: ""
+    includeArea: "crown/o2barrier.html"
 el:
   production:
     title: "Ελληνικα State of the art plant"

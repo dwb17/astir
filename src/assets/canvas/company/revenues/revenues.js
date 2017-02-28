@@ -13,7 +13,7 @@ lib.properties = {
 
 // stage content:
 (lib.revenues = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// FlashAICB
 	this.shape = new cjs.Shape();
@@ -1106,5 +1106,5 @@ lib.properties = {
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(593,249,1107.9,439.3);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libRevenues = libRevenues||{}, images = images||{}, createjs = createjs||{});
+var libRevenues, images, createjs;

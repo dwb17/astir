@@ -13,7 +13,7 @@ lib.properties = {
 
 // stage content:
 (lib.production = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 15 (mask)
 	var mask = new cjs.Shape();
@@ -650,5 +650,5 @@ lib.properties = {
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(577.9,258.2,1109.2,456.7);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libProduction = libProduction||{}, images = images||{}, createjs = createjs||{});
+var libProduction, images, createjs;

@@ -15,7 +15,7 @@ lib.properties = {
 
 // stage content:
 (lib.promocodes = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 11 (mask)
 	var mask = new cjs.Shape();
@@ -605,5 +605,5 @@ p.nominalBounds = new cjs.Rectangle(-89.4,-12.7,178.9,25.5);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-100.9,-35.3,201.9,70.6);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libPromoCode = libPromoCode||{}, images = images||{}, createjs = createjs||{});
+var libPromoCode, images, createjs;

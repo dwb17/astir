@@ -18,7 +18,7 @@ lib.properties = {
 
 // stage content:
 (lib.coldactivated = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 4
 	this.instance = new lib.Symbol3();
@@ -112,5 +112,5 @@ p.nominalBounds = new cjs.Rectangle(-270,-282,540,564);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-270,-282,540,564);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libColdActivated = libColdActivated||{}, images = images||{}, createjs = createjs||{});
+var libColdActivated, images, createjs;

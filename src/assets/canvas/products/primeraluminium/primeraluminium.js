@@ -17,7 +17,7 @@ lib.properties = {
 
 // stage content:
 (lib.primeraluminium = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 3
 	this.instance = new lib.Symbol2();
@@ -84,5 +84,5 @@ p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libPrimerAluminium = libPrimerAluminium||{}, images = images||{}, createjs = createjs||{});
+var libPrimerAluminium, images, createjs;

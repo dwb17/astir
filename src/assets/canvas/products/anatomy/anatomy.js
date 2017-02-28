@@ -16,7 +16,7 @@ lib.properties = {
 
 // stage content:
 (lib.anatomy = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
 	this.instance = new lib.Symbol1();
@@ -59,5 +59,5 @@ p.nominalBounds = new cjs.Rectangle(0,0,540,520);
 }).prototype = p = new cjs.Container();
 p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libAnatomy = libAnatomy||{}, images = images||{}, createjs = createjs||{});
+var libAnatomy, images, createjs;

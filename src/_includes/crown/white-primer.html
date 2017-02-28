@@ -7,12 +7,12 @@
   // Get location of current script,
   // Used to provide absolute position for resources.
   var scriptPath = function () {
-      var scripts = document.getElementById('primerwhite');
-      var path = '';
-      if(scripts.src && scripts.src.match(/\/primerwhite\.js$/)) {
-      	path = scripts.src.replace(/(.*)\/primerwhite\.js$/, '$1');
-    	}
-      return path;
+    var scripts = document.getElementById('primerwhite');
+    var path = '';
+    if(scripts.src && scripts.src.match(/\/primerwhite\.js$/)) {
+      path = scripts.src.replace(/(.*)\/primerwhite\.js$/, '$1');
+    }
+    return path;
   };
 
   window.whitePrimerinit = function() {
@@ -21,18 +21,17 @@
 
     // Change the source of the assets, so as to point to the
 		// location of the js file.
-		lib.properties.manifest.forEach(function(currentValue){
+		libPrimerWhite.properties.manifest.forEach(function(currentValue){
 			// Only process if the scriptPath is not already set.
-			if(currentValue.src.indexOf('./') != 0){
-				currentValue.src = '../' + currentValue.src;
+			if(currentValue.src.indexOf('http') != 0){
+				currentValue.src = scriptPath() + '/' + currentValue.src;
 			}
-		})
-console.log(lib.properties.manifest);
+		});
 
-  	var loader = new createjs.LoadQueue(false);
+    var loader = new createjs.LoadQueue(false);
   	loader.addEventListener("fileload", handleFileLoad);
   	loader.addEventListener("complete", handleComplete);
-  	loader.loadManifest(lib.properties.manifest);
+  	loader.loadManifest(libPrimerWhite.properties.manifest);
   }
 
   function handleFileLoad(evt) {
@@ -40,13 +39,13 @@ console.log(lib.properties.manifest);
   }
 
   function handleComplete() {
-  	exportRoot = new lib.primerwhite();
+  	exportRoot = new libPrimerWhite.primerwhite();
 
   	stage = new createjs.Stage(canvas);
   	stage.addChild(exportRoot);
   	stage.update();
 
-  	createjs.Ticker.setFPS(lib.properties.fps);
+  	createjs.Ticker.setFPS(libPrimerWhite.properties.fps);
   	createjs.Ticker.addEventListener("tick", stage);
   }
 })();

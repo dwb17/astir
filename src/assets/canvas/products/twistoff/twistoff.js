@@ -26,7 +26,7 @@ lib.properties = {
 
 // stage content:
 (lib.twistoff = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
 	this.instance = new lib.twist();
@@ -158,5 +158,5 @@ p.nominalBounds = new cjs.Rectangle(0,0,540,520);
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-130,-189.5,260,260);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{});
-var lib, images, createjs;
+})(libTwistoff = libTwistoff||{}, images = images||{}, createjs = createjs||{});
+var libTwistoff, images, createjs;

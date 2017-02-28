@@ -1,4 +1,4 @@
-<script id="primertransparent" src="{{site.url}}{{site.canvasLocation}}/products/primertransparent/primertransparent.js"></script>
+<script id="internalvarnish" src="{{site.url}}{{site.canvasLocation}}/products/internalvarnish/internalvarnish.js"></script>
 <script type="text/javascript">
 (function() {
 	var canvas, stage, exportRoot;
@@ -6,21 +6,21 @@
 	// Get location of current script,
   // Used to provide absolute position for resources.
   var scriptPath = function () {
-    var scripts = document.getElementById('primertransparent');
-    var path = '';
-    if(scripts.src && scripts.src.match(/\/primertransparent\.js$/)) {
-      path = scripts.src.replace(/(.*)\/primertransparent\.js$/, '$1');
-    }
-    return path;
+	  var scripts = document.getElementById('internalvarnish');
+	  var path = '';
+	  if(scripts.src && scripts.src.match(/\/internalvarnish\.js$/)) {
+	    path = scripts.src.replace(/(.*)\/internalvarnish\.js$/, '$1');
+	  }
+	  return path;
   };
 
-	window.transparentPrimerinit = function() {
-		canvas = document.getElementById("transparent-primer-canvas");
+	window.internalvarnishinit = function() {
+		canvas = document.getElementById("internalvarnish-canvas");
 		images = images||{};
 
 		// Change the source of the assets, so as to point to the
 		// location of the js file.
-		libPrimerTransparent.properties.manifest.forEach(function(currentValue){
+		libInternalVarnish.properties.manifest.forEach(function(currentValue){
 			// Only process if the scriptPath is not already set.
 			if(currentValue.src.indexOf('http') != 0){
 				currentValue.src = scriptPath() + '/' + currentValue.src;
@@ -30,8 +30,8 @@
 		var loader = new createjs.LoadQueue(false);
 		loader.addEventListener("fileload", handleFileLoad);
 		loader.addEventListener("complete", handleComplete);
-		loader.loadManifest(libPrimerTransparent.properties.manifest);
 
+		loader.loadManifest(libInternalVarnish.properties.manifest);
 	}
 
 	function handleFileLoad(evt) {
@@ -39,15 +39,15 @@
 	}
 
 	function handleComplete() {
-		exportRoot = new libPrimerTransparent.primertransparent();
+		exportRoot = new libInternalVarnish.internalvarnish();
 
 		stage = new createjs.Stage(canvas);
 		stage.addChild(exportRoot);
 		stage.update();
 
-		createjs.Ticker.setFPS(libPrimerTransparent.properties.fps);
+		createjs.Ticker.setFPS(libInternalVarnish.properties.fps);
 		createjs.Ticker.addEventListener("tick", stage);
 	}
 })();
 </script>
-<canvas id="transparent-primer-canvas" class="canvas-animation" width="540" height="520" style=""></canvas>
+<canvas id="internalvarnish-canvas" class="canvas-animation" width="540" height="520"  style=""></canvas>

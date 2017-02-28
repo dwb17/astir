@@ -20,7 +20,7 @@ function init() {
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", handleFileLoad);
 	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(lib.properties.manifest);
+	loader.loadManifest(libO2Barrier.properties.manifest);
 }
 
 function handleFileLoad(evt) {
@@ -28,13 +28,13 @@ function handleFileLoad(evt) {
 }
 
 function handleComplete() {
-	exportRoot = new lib.o2barrier();
+	exportRoot = new libO2Barrier.o2barrier();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 
-	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.setFPS(libO2Barrier.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
 }
 </script>
