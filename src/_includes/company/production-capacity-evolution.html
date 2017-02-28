@@ -1,3 +1,33 @@
+<script src="{{site.url}}{{site.canvasLocation}}/company/production/production.js"></script>
+<script type="text/javascript">
+(function() {
+  var canvas, stage, exportRoot;
+
+  // resize the canvas to fill browser window dynamically
+  // window.addEventListener('resize', globalMapInit, false);
+  window.productionInit = function() {
+  	canvas = document.getElementById("production-chart");
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    //canvas.width  = w;
+    //canvas.height = w * (1146/466); //aspect ratio 1146*466
+  	globalMapDraw(canvas);
+  }
+
+  function globalMapDraw(e) {
+    var canvas = e;
+    exportRoot = new libProduction.production();
+
+  	stage = new createjs.Stage(canvas);
+  	stage.addChild(exportRoot);
+  	stage.update();
+
+  	createjs.Ticker.setFPS(libProduction.properties.fps);
+  	createjs.Ticker.addEventListener("tick", stage);
+  }
+})();
+</script>
+<canvas id="production-chart" class="canvas-animation" width="1146" height="466" ></canvas>
+
 <div class="image-slice" id="company-about-astir">
   <div class="image"><img class="img-fluid" src="/images/company/1.jpg"></div>
 </div>

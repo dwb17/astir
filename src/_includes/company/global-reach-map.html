@@ -1,11 +1,11 @@
 <script src="{{site.url}}{{site.canvasLocation}}/company/map/map.js"></script>
 <script type="text/javascript">
+(function() {
   var canvas, stage, exportRoot;
 
   // resize the canvas to fill browser window dynamically
   // window.addEventListener('resize', globalMapInit, false);
-
-  function globalMapInit() {
+  window.globalMapInit = function() {
   	canvas = document.getElementById("global-map");
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     canvas.width  = w;
@@ -15,15 +15,16 @@
 
   function globalMapDraw(e) {
     var canvas = e;
-    exportRoot = new lib.map();
+    exportRoot = new libMap.map();
 
   	stage = new createjs.Stage(canvas);
   	stage.addChild(exportRoot);
   	stage.update();
 
-  	createjs.Ticker.setFPS(lib.properties.fps);
+  	createjs.Ticker.setFPS(libMap.properties.fps);
   	createjs.Ticker.addEventListener("tick", stage);
   }
+})();
 </script>
 <canvas id="global-map" class="canvas-animation" style="background-color:#FFFFFF"></canvas>
 
