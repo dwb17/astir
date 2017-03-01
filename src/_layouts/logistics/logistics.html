@@ -15,7 +15,7 @@ layout: default
       {% include slice.html param=logisticsItem %}
       <div class="grey-background">
         <div class="container">
-          <div class="row layout-two-column">
+          <div class="row">
           {% for packagingItems in site.data.packaging[langcode] %}
             {% assign packagingItem = packagingItems[1] %}
               {% include item.html param=packagingItem %}
@@ -27,10 +27,10 @@ layout: default
     {% elsif logisticsItem.id == "quality-standards" %}
       {% include slice.html param=logisticsItem %}
       <div class="container">
-        <div class="row layout-two-column">
+        <div class="row">
         {% for certificatesItems in site.data.certificates[langcode] %}
           {% assign certificatesItem = certificatesItems[1] %}
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12">
               <h3 class="title title--small text--centered">{{ certificatesItem.title }}</h3>
               <div class="image text--centered"><img class="img-fluid" alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
             </div>

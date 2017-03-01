@@ -1,5 +1,5 @@
 {% assign node = include.param %}
-<div class="item column {{ node.variantClasses }} {{ node.layout }}" {% if(node.id) %}id="{{ node.id }}"{% endif; %}>
+<div class="item {{ node.variantClasses }} {{ node.layout }}" {% if(node.id) %}id="{{ node.id }}"{% endif; %}>
   {% if (node.image) %}<div class="image"><img class="img-fluid" src="{{ node.image }}"></div>{% endif; %}
   <h2 class="title {{ node.title_variantClasses }}">{{ node.title }}</h2>
   <div class="text {{ node.text_variantClasses }}">{{ node.body | markdownify }}</div>

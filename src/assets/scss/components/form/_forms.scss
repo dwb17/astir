@@ -17,14 +17,13 @@ form {
   float: left;
 
   // Collapse in one column.
-  /*
-  @include breakpoint(0 ($tablet - 1)) {
+  @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
     width: 100%;
     float: none;
   }
-  */
 
-  &.webform-component-textarea {
+
+  &#webform-component-message {
     width: 100%;
   }
 

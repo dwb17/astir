@@ -1,11 +1,20 @@
 .layout-two-thirds {
   // Flexbox.
   display: flex;
+  @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    display: block;
+  }
+  // Set padding when max width reached.
+  @media only screen and (min-width:0) and (max-width: $content-wrapper-max-width)  {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   .column {
     position: relative;
 
     // Fallback.
-    float: left ;
+    float: left;
     min-height: 20px;
 
     // Flexbox.
@@ -17,12 +26,19 @@
 
   .column:nth-child(2n+1) {
     width: 55%;
+    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+      width: 100%;
+    }
 
   }
 
   .column:nth-child(2n) {
     width: 45%;
     max-width: $content-wrapper-max-width*45/100;
+    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+      width: 100%;
+      max-width: auto;
+    }
   }
 
   .content-wrapper {
@@ -34,6 +50,11 @@
     // We might want to change this class in order to avoid overwriting css.
     padding-right: 0;
     padding-left: 5%;
+
+    // Set padding when max width reached.
+    @media only screen and (min-width:0) and (max-width: $section-text-max-width)  {
+      padding-left: 0;
+    }
 
   }
 
@@ -48,6 +69,10 @@
     .content-wrapper {
       padding-left: 0;
       padding-right: 5%;
+      // Set padding when max width reached.
+      @media only screen and (min-width:0) and (max-width: $section-text-max-width)  {
+        padding-right: 0;
+      }
     }
     .column:nth-child(2n) {
       order: -1;

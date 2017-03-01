@@ -183,6 +183,7 @@ $content-wrapper-max-width: map-get($container-max-widths, xl);
 
 // mobile breakpoint
 // Canvas animation and fx animation stop below this value
-$mobile-breakpoint: 768px;
+$mobile-breakpoint: map-get($grid-breakpoints, md);
+$two-column-breakpoint: map-get($grid-breakpoints, md);
 // Gutter
 $gutter: 30px;
