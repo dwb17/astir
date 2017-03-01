@@ -1,4 +1,5 @@
 <script src="{{site.url}}{{site.canvasLocation}}/company/revenues/revenues.js"></script>
+<script src="{{site.url}}{{site.canvasLocation}}/company/circles/circles.js"></script>
 <script type="text/javascript">
 (function() {
   var canvas, stage, exportRoot;
@@ -27,6 +28,34 @@
 })();
 </script>
 <canvas id="revenue-chart" class="canvas-animation" width="1146" height="466" ></canvas>
+<script type="text/javascript">
+(function() {
+  var canvas, stage, exportRoot;
+
+  // resize the canvas to fill browser window dynamically
+  // window.addEventListener('resize', globalMapInit, false);
+  window.revenueInit = function() {
+  	canvas = document.getElementById("circles-chart");
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    //canvas.width  = w;
+    //canvas.height = w * (1146/466); //aspect ratio 1146*466
+  	globalMapDraw(canvas);
+  }
+
+  function globalMapDraw(e) {
+    var canvas = e;
+    exportRoot = new libcircles.circles();
+
+  	stage = new createjs.Stage(canvas);
+  	stage.addChild(exportRoot);
+  	stage.update();
+
+  	createjs.Ticker.setFPS(libcircles.properties.fps);
+  	createjs.Ticker.addEventListener("tick", stage);
+  }
+})();
+</script>
+<canvas id="circles-chart" class="canvas-animation" width="1146" height="466" ></canvas>
 
 <div class="image-mobile">
   <div class="image"><img class="img-fluid" src="/images/company/Facts-1.png"></div>
