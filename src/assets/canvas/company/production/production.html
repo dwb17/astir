@@ -14,13 +14,13 @@ var canvas, stage, exportRoot;
 
 function init() {
 	canvas = document.getElementById("canvas");
-	exportRoot = new lib.production();
+	exportRoot = new libProduction.production();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 
-	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.setFPS(libProduction.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
 }
 </script>

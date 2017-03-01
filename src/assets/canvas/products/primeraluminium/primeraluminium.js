@@ -36,7 +36,16 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	// Layer 1
 	this.instance_2 = new lib.transparent();
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(70));
+	this.instance_3 = new lib.Tween1("synched",0);
+	this.instance_3.setTransform(270,260);
+	this.instance_3._off = true;
+
+	this.instance_4 = new lib.Tween2("synched",0);
+	this.instance_4.setTransform(270,260);
+	this.instance_4.alpha = 0;
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},22).to({state:[{t:this.instance_4}]},14).to({state:[]},1).wait(33));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(22).to({_off:false},0).to({_off:true,alpha:0},14,cjs.Ease.get(1)).wait(34));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(251,257,559,523);
@@ -59,6 +68,30 @@ p.nominalBounds = new cjs.Rectangle(0,0,540,520);
 	this.initialize(img.transparent);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,540,520);
+
+
+(lib.Tween2 = function() {
+	this.initialize();
+
+	// Layer 1
+	this.instance = new lib.transparent();
+	this.instance.setTransform(-270,-260);
+
+	this.addChild(this.instance);
+}).prototype = p = new cjs.Container();
+p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
+
+
+(lib.Tween1 = function() {
+	this.initialize();
+
+	// Layer 1
+	this.instance = new lib.transparent();
+	this.instance.setTransform(-270,-260);
+
+	this.addChild(this.instance);
+}).prototype = p = new cjs.Container();
+p.nominalBounds = new cjs.Rectangle(-270,-260,540,520);
 
 
 (lib.Symbol2 = function() {

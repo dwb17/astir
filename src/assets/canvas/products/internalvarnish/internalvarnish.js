@@ -16,13 +16,13 @@ lib.properties = {
 
 // stage content:
 (lib.internalvarnish = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 2
 	this.instance = new lib.Symbol1();
 	this.instance.setTransform(270,260);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:403,y:359,alpha:0.109},28,cjs.Ease.get(1)).to({_off:true},1).wait(20));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:403,y:359,alpha:0},28,cjs.Ease.get(1)).to({_off:true},1).wait(20));
 
 	// Layer 1
 	this.instance_1 = new lib._1();

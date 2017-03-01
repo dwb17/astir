@@ -15,7 +15,7 @@ lib.properties = {
 
 // stage content:
 (lib.promocodes = function(mode,startPosition,loop) {
-if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
+	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 11 (mask)
 	var mask = new cjs.Shape();

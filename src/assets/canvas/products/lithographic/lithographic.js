@@ -22,10 +22,10 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Layer 1
 	this.instance = new lib.Symbol1();
-	this.instance.setTransform(283.5,311,0.707,0.707);
+	this.instance.setTransform(303.5,291);
 	this.instance.alpha = 0.109;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({scaleX:1,scaleY:1,x:303.5,y:291,alpha:1},26,cjs.Ease.get(1)).wait(64));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1},26,cjs.Ease.get(1)).wait(64));
 
 	// Layer 2
 	this.instance_1 = new lib.Symbol2();
@@ -56,7 +56,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(26).to({_off:false},0).to({_off:true,x:303.5,y:291,alpha:1},32,cjs.Ease.get(1)).wait(32));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(372.5,396.4,429,411.3);
+p.nominalBounds = new cjs.Rectangle(303.5,291,607,582);
 
 
 // symbols:

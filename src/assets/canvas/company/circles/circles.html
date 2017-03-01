@@ -2,31 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>map</title>
+<title>circles</title>
 
 <script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
 <script src="http://code.createjs.com/tweenjs-0.5.0.min.js"></script>
 <script src="http://code.createjs.com/movieclip-0.7.0.min.js"></script>
-<script src="map.js"></script>
+<script src="circles.js"></script>
 
 <script>
 var canvas, stage, exportRoot;
 
 function init() {
 	canvas = document.getElementById("canvas");
-	exportRoot = new libMap.map();
+	exportRoot = new libcircles.circles();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
 	stage.update();
 
-	createjs.Ticker.setFPS(libMap.properties.fps);
+	createjs.Ticker.setFPS(libcircles.properties.fps);
 	createjs.Ticker.addEventListener("tick", stage);
 }
 </script>
 </head>
 
 <body onload="init();" style="background-color:#D4D4D4">
-	<canvas id="canvas" width="1397" height="888" style="background-color:#FFFFFF"></canvas>
+	<canvas id="canvas" width="1192" height="310" style="background-color:#FFFFFF"></canvas>
 </body>
 </html>

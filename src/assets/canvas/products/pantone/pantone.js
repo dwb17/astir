@@ -9,7 +9,7 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	manifest: [
-		{src:"images/_1.jpg", id:"_1"},
+		{src:"images/_1πνγ.jpg", id:"_1πνγ"},
 		{src:"images/_2.jpg", id:"_2"},
 		{src:"images/guide.png", id:"guide"}
 	]
@@ -86,7 +86,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1).to({_off:false},0).wait(84));
 
 	// Layer 1
-	this.instance_3 = new lib._1();
+	this.instance_3 = new lib._1πνγ();
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(85));
 
@@ -95,8 +95,8 @@ p.nominalBounds = new cjs.Rectangle(270,282,540,564);
 
 
 // symbols:
-(lib._1 = function() {
-	this.initialize(img._1);
+(lib._1πνγ = function() {
+	this.initialize(img._1πνγ);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,540,564);
 

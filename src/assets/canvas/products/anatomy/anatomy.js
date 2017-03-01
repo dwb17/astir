@@ -24,7 +24,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).to({x:269,y:260,alpha:0.609},24).wait(45));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).to({x:269,y:260,alpha:0.609},24,cjs.Ease.get(1)).wait(45));
 
 	// Layer 1
 	this.instance_1 = new lib._1();
