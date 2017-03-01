@@ -45,6 +45,13 @@
         offset: customwaypointOffset,
         triggerOnce: true,
       });
+      $('#revenue-chart').waypoint(function (direction) {
+        window.circlesInit();
+        this.destroy();
+      }, {
+        offset: customwaypointOffset,
+        triggerOnce: true,
+      });
 
       $('#about').waypoint(function (direction) {
         window.productionInit();
