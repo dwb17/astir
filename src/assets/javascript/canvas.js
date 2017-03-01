@@ -52,7 +52,6 @@
         offset: customwaypointOffset,
         triggerOnce: true,
       });
-
       $('#about').waypoint(function (direction) {
         window.productionInit();
         this.destroy();
