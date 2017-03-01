@@ -13,7 +13,7 @@ en:
     id: "white-primer"
     group: "primer"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Primer-White.png"
     includeArea: "crown/white-primer.html"
   1:
     variantClasses: "grey-background"
@@ -25,7 +25,7 @@ en:
     id: "transparent-primer"
     group: "primer"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Primer-Transparent.jpg"
     includeArea: "crown/primertransparent.html"
   2:
     variantClasses: "odd grey-background"
@@ -37,7 +37,7 @@ en:
     id: "aluminum-primer"
     group: "primer"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Primer-Aluminium.jpg"
     includeArea: "crown/primeraluminium.html"
   3:
     variantClasses: "odd"
@@ -55,7 +55,7 @@ en:
     id: "offset-print"
     group: "print"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Print-offset.png"
     includeArea: "crown/pantone.html"
   4:
     variantClasses: ""
@@ -67,7 +67,7 @@ en:
     id: "cmyk-print"
     group: "print"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Print-CMYK.jpg"
     includeArea: "crown/cmyk.html"
   5:
     variantClasses: "odd"
@@ -79,7 +79,7 @@ en:
     id: "cold-activated-print"
     group: "print"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Print-Cold-activated.jpg"
     includeArea: "crown/coldactivated.html"
   6:
     variantClasses: "viewport-height grey-background"
@@ -93,7 +93,7 @@ en:
     id: "internal-print"
     group: "internal-print"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Internal-Print.png"
     includeArea: "crown/lithographic.html"
   7:
     variantClasses: "odd viewport-height"
@@ -107,7 +107,7 @@ en:
     id: "interior-side"
     group: "interior-side"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Interior-varnish.png"
     includeArea: "crown/internalvarnish.html"
   8:
     variantClasses: "viewport-height grey-background"
@@ -121,7 +121,7 @@ en:
     id: "inject-coating"
     group: "inject-coating"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Unique-Promotional-Codes.png"
     includeArea: "crown/promocodes.html"
   9:
     variantClasses: "odd"
@@ -136,7 +136,7 @@ en:
     id: "pry-off-interior"
     group: "interior-liner"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Interior-pry-off.png"
     includeArea: "crown/pryoff.html"
   10:
     variantClasses: ""
@@ -148,7 +148,7 @@ en:
     id: "twist-off-interior"
     group: "interior-liner"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Interior-twist-off.jpg"
     includeArea: "crown/twistoff.html"
   11:
     variantClasses: "odd"
@@ -160,7 +160,7 @@ en:
     id: "oxygen-interior"
     group: "interior-liner"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Interior-oxygen-scavenger.jpg"
     includeArea: "crown/o2scavenger.html"
   12:
     variantClasses: ""
@@ -172,7 +172,7 @@ en:
     id: "oxygen-barrier-interior"
     group: "interior-liner"
     layout: "layout-two-column"
-    mobileImage: ""
+    mobileImage: "/images/corks/Interior-oxygen-barrier.jpg"
     includeArea: "crown/o2barrier.html"
 el:
   production:

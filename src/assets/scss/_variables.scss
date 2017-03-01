@@ -181,5 +181,8 @@ $section-text-max-width: 420px;
 // Sync with bootstrap
 $content-wrapper-max-width: map-get($container-max-widths, xl);
 
+// mobile breakpoint
+// Canvas animation and fx animation stop below this value
+$mobile-breakpoint: 768px;
 // Gutter
 $gutter: 30px;

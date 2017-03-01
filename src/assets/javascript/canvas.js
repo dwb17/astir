@@ -8,6 +8,8 @@
   $(document).ready(function () {
     // Only add efects to desktop
     if(!window.matchMedia('(max-width: 768px)').matches) {
+      // Add class to html to signify canvas enabled.
+      $('html').addClass('js-canvas-enabled');
       // Waypoint init canvas.
       var customwaypointOffset = '40%';
       var customCompanywaypointOffset = '60%';
@@ -51,8 +53,6 @@
         offset: customwaypointOffset,
         triggerOnce: true,
       });
-
-
 
 
       // Product page.
@@ -147,12 +147,10 @@
         offset: customwaypointOffset,
         triggerOnce: true,
       });
-
-
-
-
-
-
+    }
+    else {
+      // Add class to html to signify canvas enabled.
+      $('html').addClass('js-small-screen');
     }
   });
 

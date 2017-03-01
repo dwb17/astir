@@ -57,7 +57,17 @@
         // Play the video when enough has been buffered
         if (!self.opt.isMobile) {
           self.opt.onLoad && self.opt.onLoad();
-          if (self.opt.autoplay !== false) self.videoEl.play();
+          if (self.opt.autoplay !== false) {
+            var inview = new Waypoint.Inview({
+              element: self.videoEl,
+              enter: function(direction) {
+                self.videoEl.play();
+              },
+              exited: function(direction) {
+                self.videoEl.pause();
+              }
+            })
+          }
         }
       });
 

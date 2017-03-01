@@ -136,3 +136,16 @@ body {
   height: auto;
   display: block;
 }
+
+
+@media all and (max-width: $mobile-breakpoint) {
+  .canvas-animation {
+    display: none;
+  }
+}
+
+@media all and (min-width: $mobile-breakpoint - 1) {
+  .image-mobile {
+    display: none;
+  }
+}

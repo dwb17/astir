@@ -14,7 +14,7 @@ $hamburger-padding-y                       : 15px !default;
 $hamburger-layer-width                     : 40px !default;
 $hamburger-layer-height                    : 4px !default;
 $hamburger-layer-spacing                   : 6px !default;
-$hamburger-layer-color                     : #000 !default;
+$hamburger-layer-color                     : #fff !default;
 $hamburger-layer-border-radius             : 4px !default;
 $hamburger-hover-opacity                   : 0.7 !default;
 $hamburger-hover-transition-duration       : 0.15s !default;
@@ -29,32 +29,7 @@ $hamburger-hover-filter    : opacity(50%) !default;
 // Types (Remove or comment out what you don’t need)
 // ==================================================
 $hamburger-types: (
-  3dx,
-  3dx-r,
-  3dy,
-  3dy-r,
-  arrow,
-  arrow-r,
-  arrowalt,
-  arrowalt-r,
-  boring,
   collapse,
-  collapse-r,
-  elastic,
-  elastic-r,
-  emphatic,
-  emphatic-r,
-  slider,
-  slider-r,
-  spring,
-  spring-r,
-  stand,
-  stand-r,
-  spin,
-  spin-r,
-  squeeze,
-  vortex,
-  vortex-r
 ) !default;
 
 // Base Hamburger (We need this)
@@ -63,6 +38,8 @@ $hamburger-types: (
 
 // Hamburger types
 // ==================================================
+@import "types/collapse";
+/*
 @import "types/3dx";
 @import "types/3dx-r";
 @import "types/3dy";
@@ -89,7 +66,7 @@ $hamburger-types: (
 @import "types/squeeze";
 @import "types/vortex";
 @import "types/vortex-r";
-
+*/
 // ==================================================
 // Cooking up additional types:
 //

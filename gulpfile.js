@@ -43,7 +43,7 @@ gulp.task("jekyll:prod", $.shell.task("bundle exec jekyll build --config _config
 gulp.task("styles", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
   return gulp.src("src/assets/scss/style.scss")
-    .pipe($.sass())
+    .pipe($.sass({outputStyle: 'compressed'}))
     // AutoPrefix your CSS so it works between browsers
     .pipe($.autoprefixer("last 1 version", { cascade: true }))
     // Directory your CSS file goes to

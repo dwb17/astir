@@ -32,7 +32,7 @@ layout: default
           {% assign certificatesItem = certificatesItems[1] %}
             <div class="col-4">
               <h3 class="title title--small text--centered">{{ certificatesItem.title }}</h3>
-              <div class="image text--centered"><img alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
+              <div class="image text--centered"><img class="img-fluid" alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
             </div>
         {% endfor %}
         </div>

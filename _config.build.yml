@@ -2,7 +2,7 @@
 # Overrides these options in _config.yml
 
 # Write your domain.
-url: http://astir-beta.pointblank.gr
+url: http://astir.devel.pointblank.gr
 
 # Hides your drafts and future posts
 future: false

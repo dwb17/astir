@@ -4,6 +4,9 @@
   &.is-enabled {
     width: 100%;
   }
+  ul,li {
+    list-style: none;
+  }
 }
 
 .hamburger-wrap {
