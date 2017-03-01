@@ -7,7 +7,13 @@
       <div class="text">{{ node.body }}</div>
     </div>
     <div class="column">
-      <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+      {% if node.includeArea %}
+        {% include {{ node.includeArea }} %}
+      {% endif %}
+
+      {% if node.image %}
+          <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+      {% endif %}
     </div>
   </div>
 </div>

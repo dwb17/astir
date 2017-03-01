@@ -20,6 +20,8 @@ en:
     bgImagePosition: "left top"
     bgImageSize: "60% auto"
     id: "crown-corks"
+    mobileImage: ""
+    includeArea: "crown/anatomy.html"
   exterior-side:
     title: "Steel"
     subtitle: "EXTERIOR SIDE"

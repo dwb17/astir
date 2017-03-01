@@ -1,0 +1,57 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/0.8.0/easeljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tweenjs/0.6.2/tweenjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/0.8.0/movieclip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/0.6.0/preloadjs.min.js"></script>
+<script id="thinkgreen" src="{{site.url}}{{site.canvasLocation}}/facilities/thinkgreen/thinkgreen.js"></script>
+<script type="text/javascript">
+(function() {
+	var canvas, stage, exportRoot;
+
+	// Get location of current script,
+  // Used to provide absolute position for resources.
+  var scriptPath = function () {
+	  var scripts = document.getElementById('thinkgreen');
+	  var path = '';
+	  if(scripts.src && scripts.src.match(/\/thinkgreen\.js$/)) {
+	    path = scripts.src.replace(/(.*)\/thinkgreen\.js$/, '$1');
+	  }
+	  return path;
+  };
+
+	window.thinkgreeninit = function() {
+		canvas = document.getElementById("thinkgreen-canvas");
+		images = images||{};
+
+		// Change the source of the assets, so as to point to the
+		// location of the js file.
+		libThinkGreen.properties.manifest.forEach(function(currentValue){
+			// Only process if the scriptPath is not already set.
+			if(currentValue.src.indexOf('http') != 0){
+				currentValue.src = scriptPath() + '/' + currentValue.src;
+			}
+		});
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+
+		loader.loadManifest(libThinkGreen.properties.manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new libThinkGreen.thinkgreen();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+
+		createjs.Ticker.setFPS(libThinkGreen.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+})();
+</script>
+<canvas id="thinkgreen-canvas" class="canvas-animation" width="430" height="407" style=""></canvas>
