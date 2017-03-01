@@ -10,18 +10,50 @@
     if(!window.matchMedia('(max-width: 768px)').matches) {
       // Waypoint init canvas.
       var customwaypointOffset = '40%';
+      var customCompanywaypointOffset = '60%';
 
-
-      // Company page
-      $('#global-map').waypoint(function (direction) {
-        if (direction === 'down') {
-          globalMapInit();
-        }
+      // Facilities
+      $('#sustainable').waypoint(function (direction) {
+        window.thinkgreeninit();
         this.destroy();
       }, {
         offset: customwaypointOffset,
         triggerOnce: true,
       });
+
+      // Company page
+      $('#crown-corks').waypoint(function (direction) {
+        window.anatomyinit();
+        this.destroy();
+      }, {
+        offset: customwaypointOffset,
+        triggerOnce: true,
+      });
+      $('#global-map').waypoint(function (direction) {
+        window.globalMapInit();
+        this.destroy();
+      }, {
+        offset: customwaypointOffset,
+        triggerOnce: true,
+      });
+      $('#facts').waypoint(function (direction) {
+        window.revenueInit();
+        this.destroy();
+      }, {
+        offset: customwaypointOffset,
+        triggerOnce: true,
+      });
+
+      $('#about').waypoint(function (direction) {
+        window.productionInit();
+        this.destroy();
+      }, {
+        offset: customwaypointOffset,
+        triggerOnce: true,
+      });
+
+
+
 
       // Product page.
       $('#white-primer').waypoint(function (direction) {

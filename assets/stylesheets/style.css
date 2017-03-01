@@ -6176,15 +6176,15 @@ ul.tabs li.current {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #0e3721;
-  background-color: rgba(14, 55, 33, 0.9);
+  background-color: #e11b22;
+  background-color: rgba(225, 27, 34, 0.9);
   overflow-x: hidden;
   -webkit-transition: 0.5s;
           transition: 0.5s; }
 
 .overlay-content {
   position: relative;
-  top: 25%;
+  top: 15%;
   width: 100%;
   text-align: center;
   margin-top: 30px; }
@@ -6192,8 +6192,8 @@ ul.tabs li.current {
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
-  color: #818181;
+  font-size: 43px;
+  color: #ffffff;
   display: block;
   -webkit-transition: 0.3s;
           transition: 0.3s; }
