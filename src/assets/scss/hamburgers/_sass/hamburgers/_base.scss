@@ -17,7 +17,10 @@
   border: 0;
   margin: 0;
   overflow: visible;
-
+  &:focus {
+    outline:0;
+    outline: none;
+  }
   &:hover {
     @if $hamburger-hover-use-filter == true {
       filter: $hamburger-hover-filter;
@@ -27,7 +30,17 @@
     }
   }
 }
-
+.hamburger-label {
+  color: $hamburger-layer-color;
+  line-height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  display: inline-block;
+  position:relative;
+  vertical-align: top;
+  padding-right: 5px;
+  .is-dark & {
+    color: $hamburger-layer-color-dark;
+  }
+}
 .hamburger-box {
   width: $hamburger-layer-width;
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
@@ -51,6 +64,9 @@
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+    .is-dark & {
+      background-color: $hamburger-layer-color-dark;
+    }
   }
 
   &::before,
