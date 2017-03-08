@@ -1,11 +1,21 @@
 .footer {
   background-color: $black;
   padding-top: 6rem;
-  
-  &__item {
 
+  &__item {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 1.5rem;
+    }
+    // Change column styling, to inline blocks
+    @include media-breakpoint-between(sm, lg) {
+      float: none;
+      width: 48%;
+      display: inline-block;
+      vertical-align: top;
+    }
     .text {
       color: $gray-light;
+      max-width: 320px;
     }
   }
 
@@ -45,6 +55,10 @@
       list-style: none;
       &__link{
         color: $gray-light;
+        &.active,
+        &:hover {
+          color: $white;
+        }
       }
     }
   }

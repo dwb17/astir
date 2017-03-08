@@ -16,6 +16,8 @@
     // center only within a viewport-height element
     @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
       height: auto;
+      padding-top: 55px;
+      padding-bottom: 55px;
     }
     .content-wrapper,
     .image {

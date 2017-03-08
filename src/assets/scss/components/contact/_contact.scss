@@ -7,12 +7,15 @@
 
 .contact {
   padding-bottom: 6rem;
-
+  padding-top: 5rem;
+  .title {
+    margin-bottom: 0;
+  }
   .title--small {
     padding-bottom: .3rem;
     padding-top: 1.8rem;
   }
-  
+
   &__telephone,
   &__email {
     font-size: $contact-title;
@@ -31,5 +34,11 @@
 
 #gmap {
   width: 100%;
-  height: 400px;
+  height: 850px;
+  @include media-breakpoint-between(sm, md) {
+    height: 650px;
+  }
+  @include media-breakpoint-down(sm) {
+    height: 320px;
+  }
 }

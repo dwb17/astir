@@ -37,4 +37,8 @@
   &--centered {
     text-align: center;
   }
+  // Grey text.
+  &--gray-colored {
+    color: $gray-lighter;
+  }
 }

@@ -7,13 +7,12 @@ layout: default
   {% if logisticsItems[0] == "video" %}
       {% include video.html param=logisticsItem %}
   {% else %}
-
     {% if logisticsItem.id == "supply-chain" %}
       {% include slice.html param=logisticsItem imageBelowSection="true" %}
 
     {% elsif logisticsItem.id == "packaging" %}
       {% include slice.html param=logisticsItem %}
-      <div class="grey-background">
+      <div class="grey-background" id="packaging-list">
         <div class="container">
           <div class="row">
           {% for packagingItems in site.data.packaging[langcode] %}
@@ -26,7 +25,7 @@ layout: default
 
     {% elsif logisticsItem.id == "quality-standards" %}
       {% include slice.html param=logisticsItem %}
-      <div class="container">
+      <div class="container" id="quality-standards-list">
         <div class="row">
         {% for certificatesItems in site.data.certificates[langcode] %}
           {% assign certificatesItem = certificatesItems[1] %}

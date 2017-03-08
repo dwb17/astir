@@ -27,6 +27,12 @@ body {
 
 .vertically-centered {
   @include vertically-centered();
+  @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    position: relative;;
+    top: auto;
+    left: auto;
+    transform:none;
+  }
 }
 
 // Max width on content wrapper
@@ -139,6 +145,7 @@ body {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 
@@ -152,4 +159,49 @@ body {
   .image-mobile {
     display: none;
   }
+}
+
+// Paddings per slice
+#company-about-astir,
+#company-facts {
+  padding-top: 5rem;
+}
+
+#revenue-chart {
+  padding-bottom: 4rem;
+}
+
+#facilities {
+  .image {
+    padding-top: 2rem;
+  }
+  padding-bottom: 5rem;
+}
+
+#thinkgreen-canvas {
+  padding-top: 4rem;
+}
+
+#supply-chain {
+  .image {
+    padding-top: 2rem;
+  }
+  padding-bottom: 5rem;
+}
+
+#packaging-list {
+  padding-bottom: 5rem;
+  .title--medium {
+    margin-bottom: 0;
+  }
+  .item {
+    padding-bottom: 2rem;
+  }
+}
+
+#quality-standards {
+  padding-bottom: 3rem;
+}
+#quality-standards-list {
+  padding-bottom: 5rem;
 }
