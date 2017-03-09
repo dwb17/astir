@@ -1,0 +1,35 @@
+{% assign node = include.param %}
+<div class="section {{ node.variantClasses }} {{ node.layout }} clearfix" id="{{node.id}}" {% unless node.id == "exterior-side" %}{% if(node.bgImage) %}style="background-image:url({{ node.bgImage }}); background-position: {{ node.bgImagePosition }}; background-size: {{ node.bgImageSize }};"{% endif %}{% endunless %}>
+  <div class="content-container">
+    <div class="column">
+      {% if node.includeArea %}
+        {% include {{ node.includeArea }} %}
+      {% endif %}
+      {% if node.mobileImage %}
+        <div class="image-mobile">
+          <div class="image"><img class="img-fluid" src="{{ node.mobileImage }}"></div>
+        </div>
+      {% endif %}
+
+      {% if node.image %}
+        <div class="js-waypoint-image">
+          <div class="image"><img class="img-fluid" src="{{ node.image }}"></div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="column ">
+      <div class="content-wrapper">
+        <div class="js-waypoint-text--canvas">
+          {% if node.subtitle %}
+          <h2 class="subtitle">{{ node.subtitle }}</h2>
+          {% endif %}
+          <h1 class="title {{ node.title_variantClasses }}">{{ node.title }}</h1>
+          <div class="text">{{ node.body | markdownify }}</div>
+          {% if node.buttonLink %}
+          <a href="{{ site.url }}{{ node.buttonLink }}" class="btn {{ node.buttonClasses }}">{{ node.buttonText }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

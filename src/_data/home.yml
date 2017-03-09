@@ -33,7 +33,7 @@ en:
     bgImage: "/images/homepage/State-of-the-art-plant-back.jpg"
     bgImagePosition: "right top"
     bgImageSize: "auto 70%"
-    id: facilities
+    id: facilities-homepage
   crown-corks:
     title: "Elegantly crafted"
     variantClasses: "on-brand-color odd viewport-height"

@@ -10,6 +10,7 @@
     top: 32%;
     opacity: 0;
     transition: top .9s, opacity .4s;
+    z-index: 3;
     &.is-loaded {
       top: 50%;
       opacity: 1;
@@ -28,7 +29,7 @@
     background-position: 50% 50%;
     height: 100%;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
   }
 
   &__cover {
@@ -40,8 +41,10 @@
       background-position: center;
       opacity: 1;
       transition: opacity .5s;
+      z-index: 2;
       &.is-loaded {
         opacity: 0;
+        z-index: -10;
       }
     }
 
@@ -54,7 +57,6 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
   }
 
   .title {

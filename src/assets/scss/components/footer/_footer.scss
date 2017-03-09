@@ -1,6 +1,6 @@
 .footer {
   background-color: $black;
-  padding-top: 6rem;
+  @include section-padding-top(6);
 
   &__item {
     @include media-breakpoint-down(lg) {

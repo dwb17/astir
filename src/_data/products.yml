@@ -1,7 +1,7 @@
 ---
 en:
   0:
-    variantClasses: "odd grey-background"
+    variantClasses: "odd grey-background crown-corks__item crown-corks__item--first"
     title: "White Primer"
     title_variantClasses: "title--large"
     subtitle: "PRIMER"
@@ -16,7 +16,7 @@ en:
     mobileImage: "/images/corks/Primer-White.png"
     includeArea: "crown/white-primer.html"
   1:
-    variantClasses: "grey-background"
+    variantClasses: "grey-background crown-corks__item"
     title: "Transparent Primer"
     title_variantClasses: "title--large"
     subtitle: "PRIMER"
@@ -28,7 +28,7 @@ en:
     mobileImage: "/images/corks/Primer-Transparent.jpg"
     includeArea: "crown/primertransparent.html"
   2:
-    variantClasses: "odd grey-background"
+    variantClasses: "odd grey-background crown-corks__item"
     title: "Aluminum"
     title_variantClasses: "title--large"
     subtitle: "PRIMER"
@@ -40,7 +40,7 @@ en:
     mobileImage: "/images/corks/Primer-Aluminium.jpg"
     includeArea: "crown/primeraluminium.html"
   3:
-    variantClasses: "odd"
+    variantClasses: "odd crown-corks__item crown-corks__item--first"
     title: "Offset Print"
     title_variantClasses: "title--large"
     subtitle: "PRINT"
@@ -58,7 +58,7 @@ en:
     mobileImage: "/images/corks/Print-offset.png"
     includeArea: "crown/pantone.html"
   4:
-    variantClasses: ""
+    variantClasses: "crown-corks__item"
     title: "CMYK"
     title_variantClasses: "title--large"
     subtitle: "PRINT"
@@ -70,7 +70,7 @@ en:
     mobileImage: "/images/corks/Print-CMYK.jpg"
     includeArea: "crown/cmyk.html"
   5:
-    variantClasses: "odd"
+    variantClasses: "odd crown-corks__item"
     title: "Cold activated ink"
     title_variantClasses: "title--large"
     subtitle: "PRINT"
@@ -82,7 +82,7 @@ en:
     mobileImage: "/images/corks/Print-Cold-activated.jpg"
     includeArea: "crown/coldactivated.html"
   6:
-    variantClasses: "viewport-height grey-background"
+    variantClasses: "grey-background crown-corks__item crown-corks__item--first"
     title: "Lithographic Print"
     title_variantClasses: "title--large"
     subtitle: "INTERNAL PRINT"
@@ -96,7 +96,7 @@ en:
     mobileImage: "/images/corks/Internal-Print.png"
     includeArea: "crown/lithographic.html"
   7:
-    variantClasses: "odd viewport-height"
+    variantClasses: "odd crown-corks__item crown-corks__item--first"
     title: "Internal Varnish"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR SIDE"
@@ -110,7 +110,7 @@ en:
     mobileImage: "/images/corks/Interior-varnish.png"
     includeArea: "crown/internalvarnish.html"
   8:
-    variantClasses: "viewport-height grey-background"
+    variantClasses: "grey-background  crown-corks__item crown-corks__item--first"
     title: "Unique Promotional Codes"
     title_variantClasses: "title--large"
     subtitle: "INJECT COATING"
@@ -124,7 +124,7 @@ en:
     mobileImage: "/images/corks/Unique-Promotional-Codes.png"
     includeArea: "crown/promocodes.html"
   9:
-    variantClasses: "odd"
+    variantClasses: "odd crown-corks__item crown-corks__item--first"
     title: "Pry Off"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR PLASTIC LINER"
@@ -139,7 +139,7 @@ en:
     mobileImage: "/images/corks/Interior-pry-off.png"
     includeArea: "crown/pryoff.html"
   10:
-    variantClasses: ""
+    variantClasses: " crown-corks__item"
     title: "Twist Off"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR PLASTIC LINER"
@@ -151,7 +151,7 @@ en:
     mobileImage: "/images/corks/Interior-twist-off.jpg"
     includeArea: "crown/twistoff.html"
   11:
-    variantClasses: "odd"
+    variantClasses: "odd crown-corks__item"
     title: "Oxygen scavenger"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR PLASTIC LINER"
@@ -163,7 +163,7 @@ en:
     mobileImage: "/images/corks/Interior-oxygen-scavenger.jpg"
     includeArea: "crown/o2scavenger.html"
   12:
-    variantClasses: ""
+    variantClasses: "crown-corks__item crown-corks__item--last"
     title: "Oxygen barrier"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR PLASTIC LINER"

@@ -1,6 +1,6 @@
 .slice {
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+  @include section-padding-top(5);
+  @include section-padding-bottom(3);
   background-repeat: no-repeat;
 
   &--with-centered-image {

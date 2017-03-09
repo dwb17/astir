@@ -1,14 +1,14 @@
 ---
 en:
   0:
-    variantClasses: "text--centered"
+    variantClasses: "text--centered col-md-6 exterior-side__item"
     title: "TFS"
     title_variantClasses: "title--medium"
     body: "Almost 70% of crown corks in the world are made of Tin Free Steel. TFS is widely used in the metal packaging industry due to its really competitive cost-performance ratio. TFS has a dull grey stone finish and usually comes with white lacquer applied on top."
     image: "/images/corks/Steel-TFS.jpg"
     layout: ""
   1:
-    variantClasses: "text--centered"
+    variantClasses: "text--centered col-md-6 exterior-side__item"
     title: "ETP"
     title_variantClasses: "title--medium"
     body: "Electrolytic TinPlate is a more expensive material, tin coated with beautiful bright metallic finish. Adds luxury appearance to the bottle caps and is ideal for premium packaging. Shiny silver and golden crown corks are made only with ETP steel."

@@ -47,6 +47,22 @@
       $('.js-waypoint-text').addClass('is-going-to-be-animated');
       $('.js-waypoint-image').addClass('is-going-to-be-animated');
 
+      // Special canvas text handling
+      $('.js-waypoint-text--canvas').addClass('is-going-to-be-animated');
+      $('.js-waypoint-text--canvas').waypoint(function (direction) {
+        if (direction === 'down') {
+          // Show and animate elements once.
+          if ($(this.element).hasClass('is-going-to-be-animated')) {
+            $(this.element).removeClass('is-going-to-be-animated');
+            $(this.element).addClass('animated fadeInUp');
+          }
+        }
+        this.destroy();
+      }, {
+        offset: '60%',
+        triggerOnce: true,
+      });
+
       // Waypoint animate.
       $('.js-waypoint-text').waypoint(function (direction) {
         if (direction === 'down') {
@@ -56,7 +72,7 @@
             $(this.element).addClass('animated fadeInUp');
           }
         }
-        //this.destroy();
+        this.destroy();
       }, {
         offset: '40%',
         triggerOnce: true,
@@ -76,6 +92,7 @@
             }
           }
         }
+        this.destroy();
       }, {
         offset: '80%'
       });

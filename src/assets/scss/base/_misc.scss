@@ -17,6 +17,15 @@ body {
   margin-top: 1rem;
 }
 
+// mixing for paddings
+@mixin section-padding-top($padding-top) {
+  padding-top: $padding-top * $line-height-base + rem;
+}
+
+@mixin section-padding-bottom($padding-bottom) {
+  padding-bottom: $padding-bottom * $line-height-base + rem;
+}
+
 @mixin vertically-centered() {
   width: 100%;
   position: absolute;
@@ -28,7 +37,7 @@ body {
 .vertically-centered {
   @include vertically-centered();
   @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
-    position: relative;;
+    position: relative;
     top: auto;
     left: auto;
     transform:none;
@@ -164,44 +173,98 @@ body {
 // Paddings per slice
 #company-about-astir,
 #company-facts {
-  padding-top: 5rem;
+  @include section-padding-top(5);
 }
 
 #revenue-chart {
-  padding-bottom: 4rem;
+  @include section-padding-bottom(4);
 }
 
 #facilities {
   .image {
     padding-top: 2rem;
   }
-  padding-bottom: 5rem;
+  @include section-padding-top(5);
 }
 
 #thinkgreen-canvas {
-  padding-top: 4rem;
+  @include section-padding-top(4);
 }
 
 #supply-chain {
   .image {
     padding-top: 2rem;
   }
-  padding-bottom: 5rem;
+  @include section-padding-top(5);
 }
 
 #packaging-list {
-  padding-bottom: 5rem;
+  @include section-padding-bottom(5);
   .title--medium {
     margin-bottom: 0;
   }
   .item {
     padding-bottom: 2rem;
   }
+  .text {
+    min-height: 56px;
+  }
+}
+
+#production {
+  .text {
+    z-index: 10;
+  }
+  .image {
+    margin-top: -3rem;
+    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+      margin-top: 0;
+    }
+  }
 }
 
 #quality-standards {
-  padding-bottom: 3rem;
+  @include section-padding-bottom(3);
 }
 #quality-standards-list {
-  padding-bottom: 5rem;
+  @include section-padding-bottom(5);
+}
+
+
+// Crown corks
+.exterior-side__item {
+  .text {
+    max-width: $section-text-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#exterior-side {
+  @include section-padding-top(5);
+  @include section-padding-bottom(4);
+}
+
+#exterior-diferrence {
+  @include section-padding-top(4);
+}
+
+#see-the-difference {
+  @include section-padding-top(1.5);
+  @include section-padding-bottom(5);
+}
+
+.crown-corks__item {
+  //center content in column.
+  &.layout-two-column .column:nth-child(2n) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  @include section-padding-bottom(4);
+  &--first {
+    @include section-padding-top(4);
+  }
+  &--last {
+    @include section-padding-bottom(6);
+  }
 }

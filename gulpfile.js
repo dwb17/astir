@@ -195,7 +195,11 @@ gulp.task("serve:dev", ["styles", "jekyll:dev", "scripts-opt", "scripts-opt-bide
     open: false,
     // tunnel: "",
     server: {
-      baseDir: "serve"
+      baseDir: "serve",
+      middleware: function (req, res, next) {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+      }
     }
   });
 });
@@ -239,7 +243,7 @@ gulp.task("copy-favicon", function() {
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "scripts-opt-bideo", "video", "canvas", "phpmailer","copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "scripts-opt-bideo", "video", "phpmailer","copy-favicon");
 });
 
 gulp.task('scripts-opt', ["scripts-opt-bideo"], function() {

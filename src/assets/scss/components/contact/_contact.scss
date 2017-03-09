@@ -1,13 +1,13 @@
 // request form
 .contact-form {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  @include section-padding-top(6);
+  @include section-padding-bottom(6);
 
 }
 
 .contact {
-  padding-bottom: 6rem;
-  padding-top: 5rem;
+  @include section-padding-top(5);
+  @include section-padding-bottom(6);
   .title {
     margin-bottom: 0;
   }
