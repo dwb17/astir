@@ -80,6 +80,9 @@
   &.odd {
     .column:nth-child(2n) {
       order: -1;
+      @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+        order: 2;
+      }
     }
     /*
     .column:nth-child(2n+1) {

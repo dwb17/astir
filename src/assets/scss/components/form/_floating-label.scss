@@ -5,14 +5,14 @@
 
   label {
     position: relative;
-    top: 40px;
+    top: 33px;
     transition: .75s;
     pointer-events: none;
   }
 
   // Textarea: Add some padding for the placeholder text.
   textarea {
-    padding-top: 1rem;
+    padding-top: 0;
     padding-left: 0;
     margin-top: 0;
   }
@@ -21,13 +21,20 @@
   // Used for the line fx.
   &:after {
     content: '';
-    left: 10px;
-    right: 10px;
+    left: 16px;
+    right: 16px;
     position: absolute;
     bottom: 1px;
     height: 1px;
     background: $input-line;
     transition: .2s;
+  }
+
+  // Textarea: Move label less.
+  &.webform-component-textarea {
+    label {
+      top: 28px;
+    }
   }
 
   &.is-floated {
@@ -40,7 +47,7 @@
     }
 
     // Textarea: Move not all the way up but at line height pixels.
-    &.webform-component-textarea {
+    &#webform-component-textarea {
       label {
         top: $line-height-base;
       }

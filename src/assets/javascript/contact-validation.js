@@ -30,7 +30,7 @@ $(document).ready(function() {
       message: "Please specify your message",
       e_mail: {
         required: "We need your email address to contact you.",
-        email: "Your email address must be in the format of name@domain.com"
+        email: "Your email address is invalid."
       }
     },
     submitHandler: function(form) {
@@ -50,9 +50,9 @@ $(document).ready(function() {
   function showResponse(responseText, statusText, xhr, $form)  {
     if (responseText.status == 'OK') {
       $form.hide();
-      $('#form-response').text(responseText.message).show();
+      $('#form-response').text('<i class="fa fa-check-circle-o" aria-hidden="true"></i>'+responseText.message).show();
     } else {
-      $('#form-response').text(responseText.message).show();
+      $('#form-response').text('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>'+responseText.message).show();
     }
     //$form.resetForm();
   }

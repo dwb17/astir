@@ -5,6 +5,7 @@ en:
     subtitle: "Combining the taste of tradition with our passion for innovation, we craft high-quality crown corks that help brands enhance the value of their products and build strong customer relationships."
     videomp4: "/assets/video/company/company.mp4"
     videoPoster: "/assets/video/company/company.jpg"
+    videoMobilePoster: "/assets/video/company/company.jpg"
     WatchFullVideo: false
   about:
     title: "Crowning An art of its own"

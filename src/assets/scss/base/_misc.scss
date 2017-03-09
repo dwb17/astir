@@ -20,10 +20,16 @@ body {
 // mixing for paddings
 @mixin section-padding-top($padding-top) {
   padding-top: $padding-top * $line-height-base + rem;
+  @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+    padding-top: $padding-top + rem;
+  }
 }
 
 @mixin section-padding-bottom($padding-bottom) {
   padding-bottom: $padding-bottom * $line-height-base + rem;
+  @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+    padding-bottom: $padding-bottom + rem;
+  }
 }
 
 @mixin vertically-centered() {

@@ -5,6 +5,7 @@ en:
     subtitle: "Manufacturing bespoke excellence"
     videomp4: "/assets/video/home/home.mp4"
     videoPoster: "/assets/video/home/home.jpg"
+    videoMobilePoster: "/assets/video/home/home.jpg"
     WatchFullVideo: true
     WatchVideoLinkText: "WATCH VIDEO"
     FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"

@@ -2,6 +2,10 @@
   background-color: $black;
   @include section-padding-top(6);
 
+  &.on-dark-color .title {
+    color: $white;
+  }
+
   &__item {
     @include media-breakpoint-down(lg) {
       margin-bottom: 1.5rem;

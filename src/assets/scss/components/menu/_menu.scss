@@ -1,6 +1,7 @@
 // Navigation open or close state
 #navigation{
   width: 0%;
+
   &.is-enabled {
     width: 100%;
   }
@@ -13,7 +14,7 @@
   position: fixed;
   top: 5%;
   right: 5%;
-  z-index: 100;
+  z-index: 101;
 }
 
 .overlay {
@@ -27,6 +28,7 @@
     background-color: rgba(225,27,34, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
+    overflow: hidden;
 }
 
 .overlay-content {
@@ -48,6 +50,13 @@
     color: $white;
     display: block;
     transition: 0.3s;
+    @media screen and ( max-height: 720px ){
+      font-size: 32px;
+    }
+
+    @media screen and ( max-height: 480px ){
+      font-size: 27px;
+    }
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -62,8 +71,10 @@
     top: 20px;
     right: 45px;
     font-size: 60px;
+    z-index: 1001;
 }
 
+/*
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
@@ -72,3 +83,4 @@
     right: 35px;
   }
 }
+*/

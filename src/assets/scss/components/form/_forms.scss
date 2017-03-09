@@ -8,11 +8,20 @@ button {
 form {
   //@extend %layout-center;
   @include clearfix();
+  @include section-padding-top(3);
+  span.error {
+    position: absolute;
+    color: $white;
+    font-size: $font-size-sm;
+    line-height: 1;
+    bottom: -27px;
+    left: 16px;
+  }
 }
 
 .form-item {
-  margin: 2rem 0;
-  padding: 0 $gutter/2;
+  margin: 0 0 16px 0;
+  padding: 0 16px;
   width: 50%;
   float: left;
 
@@ -25,39 +34,66 @@ form {
 
   &#webform-component-message {
     width: 100%;
+    &::after {
+      bottom: 0;
+    }
   }
 
   input {
     width: 100%;
+  }
+  .form-textarea-wrapper {
+    line-height: 0;
   }
 
   textarea {
     resize: none;
     border: 0;
     width: 100%;
+    background-attachment: local;
+    background-image: repeating-linear-gradient(transparent, transparent 31px, $input-line 31px, $input-line 32px, transparent 32px);
+    line-height: 32px;
+    height: 5 * 32px;
   }
 
   input,
   textarea {
-    background: transparent;
+    background-color: transparent;
+    color: $white;
+    font-family: $pf-light;
   }
 }
 
 
 
 label {
-  padding-bottom: .5rem;
+  padding-bottom: 0;
+  color: $white;
+  margin-bottom: 0;
 }
 
 .form-text {
-  padding-bottom: .75rem;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 5px;
   color: $black;
   border: 0;
 }
 
 .form-actions {
   clear: both;
-  text-align: right;
+  text-align: center;
 }
 
 .form-submit {}
+
+#form-response {
+  font-size: 1.25rem;
+  @include section-padding-top(2);
+
+  i {
+    color: white;
+    font-size: 1.6rem;
+    padding-right: 10px;
+  }
+}
