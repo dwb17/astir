@@ -226,6 +226,9 @@ gulp.task("serve:prod", function () {
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
 
+// CSS only
+gulp.task("plain", ["styles", "watch"]);
+
 // Checks your CSS, JS and Jekyll for errors
 gulp.task("check", ["jslint", "doctor"], function () {
   // Better hope nothing is wrong.

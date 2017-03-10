@@ -8,7 +8,7 @@
 
   $(document).ready(function () {
     // Only add efects to desktop
-    if(!window.matchMedia('(max-width: 768px)').matches) {
+    if(!window.matchMedia('(max-width: 767px)').matches) {
       // Add class to html to signify canvas enabled.
       $('html').addClass('js-canvas-enabled');
       // Waypoint init canvas.

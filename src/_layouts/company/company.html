@@ -15,7 +15,7 @@ layout: default
 {% for companyItems in site.data.company[langcode] %}
   {% assign companyItem = companyItems[1] %}
   {% if companyItems[0] == "video" %}
-    {% include video.html param=companyItem variantClass="video--homepage" %}
+    {% include video.html param=companyItem %}
   {% else %}
     {% include slice.html param=companyItem %}
     {% if companyItem.includeArea %}

@@ -9,25 +9,31 @@ body {
   }
 }
 
+
 // Override btn, chnage font-size and paddings
 // due to capitlization on them.
 .btn {
-  font-size: $font-size-xs;
-  padding-bottom: 0.6rem;
-  margin-top: 1rem;
+  font-size: .75rem;
+  margin-top: $line-height-base + rem;
+  font-family: helvetica,arial,sans-serif;
+  font-weight: bold;
+  letter-spacing: .8px;
+  @include media-breakpoint-down(sm) {
+    padding: .8rem 1.25rem;
+  }
 }
 
 // mixing for paddings
 @mixin section-padding-top($padding-top) {
   padding-top: $padding-top * $line-height-base + rem;
-  @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+  @include media-breakpoint-down(sm) {
     padding-top: $padding-top + rem;
   }
 }
 
 @mixin section-padding-bottom($padding-bottom) {
   padding-bottom: $padding-bottom * $line-height-base + rem;
-  @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+  @include media-breakpoint-down(sm) {
     padding-bottom: $padding-bottom + rem;
   }
 }
@@ -42,7 +48,8 @@ body {
 
 .vertically-centered {
   @include vertically-centered();
-  @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+  // Reset to default behavior
+  @include media-breakpoint-down(sm) {
     position: relative;
     top: auto;
     left: auto;
@@ -101,7 +108,7 @@ body {
     column-gap: 2rem;
     max-width: $content-wrapper-max-width;
     text-align: left;
-    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    @include media-breakpoint-down(sm) {
       column-count: 1;
       column-gap: 0;
     }
@@ -164,13 +171,13 @@ body {
 }
 
 
-@media all and (max-width: $mobile-breakpoint) {
+@include media-breakpoint-down(sm) {
   .canvas-animation {
     display: none;
   }
 }
 
-@media all and (min-width: $mobile-breakpoint - 1) {
+@include media-breakpoint-up(md) {
   .image-mobile {
     display: none;
   }
@@ -223,7 +230,7 @@ body {
   }
   .image {
     margin-top: -3rem;
-    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    @include media-breakpoint-down(sm) {
       margin-top: 0;
     }
   }

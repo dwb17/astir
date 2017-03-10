@@ -1,8 +1,7 @@
 // request form
 .contact-form {
-  @include section-padding-top(6);
-  @include section-padding-bottom(6);
-
+  @include section-padding-top(4);
+  @include section-padding-bottom(4);
 }
 
 .contact {

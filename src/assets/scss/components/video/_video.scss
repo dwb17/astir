@@ -5,17 +5,18 @@
   position: relative;
   overflow: hidden;
 
-  &__content {
-    @include vertically-centered();
-    top: 32%;
-    opacity: 0;
-    transition: top .9s, opacity .4s;
-    z-index: 3;
-    &.is-loaded {
-      top: 50%;
-      opacity: 1;
+  @include media-breakpoint-up(sm) {
+    &__content {
+      @include vertically-centered();
+      top: 32%;
+      opacity: 0;
+      transition: top .9s, opacity .4s;
+      z-index: 3;
+      &.is-loaded {
+        top: 50%;
+        opacity: 1;
+      }
     }
-
     // Set padding when max width reached
     @media only screen and (min-width:0) and (max-width: $container-medium)  {
       padding-left: 5%;
@@ -40,7 +41,7 @@
     background-size: cover;
     background-position: center;
     z-index: 2;
-    @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+    @include media-breakpoint-down(sm) {
       display: block !important;
     }
   }
@@ -58,7 +59,7 @@
         opacity: 0;
         z-index: -10;
       }
-      @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+      @include media-breakpoint-down(sm) {
         display: none !important;
       }
     }
@@ -83,10 +84,8 @@
     @extend .text--light-colored;
     max-width: $container-medium;
     margin: 0 auto;
-    padding-top: .5rem;
+    //padding-top: .5rem;
     padding-bottom: 1rem;
-
-
   }
 
   &__watch-full-video {
@@ -97,7 +96,10 @@
       padding: .25rem;
     }
     font-size: $font-size-sm;
-
+    letter-spacing: .8px;
+    @include media-breakpoint-down(sm)  {
+      font-size: .8rem;
+    }
     &:hover,
     &:focus {
       color: $inverse-color;
@@ -106,9 +108,15 @@
 
   // Homepage variant
   &.video--homepage {
-    .video {
+    .video__content {
+      .title {
+        margin-bottom: 0;
+      }
       .text {
         @extend .text--large;
+        @include media-breakpoint-down(sm)  {
+          font-size: 1rem;
+        }
       }
     }
   }

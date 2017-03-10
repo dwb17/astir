@@ -71,7 +71,7 @@ en:
     includeArea: "crown/cmyk.html"
   5:
     variantClasses: "odd crown-corks__item"
-    title: "Cold activated ink"
+    title: "Cold Activated Ink"
     title_variantClasses: "title--large"
     subtitle: "PRINT"
     counter: "03"
@@ -152,7 +152,7 @@ en:
     includeArea: "crown/twistoff.html"
   11:
     variantClasses: "odd crown-corks__item"
-    title: "Oxygen scavenger"
+    title: "Oxygen Scavenger"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR PLASTIC LINER"
     counter: "03"
@@ -164,7 +164,7 @@ en:
     includeArea: "crown/o2scavenger.html"
   12:
     variantClasses: "crown-corks__item crown-corks__item--last"
-    title: "Oxygen barrier"
+    title: "Oxygen Barrier"
     title_variantClasses: "title--large"
     subtitle: "INTERIOR PLASTIC LINER"
     counter: "04"

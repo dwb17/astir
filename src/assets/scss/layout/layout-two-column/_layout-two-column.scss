@@ -45,7 +45,7 @@
     }
 
     // Single column.
-    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    @include media-breakpoint-down(sm) {
       width: 100%;
       padding-right: 0;
       + .column {
@@ -80,20 +80,9 @@
   &.odd {
     .column:nth-child(2n) {
       order: -1;
-      @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+      @include media-breakpoint-down(sm) {
         order: 2;
       }
     }
-    /*
-    .column:nth-child(2n+1) {
-      width: 50%;
-     // float: right;
-    }
-
-    .column:nth-child(2n) {
-      width: 50%;
-//float: left;
-    }
-    */
   }
 }

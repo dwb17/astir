@@ -26,7 +26,7 @@ form {
   float: left;
 
   // Collapse in one column.
-  @media only screen and (min-width:0) and (max-width: $mobile-breakpoint)  {
+  @include media-breakpoint-down(sm) {
     width: 100%;
     float: none;
   }

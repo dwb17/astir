@@ -4,21 +4,27 @@ en:
     url: "/"
   company:
     menuTitle: "COMPANY"
+    footerTitle: "Company"
     url: "/company/"
-  crown-corks:
-    menuTitle: "CROWN CORKS"
-    url: "/crown-corks/"
   facilities:
     menuTitle: "FACILITES"
+    footerTitle: "Facilities"
     url: "/facilities/"
+  crown-corks:
+    menuTitle: "CROWN CORKS"
+    footerTitle: "Crown Corks"
+    url: "/crown-corks/"
   logistics:
-    menuTitle: "SPECIFICATIONS"
-    url: "/logistics/"  
+    menuTitle: "LOGISTICS"
+    footerTitle: "Logistics"
+    url: "/logistics/"
   why-crown-corks:
     menuTitle: "WHY CROWN CORKS"
+    footerTitle: "Why Crown Corks"
     url: "/why-crown-corks/"
   contact:
-    menuTitle: "CONTACT"
+    menuTitle: "CONTACT US"
+    footerTitle: "Contact us"
     url: "/contact/"
 
 el:

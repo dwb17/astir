@@ -8,7 +8,7 @@ en:
     videoMobilePoster: "/assets/video/company/company.jpg"
     WatchFullVideo: false
   about:
-    title: "Crowning An art of its own"
+    title: "Crowning<br/>An art of its own"
     title_variantClasses: "title--large"
     subtitle: "ABOUT ASTIR"
     body: "Astir Vitogiannis Bros S.A. is a leading crown corks manufacturer with over 60 years of experience. Operating in the crowns business for 3 generations, we combine traditional values for excellent service and strong customer relationships with in-depth knowledge of the product. We produce in our state of the art facilities, utilising innovative technology and know-how and we proudly serve the needs of the world’s favorite and largest beer and beverage brands."
@@ -53,7 +53,7 @@ en:
     id: "team"
     includeArea: "company/our-team-image-slice.html"
   global-reach:
-    title: "A truly global game play"
+    title: "A truly global<br/>game play"
     title_variantClasses: "title--large"
     subtitle: "GLOBAL REACH"
     body: "Astir crown corks are manufactured in our strategically located plants in Greece, and Canada. Our efficient and fast growing distribution network distributes our crowns to more than 700 destinations globally, in more than 45 counties across 5 continents from New Zealand to California and South Africa to Ireland. We proudly serve more than 400 different clients globally across developed, developing and emerging markets."
@@ -62,7 +62,7 @@ en:
     id: "global-reach"
     includeArea: "company/global-reach-map.html"
   clients:
-    title: "Crowning the world's favourite brands"
+    title: "Crowning the<br/>world's favourite brands"
     title_variantClasses: "title--large"
     subtitle: "CLIENTS"
     body: "Astir’s flexibility, consistency and technical expertise has gained our company the reputation of a trusted and reliable partner, offering high-standard products with the industry’s best price-quality ratio and shortest lead times. No bureaucracy, no surprises, no limits. Just zero-fault crown corks, always there, always on time. That’s why famous beer and soft drinks companies as well as exquisite, innovative and fast growing craft breweries choose to print their logo on Astir crown corks."

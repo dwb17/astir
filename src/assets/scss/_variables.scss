@@ -178,6 +178,8 @@ $container-small: 500px;
 
 $section-text-max-width: 420px;
 
+//
+
 // Sync with bootstrap
 $content-wrapper-max-width: map-get($container-max-widths, xl);
 
@@ -187,3 +189,4 @@ $mobile-breakpoint: map-get($grid-breakpoints, md);
 $two-column-breakpoint: map-get($grid-breakpoints, md);
 // Gutter
 $gutter: 30px;
+$gutter-percentage: 6%;
