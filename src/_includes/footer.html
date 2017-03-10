@@ -26,14 +26,14 @@
             {% assign footerAddress = site.data.contact[langcode].contact.footerAddress %}
             <div class="text">{{ footerAddress }}</div>
             {% assign googleMapLink = site.data.contact[langcode].contact.googleMapLink %}
-            <a class="footer__link footer__link--map" href="{{ googleMapLink }}"><i class="fa fa-map-marker" aria-hidden="true"></i>View Map</a>
+            <a class="footer__link footer__link--map" href="{{ googleMapLink }}" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i>View Map</a>
           </div>
           <div class="footer__item col-sm-6 col-lg-3">
             <h2 class="title title--block text--light-colored">
               Contact
             </h2>
-            <div class="text">{{ site.data.contact[langcode].contact.callusNumber }}</div>
-            <div class="text"><a href="mailto:{{ site.data.contact[langcode].contact.email }}">{{ site.data.contact[langcode].contact.email }}</a></div>
+            <div class="text"><a class="footer__link" href="tel:{{ site.data.contact[langcode].contact.callusNumber }}">{{ site.data.contact[langcode].contact.callusNumber }}</a></div>
+            <div class="text"><a class="footer__link" href="mailto:{{ site.data.contact[langcode].contact.email }}">{{ site.data.contact[langcode].contact.email }}</a></div>
             <a class="footer__link footer__link--skype" href="skype:{{ site.data.contact[langcode].contact.skypeUsername }}?call"><i class="fa fa-skype" aria-hidden="true"></i>{{ site.data.contact[langcode].contact.skypetext }}</a>
           </div>
           <div class="footer__item col-sm-6 col-lg-3">
@@ -50,8 +50,8 @@
       </div>
       <div class="container footer__attribution">
         <div class="row">
-          <div class="footer__item col-sm-6"><div class="text text--small">&copy Astir Vitogiannis {{ site.time | date: '%Y' }}<br/>All Rights Reserved</div></div>
-          <div class="footer__item col-sm-6"><div class="text text--small"><a class="footer__link footer__link--credits" href="http://www.pointblank.gr" target="_blank"><span>Website created by</span> Point Blank</a><br/><a class="footer__link" href="http://www.pointblank.gr" target="_blank">More Credits</a></div></div>
+          <div class="footer__item col-sm-6"><div class="text text--extra-extra-small">&copy Astir Vitogiannis {{ site.time | date: '%Y' }}<br/>All Rights Reserved</div></div>
+          <div class="footer__item col-sm-3 offset-sm-3"><div class="text text--extra-extra-small"><a class="footer__link footer__link--credits" href="http://www.pointblank.gr" target="_blank"><span>Website created by</span> Point Blank</a></div></div>
         </div>
       </div>
     </div>

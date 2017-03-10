@@ -50,9 +50,9 @@ $(document).ready(function() {
   function showResponse(responseText, statusText, xhr, $form)  {
     if (responseText.status == 'OK') {
       $form.hide();
-      $('#form-response').text('<i class="fa fa-check-circle-o" aria-hidden="true"></i>'+responseText.message).show();
+      $('#form-response').text(responseText.message).show();
     } else {
-      $('#form-response').text('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>'+responseText.message).show();
+      $('#form-response').text(responseText.message).show();
     }
     //$form.resetForm();
   }

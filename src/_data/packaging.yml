@@ -6,7 +6,7 @@ en:
     title_variantClasses: "title--medium"
     body: "Stacked in palettes of 400,000 or 500,000 pieces"
     text_variantClasses: "text--small text--gray-colored"
-    image: "/images/logistics/1.jpg"
+    image: "/images/logistics/1a.jpg"
     layout: ""
   1:
     variantClasses: "text--centered col-md-6"

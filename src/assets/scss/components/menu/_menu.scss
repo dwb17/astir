@@ -12,8 +12,8 @@
 
 .hamburger-wrap {
   position: fixed;
-  top: 5%;
-  right: 5%;
+  top: 35px;
+  right: 35px;
   z-index: 101;
 }
 
@@ -32,9 +32,7 @@
 }
 
 .overlay-content {
-    position: relative;
-    top: 15%;
-    width: 100%;
+    @include vertically-centered();
     text-align: center;
     ul,li {
       list-style: none;
@@ -50,20 +48,17 @@
     color: $white;
     display: block;
     transition: 0.3s;
+    letter-spacing: 1px;
     @media screen and ( max-height: 720px ){
       font-size: 32px;
     }
-
     @media screen and ( max-height: 480px ){
       font-size: 27px;
     }
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-.overlay a.active {
-  color: #f1f1f1;
+    &.active,
+    &:hover {
+      color: #ccc;
+    }
 }
 
 .overlay .closebtn {
@@ -73,14 +68,3 @@
     font-size: 60px;
     z-index: 1001;
 }
-
-/*
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-*/

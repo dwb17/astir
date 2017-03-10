@@ -24,12 +24,14 @@
 
   &--medium {
     font-size: $font-size-md;
+    font-family: $pf-light;
   }
 
   &--small {
     font-size: $font-size-sm;
     font-family: $pf-light;
     color: $gray-lighter;
+    letter-spacing: 1px;
   }
 
   &--block {

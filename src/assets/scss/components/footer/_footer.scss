@@ -1,6 +1,9 @@
 .footer {
   background-color: $black;
-  @include section-padding-top(6);
+  padding-top:5rem;
+  @include media-breakpoint-down(sm) {
+    padding-top:3rem;
+  }
 
   &.on-dark-color .title {
     color: $white;
@@ -16,6 +19,7 @@
       width: 48%;
       display: inline-block;
       vertical-align: top;
+      margin-left: 0;
     }
     .text {
       color: $gray-light;
@@ -24,8 +28,8 @@
   }
 
   &__attribution {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    @include section-padding-top(3);
+    @include section-padding-bottom(2);
   }
 
   &__link {

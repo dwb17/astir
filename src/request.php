@@ -28,7 +28,7 @@
       $response['message'] = "Unable to send email. Please try again shortly.";
   } else {
     $response['status'] = "OK";
-    $response['message'] = "Thank you form your submission.";
+    $response['message'] = "Thank you for your submission.";
   }
   echo json_encode($response);
 ?>

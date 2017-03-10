@@ -11,18 +11,18 @@ layout: default
       <h1 class="title title--large">{{ contactItem.title }}</h1>
 
       <h3 class="title--small">{{ contactItem.callusLabel }}</h3>
-      <div class="text--label contact__telephone"><a href="tel:{{ contactItem.callusNumber }}">{{ contactItem.callusNumber }}</a></div>
+      <div class="text--label"><a class="contact__telephone" href="tel:{{ contactItem.callusNumber }}">{{ contactItem.callusNumber }}</a></div>
 
       <h3 class="title--small">{{ contactItem.skypeLabel }}</h3>
       <a class="contact__skype-number" href="skype:{{ site.data.contact[langcode].contact.skypeUsername }}?call"><i class="fa fa-skype" aria-hidden="true"></i>{{ site.data.contact[langcode].contact.skypetext }}</a>
 
       <h3 class="title--small">{{ contactItem.enquiries }}</h3>
-      <div class="text text--medium contact__email"><a href="mailto:{{ contactItem.email }}">{{ contactItem.email }}</a></div>
+      <div class="text text--medium"><a class="contact__email" href="mailto:{{ contactItem.email }}">{{ contactItem.email }}</a></div>
 
-      <h3 class="title--small">{{ contactItem.headquartersLabel }}</h3>
+      <h3 class="title--small contact__headquarters">{{ contactItem.headquartersLabel }}</h3>
       <div class="text">{{ contactItem.headquartersAddress }}</div>
     </div>
-    {% assign gmapInfoWindow = contactItem.popupContent %}
+    {% assign gmapLink = contactItem.googleMapLink %}
   {% else %}
 
   {% endif %}
@@ -36,20 +36,25 @@ layout: default
       marker;
 
   function initMap() {
-    var astir = {lat: -25.363, lng: 131.044};
-    var popupContent = "{{ gmapInfoWindow }}";
+    var astir = {lat: 38.295123, lng: 23.651847};
+    var gmapAstirLink = "{{ gmapLink }}";
     map = new google.maps.Map(document.getElementById('gmap'), {
-      zoom: 4,
+      zoom: 11,
       scrollwheel: false,
       center: astir
     });
 
-    var infowindow = new google.maps.InfoWindow({
-      content: popupContent
-    });
-
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-    var icon = iconBase + 'parking_lot_maps.png';
+    // Origins, anchor positions and coordinates of the marker increase in the X
+    // direction to the right and in the Y direction down.
+    var icon = {
+      url: '{{ site.url }}' + '/images/astir-marker.png',
+      // This marker is 39 pixels wide by 62 pixels high.
+      size: new google.maps.Size(39, 62),
+      // The origin for this image is (0, 0).
+      origin: new google.maps.Point(0, 0),
+      // The anchor for this image is the base of the flagpole at (0, 32).
+      anchor: new google.maps.Point(20, 62)
+    };
 
     marker = new google.maps.Marker({
       position: astir,
@@ -58,9 +63,8 @@ layout: default
     });
 
     marker.addListener('click', function() {
-      infowindow.open(map, marker);
+      window.location.href = gmapAstirLink;
     });
-
   }
   window.addEventListener('resize', function () {
     map.panTo(marker.getPosition());

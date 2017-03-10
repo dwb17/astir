@@ -21,20 +21,28 @@ body {
   @include media-breakpoint-down(sm) {
     padding: .8rem 1.25rem;
   }
+  &-secondary {
+    &:focus,
+    &:hover {
+      background-color: $gray-dark;
+          border-color: $gray-dark;
+    }
+  }
 }
 
 // mixing for paddings
 @mixin section-padding-top($padding-top) {
   padding-top: $padding-top * $line-height-base + rem;
   @include media-breakpoint-down(sm) {
-    padding-top: $padding-top + rem;
+    //padding-top: $padding-top + rem;
+    padding-top: if(($padding-top - 2) > 0, ($padding-top - 2), 1) + rem;
   }
 }
 
 @mixin section-padding-bottom($padding-bottom) {
   padding-bottom: $padding-bottom * $line-height-base + rem;
   @include media-breakpoint-down(sm) {
-    padding-bottom: $padding-bottom + rem;
+    padding-bottom: if(($padding-bottom - 2) > 0, ($padding-bottom - 2), 1) + rem;
   }
 }
 
@@ -278,6 +286,6 @@ body {
     @include section-padding-top(4);
   }
   &--last {
-    @include section-padding-bottom(6);
+    @include section-padding-bottom(4);
   }
 }

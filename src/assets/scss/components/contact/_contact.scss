@@ -18,16 +18,21 @@
   &__telephone,
   &__email {
     font-size: $contact-title;
+    color: $gray-dark;
     a {
-      color: $gray-dark;
+      //
     }
   }
   &__skype-number {
     font-size: 1.25rem;
+    color: $gray-dark;
     i {
       color: #12A5F4;
       padding-right: 10px;
     }
+  }
+  &__headquarters.title--small  {
+    padding-bottom: 0.7rem;
   }
 }
 
