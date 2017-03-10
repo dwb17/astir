@@ -3,6 +3,12 @@
   // Flexbox.
   display: flex;
   flex-wrap: wrap;
+  @include media-breakpoint-down(sm) {
+    display: block;
+    padding-left: $gutter-percentage;
+    padding-right: $gutter-percentage;
+
+  }
   // contain content
   .content-container {
     max-width: $content-wrapper-max-width;
@@ -15,10 +21,16 @@
       padding-left: 5%;
       padding-right: 5%;
     }
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: none;
+      display: block;
+      margin: 0;
+    }
   }
 
   &.vertically-centered {
-
     justify-content: center;
     .column {
       justify-content: center;
@@ -48,6 +60,8 @@
     @include media-breakpoint-down(sm) {
       width: 100%;
       padding-right: 0;
+      display: block;
+      max-width: none;
       + .column {
         padding-left: 0;
       }

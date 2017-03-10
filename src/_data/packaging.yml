@@ -29,7 +29,7 @@ en:
     title: "500.000 pcs Pallet Pattern"
     title_variantClasses: "title--medium"
     body: "Net weight pallet: 1,050 kgs"
-    text_variantClasses: "text--small text--gray-colored"
+    text_variantClasses: "text--small text--gray-colored "
     image: "/images/logistics/4.jpg"
     layout: ""
   4:
@@ -39,14 +39,14 @@ en:
     body: "Mainly used in large scale orders"
     text_variantClasses: "text--small text--gray-colored"
     image: "/images/logistics/5.jpg"
-    layout: "layout-stacked"
+    layout: ""
   5:
     variantClasses: "text--centered col-md-6"
     title: ""
     title_variantClasses: "title--medium"
     body: ""
     image: "/images/logistics/6.jpg"
-    layout: "layout-stacked"
+    layout: ""
 el:
   production:
     title: "Ελληνικα State of the art plant"

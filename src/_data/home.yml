@@ -11,7 +11,7 @@ en:
     FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
   leader:
     title: "A global leader in crown corks"
-    variantClasses: "text--centered viewport-height"
+    variantClasses: "text--centered viewport-height grey-background"
     layout: "layout-stacked"
     buttonText: "THE COMPANY"
     buttonLink: "/company/"

@@ -42,7 +42,7 @@
     });
 
     // Only add efects to desktop
-    if(!window.matchMedia('(max-width: 767px)').matches) {
+    if(!window.matchMedia('(max-width: 769px)').matches) {
       // Hide all elements.
       $('.js-waypoint-text').addClass('is-going-to-be-animated');
       $('.js-waypoint-image').addClass('is-going-to-be-animated');

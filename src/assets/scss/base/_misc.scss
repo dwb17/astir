@@ -69,8 +69,8 @@ body {
 .content-wrapper {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  //padding-left: 5%;
+  //padding-right: 5%;
   //max-width: $content-wrapper-max-width;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 // History two column
-#history {
+#history {  
   .text {
     column-count: 2;
     column-gap: 2rem;
@@ -119,6 +119,7 @@ body {
     @include media-breakpoint-down(sm) {
       column-count: 1;
       column-gap: 0;
+
     }
   }
   // Adding extra spacing to image
@@ -144,6 +145,10 @@ body {
 // Exterior side
 #exterior-side-wrapper {
   background-repeat: no-repeat;
+  // Remove bg image on mobile.
+  @include media-breakpoint-between(0, sm) {
+    background-image: none !important;
+  }
 }
 
 // Why crwon corks
@@ -159,7 +164,7 @@ body {
 // COmpany
 #company-team {
   background-color: $black;
-  padding-bottom: 150px;
+  @include section-padding-bottom(5);
 }
 
 // Content widths
@@ -180,6 +185,7 @@ body {
 
 
 @include media-breakpoint-down(sm) {
+  #thinkgreen-canvas,
   .canvas-animation {
     display: none;
   }
@@ -193,7 +199,8 @@ body {
 
 // Paddings per slice
 #company-about-astir,
-#company-facts {
+#company-facts,
+#company-global-reach {
   @include section-padding-top(5);
 }
 
@@ -204,8 +211,26 @@ body {
 #facilities {
   .image {
     padding-top: 2rem;
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 2rem;
+    }
   }
-  @include section-padding-top(5);
+}
+
+#sustainable {
+  @include media-breakpoint-down(sm) {
+    .image {
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+.image-mobile {
+  padding-left: $gutter-percentage;
+  padding-right: $gutter-percentage;
+  .image {
+    padding-top: 2rem;
+  }
 }
 
 #thinkgreen-canvas {
@@ -226,6 +251,12 @@ body {
   }
   .item {
     padding-bottom: 2rem;
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+      .text {
+        min-height: 0;
+      }
+    }
   }
   .text {
     min-height: 56px;
@@ -240,6 +271,8 @@ body {
     margin-top: -3rem;
     @include media-breakpoint-down(sm) {
       margin-top: 0;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
   }
 }
@@ -254,6 +287,10 @@ body {
 
 // Crown corks
 .exterior-side__item {
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 2rem;
+  }
+
   .text {
     max-width: $section-text-max-width;
     margin-left: auto;
@@ -286,6 +323,9 @@ body {
     @include section-padding-top(4);
   }
   &--last {
-    @include section-padding-bottom(4);
+    padding-bottom: 4 * $line-height-base + rem;
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 3rem;
+    }
   }
 }

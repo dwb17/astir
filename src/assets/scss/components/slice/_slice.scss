@@ -1,7 +1,11 @@
 .slice {
   @include section-padding-top(5);
-  @include section-padding-bottom(3);
+  @include section-padding-bottom(4);
   background-repeat: no-repeat;
+  @include media-breakpoint-down(sm) {
+    padding-left: $gutter-percentage;
+    padding-right: $gutter-percentage;
+  }
 
   &--with-centered-image {
     .image {

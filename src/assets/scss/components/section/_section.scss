@@ -4,6 +4,13 @@
   position: relative;
   overflow: hidden;
 
+  // Remove bg image on mobile.
+  &:not(#taste, #safety) {
+    @include media-breakpoint-between(0, sm) {
+      background-image: none !important;
+    }
+  }
+
   // Minimum distances.
   //centering within viewport height
   //padding-top: 95px;
@@ -16,8 +23,9 @@
     // center only within a viewport-height element
     @include media-breakpoint-down(md) {
       height: auto;
-      padding-top: 55px;
-      padding-bottom: 55px;
+      min-height: 0;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
     }
     .content-wrapper,
     .image {

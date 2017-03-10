@@ -1,13 +1,23 @@
 .layout-two-thirds {
   // Flexbox.
   display: flex;
-  @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
-    display: block;
-  }
   // Set padding when max width reached.
   @media only screen and (min-width:0) and (max-width: $content-wrapper-max-width)  {
     padding-left: 5%;
     padding-right: 5%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    padding-left: $gutter-percentage;
+    padding-right: $gutter-percentage;
+    .column {
+      float:none;
+      width:100%;
+      text-align: center;
+    }
+
+
   }
 
   .column {
@@ -26,8 +36,9 @@
 
   .column:nth-child(2n+1) {
     width: 55%;
-    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    @include media-breakpoint-down(sm) {
       width: 100%;
+      float: none;
     }
 
   }
@@ -35,9 +46,11 @@
   .column:nth-child(2n) {
     width: 45%;
     max-width: $content-wrapper-max-width*45/100;
-    @media only screen and (min-width:0) and (max-width: $two-column-breakpoint)  {
+    @include media-breakpoint-down(sm) {
       width: 100%;
-      max-width: auto;
+      max-width: none;
+      float: none;
+      display: block;
     }
   }
 
@@ -52,10 +65,12 @@
     padding-left: 5%;
 
     // Set padding when max width reached.
-    @media only screen and (min-width:0) and (max-width: $section-text-max-width)  {
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      max-width: none;
+      padding-right: 0;
       padding-left: 0;
     }
-
   }
 
   // Inverse layout
@@ -63,6 +78,9 @@
     // Fallback.
     .column {
       float: right;
+      @include media-breakpoint-down(sm) {
+        float: none;
+      }
     }
     // Flexbox.
     justify-content: flex-end;
@@ -70,7 +88,7 @@
       padding-left: 0;
       padding-right: 5%;
       // Set padding when max width reached.
-      @media only screen and (min-width:0) and (max-width: $section-text-max-width)  {
+      @include media-breakpoint-down(sm) {
         padding-right: 0;
       }
     }

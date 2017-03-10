@@ -19,8 +19,8 @@
   &__email {
     font-size: $contact-title;
     color: $gray-dark;
-    a {
-      //
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
     }
   }
   &__skype-number {
