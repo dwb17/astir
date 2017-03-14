@@ -7,10 +7,17 @@
 (function ($) {
   'use strict';
   $(document).ready(function () {
-    // Change menu icon color after video element.
+    // Scrool down on SVG click
+    $('.scroll-down').on('click', function(){
+      $('html, body').animate({
+          scrollTop: $('.js-scroll-to').offset().top
+      }, 1000);
+    });
 
+    // Change menu icon color after video element.
     $('#js-video').waypoint(function (direction) {
       $('.hamburger').toggleClass('is-dark');
+      $('.logo').toggleClass('is-below-fold');
     }, {
       offset: '-80%',
     });

@@ -7,7 +7,7 @@ layout: default
   {% if contactItems[0] == "video" %}
       {% include video.html param=contactItem %}
   {% elsif contactItems[0] == "contact" %}
-    <div class="text--centered contact">
+    <div class="text--centered contact js-scroll-to">
       <h1 class="title title--large">{{ contactItem.title }}</h1>
 
       <h3 class="title--small">{{ contactItem.callusLabel }}</h3>

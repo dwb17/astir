@@ -10,9 +10,9 @@
         <a href="{{ requestItem.buttonLink }}" class="btn {{ requestItem.buttonClasses }} {{ buttonFormClass }}">{{ requestItem.buttonText }}</a>
       </div>
   {% endfor %}
-  <div id="form-response" class="js-hidden text text--centered"></div>
+  <div id="form-response" class="form-response js-hidden text text--centered"></div>
   <form accept-charset="UTF-8" id="request-form" action="{{ site.url }}/request.php" method="POST" class="on-brand-color request-form {{ formClass }}">
-    <div class="container">
+    <div class="form-response__container">
       <div id="webform-component-name" class="js-floating-label form-item is-floating-label">
         <label for="edit-submitted-name">Your name / surname * </label>
         <input type="text" class="form-text" maxlength="128" size="60" value="" name="name" id="edit-submitted-name" required="required">

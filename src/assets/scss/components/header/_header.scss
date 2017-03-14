@@ -1,5 +1,36 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#nav {
   position: absolute;
-  top: 1%;
-  right: 2%;
+  top: 0;
+  right: 0;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 14px;
+  display: block;
+  @include media-breakpoint-down(sm) {
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+
+// Change logo colors
+.logo.is-below-fold {
+  .logo__letter {
+    fill: $white;
+  }
+  .logo__ellipse,
+  .logo__cap {
+    fill: $brand-primary;
+  }
 }

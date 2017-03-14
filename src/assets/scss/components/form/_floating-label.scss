@@ -28,6 +28,10 @@
     height: 1px;
     background: $input-line;
     transition: .2s;
+    @include media-breakpoint-down(sm) {
+      left: 0;
+      right: 0;
+    }
   }
 
   // Textarea: Move label less.

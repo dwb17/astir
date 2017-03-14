@@ -37,7 +37,7 @@
         window.globalMapInit();
         this.destroy();
       }, {
-        offset: customwaypointOffset,
+        offset: '80%',
         triggerOnce: true,
       });
       $('#facts').waypoint(function (direction) {

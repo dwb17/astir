@@ -8,8 +8,8 @@
   window.globalMapInit = function() {
   	canvas = document.getElementById("global-map");
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    canvas.width  = w;
-    canvas.height = w * 0.635; //aspect ratio 1397*888
+    //canvas.width  = w;
+    //canvas.height = w * 0.635; //aspect ratio 1397*888
   	globalMapDraw(canvas);
   }
 
@@ -26,7 +26,7 @@
   }
 })();
 </script>
-<canvas id="global-map" class="canvas-animation" style="background-color:#FFFFFF"></canvas>
+<canvas id="global-map" class="canvas-animation" width="1397" height="888"></canvas>
 
 <div class="image-mobile">
   <div class="image"><img class="img-fluid" src="/images/company/map.png"></div>

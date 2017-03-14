@@ -12,7 +12,7 @@ en:
     title_variantClasses: "title--large"
     subtitle: "WHY CROWN CORKS"
     body: "The crown cork - also known as a crown seal, a crown cap or just a cap - was invented by William Painter in 1892 and is the first form of bottle cap that revolutionized the bottling industry. Since then this small metal closure marked a significant technological development, yet its essential design remains unaltered until this day. Because it’s perfect."
-    variantClasses: "viewport-height odd vertically-centered"
+    variantClasses: "viewport-height odd vertically-centered js-scroll-to"
     layout: "layout-two-column"
     id: "why-crown-works"
     bgImage: "/images/william-painter.jpg"

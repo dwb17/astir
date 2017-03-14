@@ -19,7 +19,7 @@ Send us your specific requirements and once the order is placed, our creative te
 <br/>
 Delivery transit time may vary depending on destination, yet our global reach handled by our experienced export department, ensure that Astir crown corks reach any destination by sea, truck, rail or even by air."
     image: "/images/logistics/Supply-Chain.png"
-    variantClasses: "slice--with-centered-image"
+    variantClasses: "slice--with-centered-image js-scroll-to"
     layout: "layout-two-column"
     id: "supply-chain"
   packaging:

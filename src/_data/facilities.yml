@@ -13,7 +13,7 @@ en:
     subtitle: "PRODUCTION SITE"
     body: "Astir's headquarters and main manufacturing facility are strategically located in Athens’ Industrial Park, only 40 kilometers away from Piraeus port and 45 minutes from Athens International Airport with excellent access across the supply chain. With state of the art production equipment and ergonomic design, our premises comply with the strictest quality standards. With an installed capacity in excess of 10 billion crowns annually and a fully automated production process we operate one of the largest crown cork facilities in the world with minimal human intervention and practically zero fault rates."
     image: "/images/facilities/1.jpg"
-    variantClasses: "image-pulled-up slice--with-centered-image"
+    variantClasses: "image-pulled-up slice--with-centered-image js-scroll-to"
     layout: "layout-two-column"
     id: "production"
   facilities:

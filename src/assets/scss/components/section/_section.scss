@@ -41,4 +41,16 @@
   .image {
     text-align: center;
   }
+
+  // Homepage carousel variant
+  &--with-carousel.viewport-height .content-wrapper--carousel{
+
+    // center only within a viewport-height element
+    @include media-breakpoint-between(sm, md) {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform:none;
+    }
+  }
 }

@@ -15,7 +15,7 @@ body {
 .btn {
   font-size: .75rem;
   margin-top: $line-height-base + rem;
-  font-family: helvetica,arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: .8px;
   @include media-breakpoint-down(sm) {
@@ -110,7 +110,7 @@ body {
 }
 
 // History two column
-#history {  
+#history {
   .text {
     column-count: 2;
     column-gap: 2rem;
@@ -212,7 +212,7 @@ body {
   .image {
     padding-top: 2rem;
     @include media-breakpoint-down(sm) {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
   }
 }
@@ -220,7 +220,7 @@ body {
 #sustainable {
   @include media-breakpoint-down(sm) {
     .image {
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
     }
   }
 }
@@ -232,6 +232,15 @@ body {
     padding-top: 2rem;
   }
 }
+// Overide on Crrown corks page
+@include media-breakpoint-down(sm) {
+  .crown-corks-section .image-mobile {
+    .image {
+      padding-top: 0;
+    }
+  }
+}
+
 
 #thinkgreen-canvas {
   @include section-padding-top(4);
@@ -245,6 +254,12 @@ body {
 }
 
 #packaging-list {
+  @include media-breakpoint-down(sm) {
+    .container {
+      padding-left: $gutter-percentage;
+      padding-right: $gutter-percentage;
+    }
+  }
   @include section-padding-bottom(5);
   .title--medium {
     margin-bottom: 0;
@@ -272,7 +287,7 @@ body {
     @include media-breakpoint-down(sm) {
       margin-top: 0;
       padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
   }
 }

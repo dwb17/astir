@@ -7,6 +7,13 @@
 .contact {
   @include section-padding-top(5);
   @include section-padding-bottom(6);
+
+  // Mobile paddings.
+  @include media-breakpoint-down(sm) {
+    padding-left: $gutter-percentage;
+    padding-right: $gutter-percentage;
+  }
+
   .title {
     margin-bottom: 0;
   }

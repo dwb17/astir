@@ -7,6 +7,14 @@
     min-height: 90%;
   }
 
+  // Tablet
+  @include media-breakpoint-between(sm, md) {
+    min-height: 55%;
+    .video__content {
+      padding-top: 8rem;
+    }
+  }
+
   @include media-breakpoint-up(md) {
     &__content {
       @include vertically-centered();
@@ -21,10 +29,12 @@
     }
     // Set padding when max width reached
     @media only screen and (min-width:0) and (max-width: $container-medium)  {
-      padding-left: 5%;
-      padding-right: 5%;
+      //padding-left: $gutter-percentage;
+      //padding-right: $gutter-percentage;
     }
   }
+
+  // Mobile content.
   @include media-breakpoint-down(sm) {
     &__content {
       position: relative;
@@ -33,6 +43,8 @@
       transition: opacity .4s;
       padding-top: 6rem;
       padding-bottom: 2rem;
+      padding-left: $gutter-percentage;
+      padding-right: $gutter-percentage;
       &.is-loaded {
         opacity: 1;
       }
@@ -92,6 +104,10 @@
 
   .title {
     @extend .text--light-colored;
+    @include media-breakpoint-between(sm, md) {
+      padding-left: $gutter-percentage;
+      padding-right: $gutter-percentage;
+    }
   }
 
   .text {
@@ -141,13 +157,48 @@
 .scroll-down {
   position: absolute;
   bottom: 10%;
-  left: 50%;
-  z-index: 101;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 111;
+  cursor: pointer;
+  @include media-breakpoint-between(sm, md) {
+    bottom: 4%;
+  }
+  &__svg {
+    //margin-left: -12px;
+    &:not(:root) {
+      overflow: visible;
+    }
+  }
+
   &__mouse {
-    stroke: white;
-    fill: black;
+
   }
   &__arrow {
+    position: relative;
+    animation: none;
+  }
+  &__text {
+    font-size: $font-size-xxs;
+  }
 
+  &:hover {
+    .scroll-down__arrow {
+      animation: scrolldown .8s ease-out infinite;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+}
+
+@keyframes scrolldown {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(5px);
   }
 }
