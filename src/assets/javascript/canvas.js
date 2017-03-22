@@ -14,7 +14,7 @@
       // Waypoint init canvas.
       var customwaypointOffset = '20%';
       var customCompanywaypointOffset = '60%';
-      var customProductswaypointOffset = '40%';
+      var customProductswaypointOffset = '50%';
 
       $(".js-animate--canvas").addClass('is-going-to-be-animated').waypoint(function (direction) {
         if (direction === 'down') {
@@ -23,7 +23,7 @@
           if (animateParent.hasClass('is-going-to-be-animated')) {
             animateParent.removeClass('is-going-to-be-animated');
             // Animate text.
-            $(".js-waypoint-text--canvas", animateParent).addClass('animated fadeInUp');
+            $(".js-waypoint-text--canvas, .js-waypoint-text", animateParent).addClass('animated fadeInUp');
             // Animate image
             // Check if parent has odd class to change direction
             if(animateParent.hasClass('odd')) {
@@ -35,7 +35,7 @@
         }
         this.destroy();
       }, {
-        offset: '40%',
+        offset: customProductswaypointOffset,
         triggerOnce: true,
       });
 
@@ -49,13 +49,6 @@
       });
 
       // Company page
-      $('#crown-corks').waypoint(function (direction) {
-        window.anatomyinit();
-        this.destroy();
-      }, {
-        offset: customwaypointOffset,
-        triggerOnce: true,
-      });
       $('#global-map').waypoint(function (direction) {
         window.globalMapInit();
         this.destroy();
@@ -87,6 +80,13 @@
 
 
       // Product page.
+      $('#crown-corks').waypoint(function (direction) {
+        window.anatomyinit();
+        this.destroy();
+      }, {
+        offset: customProductswaypointOffset,
+        triggerOnce: true,
+      });
       $('#white-primer').waypoint(function (direction) {
         window.whitePrimerinit();
         this.destroy();

@@ -71,6 +71,7 @@
     &.is-loaded {
       display: none !important;
       z-index: -10;
+      opacity: 0;
     }
     .no-videoautoplay &{
       display: block !important;
