@@ -5,7 +5,6 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tweenjs/0.6.2/tweenjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/0.8.0/movieclip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/0.6.0/preloadjs.min.js"></script>
-
 {% assign langcode = page.lang %}
 {% for crownItems in site.data.crown[langcode] %}
   {% assign crownItem = crownItems[1] %}
@@ -13,7 +12,7 @@ layout: default
       {% include video.html param=crownItem %}
   {% else %}
     {% if crownItem.id == "exterior-side" %}
-      <div id="exterior-side-wrapper" style="background-image:url({{ crownItem.bgImage }}); background-position: {{ crownItem.bgImagePosition }}; background-size: {{ crownItem.bgImageSize }};">
+      <div id="exterior-side-wrapper" class="js-animate" style="background-image:url({{ crownItem.bgImage }}); background-position: {{ crownItem.bgImagePosition }}; background-size: {{ crownItem.bgImageSize }};">
       {% include section.html param=crownItem %}
       <div class="container">
         <div class="row">

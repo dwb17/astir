@@ -10,7 +10,7 @@ en:
   crown-corks:
     title: "The anatomy of a crown cork"
     subtitle: "CROWN CORKS"
-    variantClasses: "odd viewport-height js-scroll-to"
+    variantClasses: "odd viewport-height js-scroll-to js-animate"
     title_variantClasses: 'title--large'
     body: "Whether Pry Off or Twist Off, crown corks are the best choice for bottling in the brewing and beverage industry. Serving the whole spectrum from special craft beers to popular soft drinks and mainstream beers, Astir offers all possible combinations of materials and options. We produce eye-catching, functional, certified crown corks that perfectly match with all bottle types and offer a new experience of taste and freshness using advanced materials with scavenging properties."
     layout: "layout-two-thirds"

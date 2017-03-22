@@ -8,13 +8,36 @@
 
   $(document).ready(function () {
     // Only add efects to desktop
-    if(!window.matchMedia('(max-width: 767px)').matches) {
+    if(!window.matchMedia('(max-width: 769px)').matches) {
       // Add class to html to signify canvas enabled.
       $('html').addClass('js-canvas-enabled');
       // Waypoint init canvas.
       var customwaypointOffset = '20%';
       var customCompanywaypointOffset = '60%';
       var customProductswaypointOffset = '40%';
+
+      $(".js-animate--canvas").addClass('is-going-to-be-animated').waypoint(function (direction) {
+        if (direction === 'down') {
+          var animateParent = $(this.element);
+          // Show and animate elements once.
+          if (animateParent.hasClass('is-going-to-be-animated')) {
+            animateParent.removeClass('is-going-to-be-animated');
+            // Animate text.
+            $(".js-waypoint-text--canvas", animateParent).addClass('animated fadeInUp');
+            // Animate image
+            // Check if parent has odd class to change direction
+            if(animateParent.hasClass('odd')) {
+              $(".js-waypoint-image--canvas", animateParent).addClass('animated slideInRight');
+            } else {
+              $(".js-waypoint-image--canvas", animateParent).addClass('animated slideInLeft');
+            }
+          }
+        }
+        this.destroy();
+      }, {
+        offset: '40%',
+        triggerOnce: true,
+      });
 
       // Facilities
       $('#sustainable').waypoint(function (direction) {

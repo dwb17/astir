@@ -11,7 +11,7 @@ en:
     FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
   leader:
     title: "A global leader in crown corks"
-    variantClasses: "text--centered viewport-height grey-background js-scroll-to"
+    variantClasses: "text--centered viewport-height grey-background js-scroll-to js-animate"
     layout: "layout-stacked"
     buttonText: "THE COMPANY"
     buttonLink: "/company/"
@@ -24,7 +24,7 @@ en:
     id: leader
   facilities:
     title: "State of the art plant"
-    variantClasses: "viewport-height"
+    variantClasses: "viewport-height js-animate"
     layout: "layout-two-thirds"
     buttonText: "FACILITIES"
     buttonLink: "/facilities/"
@@ -37,7 +37,7 @@ en:
     id: facilities-homepage
   crown-corks:
     title: "Elegantly crafted"
-    variantClasses: "on-brand-color odd viewport-height"
+    variantClasses: "on-brand-color odd viewport-height js-animate"
     layout: "layout-two-thirds"
     buttonText: "CROWN CORKS"
     buttonLink: "/crown-corks/"
@@ -50,7 +50,7 @@ en:
     id: home-crown-corks
   logistics:
     title: "Quality and reliability"
-    variantClasses: "viewport-height"
+    variantClasses: "viewport-height js-animate"
     layout: "layout-two-thirds"
     buttonText: "LOGISTICS"
     buttonLink: "/logistics/"
@@ -63,7 +63,7 @@ en:
     id: logistics
   why-crown-corks:
     title: "The perfect closure"
-    variantClasses: "on-dark-color odd viewport-height"
+    variantClasses: "on-dark-color odd viewport-height js-animate"
     layout: "layout-two-thirds"
     buttonText: "WHY CROWN CORKS"
     buttonLink: "/crown-corks/"
