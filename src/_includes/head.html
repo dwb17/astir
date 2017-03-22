@@ -18,18 +18,16 @@
       })();
   </script>
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title[page.lang] | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title[page.lang] | escape }}{% endif %} | {{ site.basehtmltitle }}</title>
   {% if page.title %}
-      <meta property="og:title" content="{{ page.title }}">
+      <meta property="og:title" content="{{ page.title }} - {{ site.basehtmltitle }}">
     {% else %}
       <meta property="og:title" content="{{ site.title }}">
     {% endif %}
 
-    {% if page.description %}
+    {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt }}">
     <meta property="og:description" content="{{ page.excerpt }}">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="" />
     {% endif %}
 
     {% if page.image %}
@@ -40,10 +38,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="{{ site.url }}/assets/stylesheets/style.css">
-
-  <!-- SEO -->
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}{% for translationSets in pages %}{% if translationSets.lang == page.lang %}{% else %}
-  <link rel="alternate" hreflang="{{ translationSets.lang }}" href="{{ translationSets.url }}" />{% endif %}{% endfor %}
 
   <!-- GA -->
   {% include ga.html %}
