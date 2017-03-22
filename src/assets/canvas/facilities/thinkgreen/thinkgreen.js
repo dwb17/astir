@@ -18,6 +18,14 @@ lib.properties = {
 (lib.thinkgreen = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_59 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(59).call(this.frame_59).wait(1));
+
 	// Layer 2
 	this.instance = new lib.Symbol1();
 	this.instance.setTransform(215,203.5,0.886,0.886);

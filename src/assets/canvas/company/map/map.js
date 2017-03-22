@@ -15,6 +15,14 @@ lib.properties = {
 (lib.map = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_104 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(104).call(this.frame_104).wait(1));
+
 	// legend
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#808080").s().p("AgiAhIAGgIQANAKAQAAQAJAAAHgDQAHgFAAgIQAAgMgQgCIgUgCQgTgDgBgSQAAgMAJgHQAJgHAOAAQARAAANAJIgGAIQgNgHgLAAQgUAAgBAQQAAAIAKADIALACIATADQAQACABAUQAAALgLAHQgKAHgPAAQgTAAgPgMg");

@@ -1,79 +1,71 @@
 {% assign video = include.param %}
-
-<!-- Should replicate https://atomicobject.com/-->
-
-  <div class="video text--centered {{include.variantClass}}" >
-    <div id="js-video">
-      <video loop muted class="video__tag">
-      </video>
-      <div style="display:none" class=""><img src="{{site.url}}{{ video.videoPoster }}" /></div>
-      <div class="video__cover" style="background-image:url({{site.url}}{{ video.videoPoster }});"></div>
-      <div class="video__cover--mobile" style="display:none; background-image:url({{site.url}}{{ video.videoMobilePoster }});"></div>
-      <div class="video__content">
-        <h1 class="title">{{ video.title }}</h1>
-        <h2 class="text">{{ video.subtitle }}</h2>
-        {% if video.WatchFullVideo == true %}
-          <a class="video__watch-full-video" href="{{video.FullVideoURL}}">
-            <svg class="play-button" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="42" height="42" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve">
-              <path fill="#FFFFFF" d="M21 0.8C9.9 0.8 0.8 9.9 0.8 21c0 11.1 9 20.2 20.2 20.2 11.1 0 20.2-9 20.2-20.2C41.2 9.9 32.1 0.8 21 0.8zM17 29.1V12.9L28.5 21 17 29.1z"/>
-            </svg><br/>
+<div class="video-element text--centered {{include.variantClass}}" >
+  <div id="js-video">
+    <video loop muted class="video-element__tag"></video>
+    <div style="display:none" class=""><img src="{{site.url}}{{ video.videoPoster }}" /></div>
+    <div class="video-element__cover" style="background-image:url({{site.url}}{{ video.videoPoster }});"></div>
+    <div class="video-element__cover--mobile" style="display:none; background-image:url({{site.url}}{{ video.videoMobilePoster }});"></div>
+    <div class="video-element__content">
+      <h1 class="title">{{ video.title }}</h1>
+      <h2 class="text">{{ video.subtitle }}</h2>
+      {% if video.WatchFullVideo == true %}
+        <a class="video-element__watch-full-video" href="{{video.FullVideoURL}}">
+          <svg class="play-button" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="42" height="42" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve">
+            <path fill="#FFFFFF" d="M21 0.8C9.9 0.8 0.8 9.9 0.8 21c0 11.1 9 20.2 20.2 20.2 11.1 0 20.2-9 20.2-20.2C41.2 9.9 32.1 0.8 21 0.8zM17 29.1V12.9L28.5 21 17 29.1z"/>
+          </svg><br/>
     {{video.WatchVideoLinkText}}</a>
-        {% endif %}
-      </div>
-      <div class="scroll-down">
-        <svg class="scroll-down__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="24" height="54" viewBox="0 0 24 54" enable-background="new 0 0 24 54" xml:space="preserve">
-          <path class="scroll-down__mouse" fill="#FFFFFF" d="M12 16.97c0.73 0 1.33-0.59 1.33-1.32V8.99c0-0.73-0.59-1.33-1.32-1.33 -0.73 0-1.33 0.6-1.33 1.33v6.66C10.67 16.38 11.27 16.97 12 16.97z"/>
-          <path class="scroll-down__mouse" fill="#FFFFFF" d="M12 1C5.39 1 0.02 6.36 0.02 12.98v18.63c0 3.78 1.75 7.14 4.49 9.34v-3.81c-1.14-1.55-1.82-3.45-1.82-5.52V12.98c0-5.15 4.17-9.32 9.32-9.32 5.14 0 9.31 4.17 9.31 9.32v18.63c0 2.07-0.68 3.97-1.82 5.52v3.82c2.73-2.19 4.49-5.56 4.49-9.34V12.98C23.98 6.36 18.62 1 12 1z"/>
-          <polygon class="scroll-down__arrow" fill="#FFFFFF" stroke="#FFFFFF" points="17.25 47.12 12.23 52.14 12.23 41.76 11.78 41.76 11.78 52.14 6.75 47.12 6.44 47.44 11.68 52.68 12 53 12.32 52.68 17.57 47.44 "/>
-        </svg>
-        <div class="scroll-down__text">Scroll Down</div>
-      </div>
+      {% endif %}
+    </div>
+    <div class="scroll-down">
+      <svg class="scroll-down__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="24" height="54" viewBox="0 0 24 54" enable-background="new 0 0 24 54" xml:space="preserve">
+        <path class="scroll-down__mouse" fill="#FFFFFF" d="M12 16.97c0.73 0 1.33-0.59 1.33-1.32V8.99c0-0.73-0.59-1.33-1.32-1.33 -0.73 0-1.33 0.6-1.33 1.33v6.66C10.67 16.38 11.27 16.97 12 16.97z"/>
+        <path class="scroll-down__mouse" fill="#FFFFFF" d="M12 1C5.39 1 0.02 6.36 0.02 12.98v18.63c0 3.78 1.75 7.14 4.49 9.34v-3.81c-1.14-1.55-1.82-3.45-1.82-5.52V12.98c0-5.15 4.17-9.32 9.32-9.32 5.14 0 9.31 4.17 9.31 9.32v18.63c0 2.07-0.68 3.97-1.82 5.52v3.82c2.73-2.19 4.49-5.56 4.49-9.34V12.98C23.98 6.36 18.62 1 12 1z"/>
+        <polygon class="scroll-down__arrow" fill="#FFFFFF" stroke="#FFFFFF" points="17.25 47.12 12.23 52.14 12.23 41.76 11.78 41.76 11.78 52.14 6.75 47.12 6.44 47.44 11.68 52.68 12 53 12.32 52.68 17.57 47.44 "/>
+      </svg>
+      <div class="scroll-down__text">Scroll Down</div>
+    </div>
   </div>
 </div>
-
-<script src="{{site.url}}/assets/javascript/vendors/bideo.min.js"></script>
+<script src="{{site.url}}/assets/javascript/vendors/bideo.js"></script>
 <script type="text/javascript">
-
 (function () {
-
   var bv = new Bideo();
-  bv.init({
-    // Video element
-    videoEl: document.querySelector('.video__tag'),
-
-    // Container element
-    container: document.querySelector('.video'),
-
-    // Pay button for mobile
-    //playButton: document.querySelector('#mobile-play-button'),
-
-    // Resize
-    resize: true,
-
-    autoplay: true,
-
-    isMobile: window.matchMedia('(max-width: 768px)').matches,
-
-    // Array of objects containing the src and type
-    // of different video formats to add
-    src: [
-      {
-        src: '{{site.url}}{{ video.videomp4 }}',
-        type: 'video/mp4'
-      },
-    ],
-
-    // What to do once video loads (initial frame)
-    onLoad: function () {
-      // Check that the class exist first.
-      var el = document.querySelector('.video__cover');
-      if (el.classList.contains("is-loaded")){
-         return true;
-      } else {
-        document.querySelector('.video__cover').className += " is-loaded";
-        document.querySelector('.video__content').className += " is-loaded";
-      }
+  Modernizr.on('videoautoplay', function( result ) {
+    if (result) {
+      intiVideo();
+    } else {
+      document.querySelector('.video-element__content').className += " is-loaded";
     }
   });
+  var intiVideo = function() {
+    bv.init({
+      // Video element
+      videoEl: document.querySelector('.video-element__tag'),
+      container: document.querySelector('.video-element'),
+      resize: true,
+      autoplay: true,
+      // Array of objects containing the src and type
+      // of different video formats to add
+      src: [
+        {
+          src: '{{site.url}}{{ video.videomp4 }}',
+          type: 'video/mp4'
+        },
+      ],
+
+      // What to do once video loads (initial frame)
+      onLoad: function () {
+        // Check that the class exist first.
+        var el = document.querySelector('.video-element__cover');
+        if (el.classList.contains("is-loaded")){
+           return true;
+        } else {
+          document.querySelector('.video-element__cover').className += " is-loaded";
+          document.querySelector('.video-element__cover--mobile').className += " is-loaded";
+          document.querySelector('.video-element__content').className += " is-loaded";
+        }
+      }
+    });
+  }
 }());
 </script>

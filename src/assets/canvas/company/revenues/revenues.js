@@ -17,6 +17,14 @@ lib.properties = {
 (lib.revenues = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_94 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(94).call(this.frame_94).wait(1));
+
 	// Layer 1
 	this.instance = new lib.revenueschart();
 	this.instance.setTransform(0,2);

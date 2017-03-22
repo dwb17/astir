@@ -20,12 +20,20 @@ lib.properties = {
 (lib.lithographic = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_84 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(84).call(this.frame_84).wait(1));
+
 	// Layer 1
 	this.instance = new lib.Symbol1();
-	this.instance.setTransform(303.5,291);
+	this.instance.setTransform(293.5,291);
 	this.instance.alpha = 0.109;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1},26,cjs.Ease.get(1)).wait(64));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:303.5,alpha:1},21,cjs.Ease.get(1)).wait(64));
 
 	// Layer 2
 	this.instance_1 = new lib.Symbol2();
@@ -33,7 +41,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance_1.alpha = 0.109;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(17).to({_off:false},0).to({x:303.5,y:291,alpha:1},28,cjs.Ease.get(1)).wait(45));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(12).to({_off:false},0).to({x:303.5,y:291,alpha:1},28,cjs.Ease.get(1)).wait(45));
 
 	// Layer 3
 	this.instance_2 = new lib.Symbol3();
@@ -41,7 +49,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance_2.alpha = 0.109;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(23).to({_off:false},0).to({x:303.5,y:291,alpha:1},29,cjs.Ease.get(1)).wait(38));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(18).to({_off:false},0).to({x:303.5,y:291,alpha:1},29,cjs.Ease.get(1)).wait(38));
 
 	// Layer 4
 	this.instance_3 = new lib.Tween1("synched",0);
@@ -52,11 +60,11 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance_4 = new lib.Tween2("synched",0);
 	this.instance_4.setTransform(303.5,291);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_3}]},26).to({state:[{t:this.instance_4}]},32).wait(32));
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(26).to({_off:false},0).to({_off:true,x:303.5,y:291,alpha:1},32,cjs.Ease.get(1)).wait(32));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_3}]},21).to({state:[{t:this.instance_4}]},32).wait(32));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(21).to({_off:false},0).to({_off:true,x:303.5,y:291,alpha:1},32,cjs.Ease.get(1)).wait(32));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(303.5,291,607,582);
+p.nominalBounds = new cjs.Rectangle(293.5,291,607,582);
 
 
 // symbols:

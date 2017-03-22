@@ -1,4 +1,4 @@
-.video {
+.video-element {
   @extend .text--light-colored;
   width: 100%;
   position: relative;
@@ -8,10 +8,10 @@
   }
 
   // Tablet
-  @include media-breakpoint-between(sm, md) {
-    min-height: 55%;
-    .video__content {
-      padding-top: 8rem;
+  @include media-breakpoint-down(sm) {
+    min-height: 45%;
+    .video-element__content {
+      padding-top: 6rem;
     }
   }
 
@@ -68,8 +68,13 @@
     background-size: cover;
     background-position: center;
     z-index: 2;
-    @include media-breakpoint-down(sm) {
+    &.is-loaded {
+      display: none !important;
+      z-index: -10;
+    }
+    .no-videoautoplay &{
       display: block !important;
+      z-index: 2;
     }
   }
   &__cover {
@@ -86,7 +91,7 @@
         opacity: 0;
         z-index: -10;
       }
-      @include media-breakpoint-down(sm) {
+      .no-videoautoplay &{
         display: none !important;
       }
     }
@@ -104,7 +109,7 @@
 
   .title {
     @extend .text--light-colored;
-    @include media-breakpoint-between(sm, md) {
+    @include media-breakpoint-up(md) {
       padding-left: $gutter-percentage;
       padding-right: $gutter-percentage;
     }
@@ -139,7 +144,7 @@
 
   // Homepage variant
   &.video--homepage {
-    .video__content {
+    .video-element__content {
       .title {
         margin-bottom: 0;
       }
@@ -155,8 +160,9 @@
 
 // Scroll down svg
 .scroll-down {
+  display: none;
   position: absolute;
-  bottom: 10%;
+  bottom: 6%;
   left: 0;
   width: 100%;
   text-align: center;
@@ -188,8 +194,8 @@
       animation: scrolldown .8s ease-out infinite;
     }
   }
-  @include media-breakpoint-down(sm) {
-    display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
   }
 
 }

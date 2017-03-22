@@ -7,7 +7,6 @@
  */
 
 (function (global) {
-
   // Define Bideo constructor on the global object
   global.Bideo = function () {
 
@@ -51,25 +50,41 @@
       // Meta data event
       self.videoEl.addEventListener('loadedmetadata', self._resize, false);
 
+
       // Fired when enough has been buffered to begin the video
       // self.videoEl.readyState === 4 (HAVE_ENOUGH_DATA)
       self.videoEl.addEventListener('canplay', function () {
         // Play the video when enough has been buffered
-        if (!self.opt.isMobile) {
-          self.opt.onLoad && self.opt.onLoad();
-          if (self.opt.autoplay !== false) {
-            var inview = new Waypoint.Inview({
-              element: self.videoEl,
-              enter: function(direction) {
-                self.videoEl.play();
-              },
-              exited: function(direction) {
-                self.videoEl.pause();
-              }
-            })
-          }
+        self.opt.onLoad && self.opt.onLoad();
+        if (self.opt.autoplay !== false) {
+          var inview = new Waypoint.Inview({
+            element: self.videoEl,
+            enter: function(direction) {
+              self.videoEl.play();
+            },
+            exited: function(direction) {
+              self.videoEl.pause();
+            }
+          })
         }
       });
+
+      // Add source to video
+      this.opt.src.forEach(function (srcOb, i, arr) {
+        var key,
+            val,
+            source = document.createElement('source');
+
+        // Set all the attribute key=val supplied in `src` option
+        for (key in srcOb) {
+          if (srcOb.hasOwnProperty(key)) {
+            val = srcOb[key];
+            source.setAttribute(key, val);
+          }
+        }
+        self.videoEl.appendChild(source);
+      });
+
 
       // If resizing is required (resize video as window/container resizes)
       if (self.opt.resize) {
@@ -78,32 +93,6 @@
 
       // Start time of video initialization
       this.startTime = (new Date()).getTime();
-
-      // Create `source` for video, Only on desktop.
-      if (!self.opt.isMobile) {
-        this.opt.src.forEach(function (srcOb, i, arr) {
-          var key
-            , val
-            , source = document.createElement('source');
-
-          // Set all the attribute key=val supplied in `src` option
-          for (key in srcOb) {
-            if (srcOb.hasOwnProperty(key)) {
-              val = srcOb[key];
-
-              source.setAttribute(key, val);
-            }
-          }
-
-          self.videoEl.appendChild(source);
-        });
-      };
-
-      if (self.opt.isMobile) {
-        // No video, show text.
-        document.querySelector('.video__content').className += " is-loaded";
-      }
-
       return;
     }
 

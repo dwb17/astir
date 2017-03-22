@@ -15,6 +15,14 @@ lib.properties = {
 (lib.production = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_99 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(99).call(this.frame_99).wait(1));
+
 	// Layer 15 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;

@@ -19,6 +19,14 @@ lib.properties = {
 (lib.primeraluminium = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
+	// timeline functions:
+	this.frame_69 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(69).call(this.frame_69).wait(1));
+
 	// Layer 3
 	this.instance = new lib.Symbol2();
 	this.instance.setTransform(270,260);
