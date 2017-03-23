@@ -9,8 +9,8 @@ lib.properties = {
 	fps: 24,
 	color: "#FFFFFF",
 	manifest: [
-		{src:"images/_1πνγ.png", id:"_1πνγ"},
-		{src:"images/_2.jpg", id:"_2"},
+		{src:"images/_1.png", id:"_1"},
+		{src:"images/_2.png", id:"_2"},
 		{src:"images/guide.png", id:"guide"}
 	]
 };
@@ -107,8 +107,8 @@ p.nominalBounds = new cjs.Rectangle(280,282,540,564);
 
 
 // symbols:
-(lib._1πνγ = function() {
-	this.initialize(img._1πνγ);
+(lib._1 = function() {
+	this.initialize(img._1);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,540,564);
 
@@ -129,7 +129,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,540,564);
 	this.initialize();
 
 	// Layer 1
-	this.instance = new lib._1πνγ();
+	this.instance = new lib._1();
 	this.instance.setTransform(0,-282);
 
 	this.addChild(this.instance);

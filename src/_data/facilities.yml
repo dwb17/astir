@@ -5,7 +5,7 @@ en:
     subtitle: "As one of the most advanced production sites in the global metal packaging sector , Astir’s central manufacturing plant is devoted to the efficient production of high quality crown corks with the lowest environmental impact."
     videomp4: "/assets/video/facilities/facilities.mp4"
     videoPoster: "/assets/video/home/home.jpg"
-    videoMobilePoster: "/assets/video/home/home.jpg"
+    videoMobilePoster: "/images/cover-images/Facilities.jpg"
     WatchFullVideo: false
   production:
     title: "State of the art plant"

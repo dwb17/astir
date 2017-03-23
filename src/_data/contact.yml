@@ -5,7 +5,7 @@ en:
     subtitle: "As one of the most advanced production sites in the global metal packaging sector, Astir’s central manufacturing plant is devoted to the efficient production of high quality bottle caps with the lowest environmental impact."
     videomp4: "/assets/video/contact/contact.mp4"
     videoPoster: "/assets/video/home/home.jpg"
-    videoMobilePoster: "/assets/video/home/home.jpg"
+    videoMobilePoster: "/images/cover-images/contact.jpg"
     WatchFullVideo: false
   contact:
     title: "Contact us 24/7"
@@ -13,7 +13,7 @@ en:
     callusNumber: "+30 22950 29371"
     skypeLabel: "SKYPE"
     skypetext: "Call us on Skype"
-    skypeUsername: "dawiba-7"
+    skypeUsername: "echo123"
     enquiries: "GENREAL ENQUIRIES"
     email: "&#105;&#110;&#102;&#111;&#064;&#118;&#105;&#116;&#111;&#103;&#105;&#097;&#110;&#110;&#105;&#115;&#046;&#103;&#114;"
     headquartersLabel: "ATHENS HEADQUARTERS"

@@ -22,14 +22,25 @@
           // Show and animate elements once.
           if (animateParent.hasClass('is-going-to-be-animated')) {
             animateParent.removeClass('is-going-to-be-animated');
+
             // Animate text.
-            $(".js-waypoint-text--canvas, .js-waypoint-text", animateParent).addClass('animated fadeInUp');
-            // Animate image
+            $(".js-waypoint-text--canvas .text", animateParent).addClass('animated fadeIn');
+            $(".js-waypoint-text--canvas .btn", animateParent).addClass('animated fadeIn');
+
+
             // Check if parent has odd class to change direction
             if(animateParent.hasClass('odd')) {
-              $(".js-waypoint-image--canvas", animateParent).addClass('animated slideInRight');
+              // Animate text.
+              $(".js-waypoint-text--canvas .subtitle", animateParent).addClass('animated fadeInLeftSmall');
+              $(".js-waypoint-text--canvas .title", animateParent).addClass('animated fadeInLeftSmall');
+              // Animate image
+              $(".js-waypoint-image--canvas", animateParent).addClass('animated fadeInRight');
             } else {
-              $(".js-waypoint-image--canvas", animateParent).addClass('animated slideInLeft');
+              // Animate text.
+              $(".js-waypoint-text--canvas .subtitle", animateParent).addClass('animated fadeInRightSmall');
+              $(".js-waypoint-text--canvas .title", animateParent).addClass('animated fadeInRightSmall');
+              // Animate image
+              $(".js-waypoint-image--canvas", animateParent).addClass('animated fadeInLeft');
             }
           }
         }

@@ -5,7 +5,7 @@ en:
     subtitle: "Above the picture: Astir strives in removing uncertainties from any client’s supply chain. From order to delivery we exceed our clients expectations and provide a fully flexible unparalleled offering."
     videomp4: "/assets/video/logistics/specifications.mp4"
     videoPoster: "/assets/video/home/home.jpg"
-    videoMobilePoster: "/assets/video/home/home.jpg"
+    videoMobilePoster: "/images/cover-images/Logistics.jpg"
     WatchFullVideo: false
   supply-chain:
     title: "Supply Chain optimisation"

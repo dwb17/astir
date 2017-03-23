@@ -111,9 +111,9 @@ gulp.task("vendors", function () {
 
 // Copy xml and txt files to the "site" directory
 gulp.task("copy", function () {
-  return gulp.src(["serve/*.txt", "serve/*.php", "serve/*.xml", "serve/shoovify.sh"])
+  return gulp.src(["serve/*.txt", "serve/*.php", "serve/*.xml"])
     .pipe(gulp.dest("site"))
-    .pipe($.size({ title: "xml & txt & shoovify.sh" }))
+    .pipe($.size({ title: "xml & txt & php" }))
 });
 
 gulp.task("cname", function () {

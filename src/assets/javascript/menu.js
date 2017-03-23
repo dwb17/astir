@@ -1,11 +1,8 @@
-// Look for .hamburger
 var hamburger = document.querySelector(".hamburger");
-// Look for overlay
+var logo = document.querySelector(".logo-wrapper");
 var navigation = document.getElementById("navigation");
-  // On click
-  hamburger.addEventListener("click", function() {
-  // Toggle class "is-active"
+hamburger.addEventListener("click", function() {
   hamburger.classList.toggle("is-active");
-  // Do something else, like open/close menu
   navigation.classList.toggle("is-enabled");
+  logo.classList.toggle("is-menu-open");
 });

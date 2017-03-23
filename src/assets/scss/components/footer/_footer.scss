@@ -48,6 +48,9 @@
 
   &__link {
     color: $gray-light;
+    &:hover {
+      color: $white
+    }
 
     &--map {
       padding-top: 1rem;
@@ -77,7 +80,6 @@
       list-style: none;
       &__link{
         color: $gray-light;
-        &.active,
         &:hover {
           color: $white;
         }

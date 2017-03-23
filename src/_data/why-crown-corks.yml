@@ -5,7 +5,7 @@ en:
     subtitle: "For more than 100 years, the crown cork safely seals and preserves the freshness of beers and beverages as no other alternative."
     videomp4: "/assets/video/why-crown-corks/why-crown-corks.mp4"
     videoPoster: "/assets/video/home/home.jpg"
-    videoMobilePoster: "/assets/video/home/home.jpg"
+    videoMobilePoster: "/images/cover-images/Why.jpg"
     WatchFullVideo: false
   why:
     title: "The perfect closure"

@@ -183,6 +183,10 @@ body {
   margin: 0 auto;
 }
 
+#internal-print .column {
+  padding-right: 0;
+}
+
 
 @include media-breakpoint-down(sm) {
   #thinkgreen-canvas,
@@ -244,6 +248,10 @@ body {
 
 #thinkgreen-canvas {
   @include section-padding-top(4);
+  display: inline-block;
+  box-sizing: content-box;
+  max-width: 430px;
+  height: auto;
 }
 
 #supply-chain {
@@ -350,4 +358,29 @@ body {
     margin-left: -$gutter-percentage;
     margin-right: -$gutter-percentage;
   }
+}
+
+// Animation delays
+.js-animate--canvas .js-waypoint-text--canvas,
+.js-animate .js-waypoint-text {
+  .title {
+    animation-delay: .4s;
+  }
+
+  .subtitle {
+    animation-delay: 0s;
+  }
+
+  .text {
+    animation-delay: .8s;
+  }
+
+  .btn {
+    animation-delay: .8s;
+  }
+}
+
+.js-animate--canvas .js-waypoint-image--canvas,
+.js-animate .js-waypoint-image {
+  animation-delay: .8s;
 }

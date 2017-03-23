@@ -22,6 +22,11 @@
 
     {% include footer.html %}
 
+    <!-- When on home page add magnific -->
+    {% if page.ref == 'home' %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    {% endif; %}
+
     <!-- JavaScript External -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
@@ -35,9 +40,10 @@
     <script async defer src="{{site.url}}/assets/javascript/menu.js"></script>
     <script async defer src="{{site.url}}/assets/javascript/animate.js"></script>
     <script async defer src="{{site.url}}/assets/javascript/floating-label.js"></script>
--->
-    <script async defer src="{{site.url}}/assets/javascript/scripts.min.js"></script>
+    <script async defer src="{{site.url}}/assets/javascript/popup.js"></script>
+  -->
 
+    <script async defer src="{{site.url}}/assets/javascript/scripts.min.js"></script>
 
   </body>
 </html>

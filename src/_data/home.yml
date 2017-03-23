@@ -5,13 +5,13 @@ en:
     subtitle: "Manufacturing bespoke excellence"
     videomp4: "/assets/video/home/home.mp4"
     videoPoster: "/assets/video/home/home.jpg"
-    videoMobilePoster: "/assets/video/home/home.jpg"
+    videoMobilePoster: "/images/cover-images/Home.jpg"
     WatchFullVideo: true
     WatchVideoLinkText: "WATCH VIDEO"
-    FullVideoURL: "https://www.youtube.com/watch?v=jay3CnBcUGU"
+    FullVideoURL: "https://www.youtube.com/watch?v=CFCPdzeWX7E"
   leader:
     title: "A global leader in crown corks"
-    variantClasses: "text--centered viewport-height grey-background js-scroll-to js-animate"
+    variantClasses: "text--centered viewport-height grey-background js-scroll-to"
     layout: "layout-stacked"
     buttonText: "THE COMPANY"
     buttonLink: "/company/"

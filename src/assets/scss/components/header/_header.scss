@@ -4,6 +4,10 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  text-align: center;
+  @include media-breakpoint-down(sm) {
+    text-align: left;
+  }
 }
 
 #nav {
@@ -14,23 +18,57 @@
 
 .logo-wrapper {
   position: relative;
-  width: 100%;
-  text-align: center;
   padding-top: 14px;
-  display: block;
+  display: inline-block;
+  z-index: 101;
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
-    text-align: left;
   }
 }
 
+.logo {
+  &__letter--name {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+  &:hover {
+    .logo__letter--name {
+      opacity: 1;
+    }
+  }
+}
 // Change logo colors
 .logo.is-below-fold {
   .logo__letter {
     fill: $white;
+    &--name {
+      fill: $brand-primary;
+    }
   }
   .logo__ellipse,
   .logo__cap {
     fill: $brand-primary;
+  }
+}
+.is-menu-open.logo-wrapper {
+  height: 95px;
+  overflow: hidden;
+}
+
+.is-menu-open .logo {
+  .logo__letter {
+    fill: $brand-primary;
+    &--name {
+      fill: $white;
+    }
+  }
+  &:hover {
+    .logo__letter--name {
+      opacity: 0;
+    }
+  }
+  .logo__ellipse,
+  .logo__cap {
+    fill: $white;
   }
 }

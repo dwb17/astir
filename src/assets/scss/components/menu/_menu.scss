@@ -1,10 +1,35 @@
 // Navigation open or close state
 #navigation{
   width: 100%;
-  transform: translateX(-100%);
-
+  transform: translate3d(-100%, 0, 0);
+  transition: all .5s;
   &.is-enabled {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+    .overlay-content li {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+      &:nth-child(1) {
+        transition-delay: .2s;
+      }
+      &:nth-child(2) {
+        transition-delay: .3s;
+      }
+      &:nth-child(3) {
+        transition-delay: .4s;
+      }
+      &:nth-child(4) {
+        transition-delay: .5s;
+      }
+      &:nth-child(5) {
+        transition-delay: .6s;
+      }
+      &:nth-child(6) {
+        transition-delay: .7s;
+      }
+      &:nth-child(7) {
+        transition-delay: .8s;
+      }
+    }
   }
   ul,li {
     list-style: none;
@@ -26,31 +51,33 @@
     top: 0;
     left: 0;
     background-color: rgb(225,27,34);
-    background-color: rgba(225,27,34, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
     overflow: hidden;
 }
 
 .overlay-content {
-    @include vertically-centered();
-    text-align: center;
-    margin: 0;
-    padding-left: $gutter-percentage;
-    padding-right: $gutter-percentage;
-    ul,li {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+  @include vertically-centered();
+  text-align: center;
+  margin: 15px 0 0 0;
+  padding-left: $gutter-percentage;
+  padding-right: $gutter-percentage;
+  list-style: none;
+  padding: 0;
+  li {
+    list-style: none;;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    transform: translate3d(-5%, 0, 0);
+    transition: all 1s;
+    opacity: 0;
+    @media screen and ( max-height: 480px ){
+      padding-top: 0;
+      padding-bottom: 0;
     }
-    li {
-      padding-top: .3em;
-      padding-bottom: .3em;
-      @media screen and ( max-height: 480px ){
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-    }
+  }
 }
 
 .overlay a {
@@ -65,7 +92,7 @@
     @media screen and ( max-height: 720px ){
       font-size: 32px;
     }
-    @media screen and ( max-height: 480px ){
+    @media screen and ( max-height: 550px ){
       font-size: 27px;
     }
     &.active,

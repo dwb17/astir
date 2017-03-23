@@ -50,7 +50,7 @@ en:
     bgImagePosition: "left top"
     bgImageSize: "60% auto"
     buttonText: "DOWNLOAD PRINT SPEC"
-    buttonLink: "/pdfs/"
+    buttonLink: "/pdfs/specifications.pdf"
     buttonClasses: "btn-primary"
     id: "offset-print"
     group: "print"

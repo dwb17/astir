@@ -58,13 +58,22 @@
           if (animateParent.hasClass('is-going-to-be-animated')) {
             animateParent.removeClass('is-going-to-be-animated');
             // Animate text.
-            $(".js-waypoint-text", animateParent).addClass('animated fadeInUp');
-            // Animate image
+            $(".js-waypoint-text .text", animateParent).addClass('animated fadeIn');
+            $(".js-waypoint-text .btn", animateParent).addClass('animated fadeIn');
+
             // Check if parent has odd class to change direction
             if(animateParent.hasClass('odd')) {
-              $(".js-waypoint-image", animateParent).addClass('animated slideInRight');
+              // Animate text.
+              $(".js-waypoint-text .subtitle", animateParent).addClass('animated fadeInLeftSmall');
+              $(".js-waypoint-text .title", animateParent).addClass('animated fadeInLeftSmall');
+              // Animate image
+              $(".js-waypoint-image", animateParent).addClass('animated fadeInRight');
             } else {
-              $(".js-waypoint-image", animateParent).addClass('animated slideInLeft');
+              // Animate text.
+              $(".js-waypoint-text .subtitle", animateParent).addClass('animated fadeInRightSmall');
+              $(".js-waypoint-text .title", animateParent).addClass('animated fadeInRightSmall');
+              // Animate image
+              $(".js-waypoint-image", animateParent).addClass('animated fadeInLeft');
             }
           }
         }
