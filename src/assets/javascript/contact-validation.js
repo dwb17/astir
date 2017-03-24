@@ -22,6 +22,11 @@ $(document).ready(function() {
     return false;
   });
 
+  // disable clicking when form is submitting.
+  $("#request-form .webform-submit.is-submitting").click(function(){
+    return false;
+  });
+
   $("#request-form").validate({
     errorElement: 'span',
     ignore: ".ignore",
@@ -41,6 +46,7 @@ $(document).ready(function() {
       });
     }
   });
+
   // pre-submit callback
   function showRequest(formData, $form, options) {
       $form.find('.webform-submit').addClass('is-submitting').val('Form is being processed');
@@ -53,6 +59,10 @@ $(document).ready(function() {
       $('#form-response').text(responseText.message).show();
     } else {
       $('#form-response').text(responseText.message).show();
+      $form.find('.webform-submit').removeClass('is-submitting').val('SUBMIT');
+      $('html, body').animate({
+          scrollTop: $("#request-form-content").offset().top
+      }, 900);
     }
     //$form.resetForm();
   }

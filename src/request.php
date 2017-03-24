@@ -1,27 +1,55 @@
 <?php
   $response = array();
+  $values = $_POST;
 
-  require 'PHPMailer/PHPMailerAutoload.php';
+  // exit if no submit value.
+  if(!isset($values['op'])){
+    $response['status'] = "NOK";
+    $response['message'] = "OP Unable to process your request. Please try again shortly.";
+    echo json_encode($response);
+    return;
+  }
+
+  // exit if honeypot is provided.
+  if (!empty($values['url'])) {
+    $response['status'] = "NOK";
+    $response['message'] = "Unable to process your request. Please try again shortly.";
+    echo json_encode($response);
+    return;
+  }
+
+  // build message.
+  $current_date = date('F j, Y, g:i a');
+  $message = 'Request form submission on: ' . $current_date . "\r\n";
+  $message .= 'Name/Surname: ' . $values['name'] . "\r\n";
+  $message .= 'Email address: ' . filter_var($values['e_mail'], FILTER_VALIDATE_EMAIL) . "\r\n";
+  $message .= (!empty($values['company'])) ? 'Company: ' . $values['company'] . "\r\n" : '';
+  $message .= (!empty($values['position'])) ? 'Position: ' . $values['position'] . "\r\n" : '';
+  $message .= (!empty($values['address'])) ? 'Address: ' . $values['address'] . "\r\n" : '';
+  $message .= (!empty($values['telephone'])) ? 'Phone number: ' . $values['telephone'] . "\r\n" : '';
+  $message .= 'Message: ' . $values['message']. "\r\n";
+  $message_sanitize = filter_var($message, FILTER_SANITIZE_STRING);
+
+  require $_SERVER["DOCUMENT_ROOT"] . '/PHPMailer/PHPMailerAutoload.php';
   $mail = new PHPMailer;
 
   //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
   $mail->isSMTP();                                      // Set mailer to use SMTP
-  $mail->Host = 'interceptor.websitewelcome.com';  // Specify main and backup SMTP servers
+  $mail->Host = 'ns1.pointblank.gr';  // Specify main and backup SMTP servers
   $mail->SMTPAuth = true;                               // Enable SMTP authentication
-  $mail->Username = 'david@pointblank.gr';                 // SMTP username
-  $mail->Password = 'paok@r@';
+  $mail->Username = 'test@astir.devel.pointblank.gr';                 // SMTP username
+  $mail->Password = 'd;U&oAfTKgEe';
   $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
   $mail->Port = 465;                          // SMTP password
 
-  $mail->setFrom('david@pointblank.gr');
-  $mail->addAddress('david7bash@gmail.com');     // Add a recipient
+  $mail->setFrom('test@astir.devel.pointblank.gr');
+  $mail->addAddress('test@astir.devel.pointblank.gr');     // Add a recipient
 
-  $mail->isHTML(true);                                  // Set email format to HTML
+  $mail->isHTML(false);                                  // Set email format to HTML
 
-  $mail->Subject = 'Here is the subject';
-  $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+  $mail->Subject = 'Request form submission.';
+  $mail->Body    = $message_sanitize;
 
   if(!$mail->send()) {
       $response['status'] = "NOK";

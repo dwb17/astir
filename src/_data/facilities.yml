@@ -2,13 +2,13 @@
 en:
   video:
     title: "FACILITIES"
-    subtitle: "As one of the most advanced production sites in the global metal packaging sector , Astir’s central manufacturing plant is devoted to the efficient production of high quality crown corks with the lowest environmental impact."
+    subtitle: "As one of the most advanced production sites in the global metal packaging sector, Astir’s central manufacturing plant is devoted to the efficient production of high quality crown corks with the lowest environmental impact."
     videomp4: "/assets/video/facilities/facilities.mp4"
     videoPoster: "/assets/video/home/home.jpg"
     videoMobilePoster: "/images/cover-images/Facilities.jpg"
     WatchFullVideo: false
   production:
-    title: "State of the art plant"
+    title: "State of the Art Plant"
     title_variantClasses: "title--large"
     subtitle: "PRODUCTION SITE"
     body: "Astir's headquarters and main manufacturing facility are strategically located in Athens’ Industrial Park, only 40 kilometers away from Piraeus port and 45 minutes from Athens International Airport with excellent access across the supply chain. With state of the art production equipment and ergonomic design, our premises comply with the strictest quality standards. With an installed capacity in excess of 10 billion crowns annually and a fully automated production process we operate one of the largest crown cork facilities in the world with minimal human intervention and practically zero fault rates."
@@ -26,10 +26,11 @@ en:
     layout: "layout-two-column slice--with-centered-image"
     id: "facilities"
   sustainable:
-    title: "Thinking green"
+    title: "Thinking Green"
     title_variantClasses: "title--large"
     subtitle: "SUSTAINABLE DEVELOPMENT"
-    body: "In a market where competitive edges are really marginal, we simply make the difference. Our direct customer approach philosophy, the unique flexibility and adaptability of the manufacturing process enables us to address extraordinary requests, optimise distance and time factors and maximize customer satisfaction. All phases of the manufacturing process are vertically integrated. Our in-house prepress department, printing, quality control, packaging and shipping are fine-tuned to guarantee on time delivery at the shortest lead times. Once we receive the artwork and order, everything mobilizes. A creative team develops your artwork and the PDF file is approved in as little as 24 hours. Your batch is scheduled and produced to perfection and be it ground, sea or air transportation, outstanding fault free crown caps arrive to your production line ready to use, in a best value for money and time ratio."
+    body: "We believe in sustainable crown corks manufacturing and we make it happen.<br/>
+Astir crown corks are created in high-speed, eco-friendly and energy saving production lines that exceed any market and environmental standard. Our company applies an integrated internal recycling programme for almost 99% of raw material and waste. All our needs in hot water are generated from renewable sources through a heat exchanging system. We managed to minimize CO2 emissions by adapting natural gas supply and incinerator burners. Going even greener, we use natural light during the day and salvage any kind of recyclable materials: used oil, paper, plastics, broken pallets and scrap steel webs. No matter if they are golden, silver, white or color printed, Astir crown corks are always “green”, with perpetually lower carbon footprint."
     variantClasses: "slice-with-image-on-right"
     layout: "layout-two-column"
     id: "sustainable"
