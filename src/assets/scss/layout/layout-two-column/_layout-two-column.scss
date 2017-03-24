@@ -1,5 +1,4 @@
 .layout-two-column {
-
   // Flexbox.
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +49,10 @@
     // Flexbox;
     display: flex;
     flex-direction: column;
+    order: 2;
+    &:nth-child(2n) {
+      order: 3;
+    }
 
     + .column {
       padding-left: 5%;
@@ -70,6 +73,7 @@
     // When image is after column it should take up the whole width.
     + .image {
       width: 100%;
+      order: 4;
     }
 
     // When image is in the column it should center.
@@ -92,10 +96,18 @@
   }
 
   &.odd {
+    .column:nth-child(1n) {
+      float: right;
+      @include media-breakpoint-down(sm) {
+        float: none;
+      }
+    }
     .column:nth-child(2n) {
-      order: -1;
+      order: 1;
+      float: left;
       @include media-breakpoint-down(sm) {
         order: 2;
+        float:none;
       }
     }
   }

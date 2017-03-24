@@ -248,7 +248,6 @@ body {
 
 #thinkgreen-canvas {
   @include section-padding-top(4);
-  display: inline-block;
   box-sizing: content-box;
   max-width: 430px;
   height: auto;

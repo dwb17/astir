@@ -80,6 +80,7 @@
     z-index: 1;
   }
 
+  // Mobile video replacement image.
   &__cover--mobile{
     position: absolute;
     width: 100%;
@@ -93,11 +94,13 @@
       z-index: -10;
       opacity: 0;
     }
+
     .no-videoautoplay &{
       display: block !important;
       z-index: 2;
     }
   }
+
   &__cover {
       position: absolute;
       width: 100%;
@@ -112,6 +115,7 @@
         opacity: 0;
         z-index: -10;
       }
+      
       .no-videoautoplay &{
         display: none !important;
       }

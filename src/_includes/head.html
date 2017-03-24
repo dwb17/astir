@@ -4,6 +4,29 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
   <script src="{{site.url}}/assets/javascript/vendors/modernizr-custom.js"></script>
+  <style>
+    .touchevents .video-element__cover--mobile,
+    .no-videoautoplay .video-element__cover--mobile {
+      display: block !important;
+      z-index: 2;
+    }
+    .no-touchevents .video-element__cover,
+    .videoautoplay .video-element__cover {
+      display: block !important;
+      z-index: 2;
+    }
+
+    .touchevents .video-element__cover,
+    .no-videoautoplay .video-element__cover {
+      display: none !important;
+      z-index: 2;
+    }
+    .no-touchevents .video-element__cover--mobile,
+    .videoautoplay .video-element__cover--mobile {
+      display: none !important;
+      z-index: 2;
+    }
+  </style>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script type="text/javascript">
       (function() {

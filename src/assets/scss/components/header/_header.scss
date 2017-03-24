@@ -50,6 +50,9 @@
     fill: $brand-primary;
   }
 }
+
+// Hide brand name, when menu open and device is touch enabled.
+.touchevents .logo-wrapper
 .is-menu-open.logo-wrapper {
   height: 95px;
   overflow: hidden;
