@@ -22,7 +22,7 @@
   display: inline-block;
   z-index: 101;
   @include media-breakpoint-down(sm) {
-    padding-left: 20px;
+    margin-left: -10px;
   }
 }
 
@@ -52,7 +52,7 @@
 }
 
 // Hide brand name, when menu open and device is touch enabled.
-.touchevents .logo-wrapper
+.touchevents .logo-wrapper,
 .is-menu-open.logo-wrapper {
   height: 95px;
   overflow: hidden;

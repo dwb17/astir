@@ -37,6 +37,7 @@
   }
 
   .column {
+    position: relative;
     width: 50%;
     max-width: $content-wrapper-max-width/2;
     padding-right: 5%;
