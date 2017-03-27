@@ -20,6 +20,45 @@ var util = require("gulp-util");
 var source = require("vinyl-source-stream");
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
+var ftp = require( 'vinyl-ftp' );
+
+
+/** Configuration **/
+var user = process.env.FTP_USER;
+var password = process.env.FTP_PWD;
+var host = '138.201.37.149';
+var port = 21;
+var localFilesGlob = ['./site/**/*'];
+var remoteFolder = '/public_html'
+
+// helper function to build an FTP connection based on our configuration
+function getFtpConnection() {
+    return ftp.create({
+        host: host,
+        port: port,
+        user: user,
+        password: password,
+        parallel: 5,
+        log: util.log
+    });
+}
+
+/**
+ * Deploy task.
+ * Copies the new files to the server
+ *
+ * Usage: `FTP_USER=someuser FTP_PWD=somepwd gulp ftp-deploy`
+ */
+gulp.task('ftp-deploy', function() {
+
+    var conn = getFtpConnection();
+
+    return gulp.src(localFilesGlob, { base: '.', buffer: false })
+        .pipe( conn.newer( remoteFolder ) ) // only upload newer files
+        .pipe( conn.dest( remoteFolder ) )
+    ;
+});
+
 
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
@@ -188,7 +227,6 @@ gulp.task("doctor", $.shell.task("bundle exec jekyll doctor"));
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
 gulp.task("serve:dev", ["styles", "jekyll:dev", "scripts-opt", "scripts-opt-bideo"], function () {
-
   bs = browserSync({
     notify: true,
     //proxy: 'http://astir.ninja',

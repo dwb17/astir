@@ -6,7 +6,8 @@
 #mfPreviewBar {
   display: none !important;
 }
-
+@import "animate/animate";
+@import "magnific/main.scss";
 @import "hamburgers/_sass/hamburgers/hamburgers";
 
 @import "magnific/main.scss";
