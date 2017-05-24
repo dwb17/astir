@@ -53,7 +53,7 @@ gulp.task('ftp-deploy', function() {
 
     var conn = getFtpConnection();
 
-    return gulp.src(localFilesGlob, { base: '.', buffer: false })
+    return gulp.src(localFilesGlob, { base: './site', buffer: false })
         .pipe( conn.newer( remoteFolder ) ) // only upload newer files
         .pipe( conn.dest( remoteFolder ) )
     ;
