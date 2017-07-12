@@ -275,22 +275,16 @@ gulp.task("check", ["jslint", "doctor"], function () {
 // Builds the site but doesn"t serve it to you
 gulp.task("build", ["jekyll:prod", "styles", "js"], function () {});
 
-// Copies favicon to the site folder
-gulp.task("copy-favicon", function() {
-  return gulp.src("src/assets/favicon.png")
-    .pipe(gulp.dest("site/assets"));
-});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "scripts-opt-bideo", "video", "phpmailer","copy-favicon");
+  gulp.start("html", "copy", "cname", "images", "fonts", "vendors", "js", "scripts-opt", "scripts-opt-bideo", "video", "phpmailer","copy-pdfs");
 });
 
 gulp.task('scripts-opt', ["scripts-opt-bideo"], function() {
   return gulp.src('./src/assets/javascript/*.js')
     .pipe($.concat('main-scripts.js'))
-    .pipe(gulp.dest("site/assets/javascript/"))
     .pipe($.rename('scripts.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest("site/assets/javascript/"))
@@ -306,7 +300,11 @@ gulp.task('scripts-opt-bideo', function() {
     .pipe(gulp.dest("serve/assets/javascript/vendors/"));
 });
 
-
+// Copies favicon to the site folder
+gulp.task("copy-pdfs", function() {
+  return gulp.src("src/pdfs/*")
+    .pipe(gulp.dest("site/pdfs"));
+});
 
 gulp.task('svgstore', function () {
     return gulp

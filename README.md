@@ -7,16 +7,20 @@ bundle install
 
 Then run `gulp` to start the local server with BrowserSync.
 
-## Installing the linter
-First,  
-```
-gem install scss_lint
-```
+## How to work on
+on the local machine, setup astir.ninja as the vhost. this settings can be changed in the file _config.yml file.
+Gulp task to run on local machine is serve:dev
 
-Then, install a plugin for your favorite editor:  
-- [PHPStorm Plugin](https://plugins.jetbrains.com/plugin/7530)  
-- [Atom Plugin](https://atom.io/packages/linter-scss-lint)  
-- [Sublime Text Plugin](https://packagecontrol.io/packages/SublimeLinter-contrib-scss-lint)
+MIght need to run the following commands is assets, ie script.min.js or canvas assets are not loading
+cp -af ./src/assets/canvas/ ./site/assets/canvas/
+cp -af ./src/assets/canvas/ ./serve/assets/canvas/
+
+In order to prepare website for live run gulp task
+ensure that the final domain is set in _config.build.yml
+gulp publish
+
+NOTE: you could also run ftp-deploy to connect to hostdog via ftp and upload the contents of the sites directory
+
 
 
 ## Deploying to `gh-pages`
