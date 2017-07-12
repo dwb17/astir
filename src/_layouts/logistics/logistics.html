@@ -20,6 +20,7 @@ layout: default
               {% include item.html param=packagingItem %}
           {% endfor %}
           </div>
+          <div class="text--centered"><a href="{{ site.url }}/pdfs/packaging_specifications.pdf" class="btn btn-primary">DOWNLOAD PACKAGING SPEC</a></div>
         </div>
       </div>
     {% elsif logisticsItem.id == "quality-standards" %}
@@ -30,7 +31,7 @@ layout: default
           {% assign certificatesItem = certificatesItems[1] %}
             <div class="col-md-4 col-sm-12">
               <h3 class="title title--small text--centered">{{ certificatesItem.title }}</h3>
-              <div class="image text--centered"><img class="img-fluid" alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></div>
+              <a href="{{ certificatesItem.pdfLink }}" class="image text--centered"><img class="img-fluid" alt="{{ certificatesItem.title }}" src="{{ certificatesItem.image }}"></a>
             </div>
         {% endfor %}
         </div>

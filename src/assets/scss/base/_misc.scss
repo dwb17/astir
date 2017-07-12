@@ -304,6 +304,12 @@ body {
 }
 #quality-standards-list {
   @include section-padding-bottom(5);
+
+  // center certificate text
+  a {
+    width: 100%;
+    display: block;
+  }
 }
 
 

@@ -4,14 +4,17 @@ en:
     title: "FOOD SAFETY"
     title_variantClasses: "title--small"
     image: "/images/logistics/certificate.png"
+    pdfLink: "/pdfs/Food_Safety_ISO_22000_2015-2018.pdf"
   1:
     title: "ENVIRONMENTAL"
     title_variantClasses: "title--small"
     image: "/images/logistics/certificate.png"
+    pdfLink: "/pdfs/Enviromental_ISO_14001_2015-2018.pdf"
   2:
     title: "HIGH HYGIENE"
     title_variantClasses: "title--small"
     image: "/images/logistics/certificate.png"
+    pdfLink: "/pdfs/High_Hygiene_BRC_2016-2017.pdf"
 el:
   production:
     title: "Ελληνικα State of the art plant"
