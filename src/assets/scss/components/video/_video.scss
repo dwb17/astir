@@ -115,7 +115,7 @@
         opacity: 0;
         z-index: -10;
       }
-      
+
       .no-videoautoplay &{
         display: none !important;
       }
@@ -151,6 +151,7 @@
 
   &__watch-full-video {
     color: $inverse-color;
+    @include invisible();
     i {
       display: block;
       font-size: 50px;

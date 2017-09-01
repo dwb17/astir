@@ -2,10 +2,8 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 
-// Hide myFonts temp.
-#mfPreviewBar {
-  display: none !important;
-}
+@import "base/fonts";
+
 @import "animate/animate";
 @import "magnific/main.scss";
 @import "hamburgers/_sass/hamburgers/hamburgers";

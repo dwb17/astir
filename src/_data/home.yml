@@ -8,7 +8,7 @@ en:
     videoMobilePoster: "/images/cover-images/Home.jpg"
     WatchFullVideo: true
     WatchVideoLinkText: "WATCH VIDEO"
-    FullVideoURL: "https://www.youtube.com/watch?v=CFCPdzeWX7E"
+    FullVideoURL: "https://vimeo.com/225974178"
   leader:
     title: "A global leader in crown corks"
     variantClasses: "text--centered viewport-height grey-background js-scroll-to"

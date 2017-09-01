@@ -22,7 +22,22 @@
   display: inline-block;
   z-index: 101;
   @include media-breakpoint-down(sm) {
-    margin-left: -10px;
+    height: 100px;
+    overflow: hidden;
+    .logo {
+
+      // Hide logo after fold
+      &.is-below-fold {
+        opacity: 0;
+      }
+
+      // Do not show letters in hover
+      &:hover {
+        .logo__letter--name {
+          opacity: 0;
+        }
+      }
+    }
   }
 }
 

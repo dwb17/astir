@@ -38,13 +38,13 @@
   $mail->isSMTP();                                      // Set mailer to use SMTP
   $mail->Host = 'ns1.pointblank.gr';  // Specify main and backup SMTP servers
   $mail->SMTPAuth = true;                               // Enable SMTP authentication
-  $mail->Username = 'test@astir.devel.pointblank.gr';                 // SMTP username
-  $mail->Password = 'd;U&oAfTKgEe';
+  $mail->Username = 'contact@astircrowns.com';                 // SMTP username
+  $mail->Password = 'De9H68TAQQ1fTHF1Ts';
   $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
   $mail->Port = 465;                          // SMTP password
 
-  $mail->setFrom('test@astir.devel.pointblank.gr');
-  $mail->addAddress('test@astir.devel.pointblank.gr');     // Add a recipient
+  $mail->setFrom('contact@astircrowns.com');
+  $mail->addAddress('astir@vitogiannis.gr');     // Add a recipient
 
   $mail->isHTML(false);                                  // Set email format to HTML
 
