@@ -41,9 +41,8 @@
         <label for="edit-submitted-message">Message <span title="This field is required." class="form-required">*</span></label>
         <div class="form-textarea-wrapper"><textarea class="form-textarea required" rows="5" cols="60" name="message" id="edit-submitted-message" required="required"></textarea></div>
       </div>
-      <div id="webform-component-url" class="js-floating-label form-item is-floating-label">
-        <label for="edit-submitted-url">URL </label>
-        <input type="url" class="form-text ignore" maxlength="128" size="60" value="" name="url" id="edit-submitted-url" required>
+      <div class="form-item form-item__markup text text--extra-small">
+        By clicking SUBMIT, you agree that you have read our <a href="{{ site.url }}/privacy-policy" target="_blank">Privacy Policy</a>, including our  <a href="{{ site.url }}/cookie-use" target="_blank">Cookie Use</a>.
       </div>
       <div class="form-actions clearfix">
         <input type="submit" value="SUBMIT" name="op" class="webform-submit btn btn-secondary form-submit">

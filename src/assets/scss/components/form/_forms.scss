@@ -36,7 +36,31 @@ form {
   width: 50%;
   float: left;
 
-  // Collapse in one column.
+  &__markup {
+    width: 100%;
+    text-align: right;
+    a{
+      color: $white;
+      text-decoration: none;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 1px;
+        background: $white;
+        transition: width .3s;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        width: 100%;
+      }
+    }
+  }
+
+    // Collapse in one column.
   @include media-breakpoint-down(sm) {
     width: 100%;
     float: none;

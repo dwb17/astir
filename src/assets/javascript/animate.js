@@ -7,7 +7,14 @@
 (function ($) {
   'use strict';
   $(document).ready(function () {
-    // Scrool down on SVG click
+
+    // Basic page
+    if($('body').hasClass('simple-page')) {
+      $('.hamburger').addClass('is-dark');
+      $('.logo').addClass('is-below-fold');
+    }
+
+    // Scroll down on SVG click
     $('.scroll-down').on('click', function(){
       $('html, body').animate({
           scrollTop: $('.js-scroll-to').offset().top

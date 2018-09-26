@@ -1,3 +1,28 @@
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000000",
+          "text": "#ffffff"
+        },
+        "button": {
+          "background": "#e11b22",
+          "text": "#ffffff"
+        }
+      },
+      "position": "bottom-right",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website. ",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "{{ site.url }}/cookie-use/"
+      },
+    })});
+</script>
+
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
